@@ -7,7 +7,7 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="author" content="">
-	<title>Medicine Hospital HTML Template</title>
+	<title>养益生</title>
 	<!-- Bootstrap CSS -->
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Font Awesome CSS -->
@@ -49,10 +49,41 @@
 					</div>
 					<div class="col-sm-3 col-xs-12">
 						<ul class="list-unstyled list-inline">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-							<li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+							<!-- <li><a href="#"><i class="fa fa-qq"></i></a></li>
+							<li><a href="#"><i class="fa fa-wechat"></i></a></li> -->
+							<li><a href="javascript:openLogin();">登录</a>
+<div id=win style="background-color:white;
+                                                border: 1px solid red;
+                                                text-align: center;
+                                                line-height: 20px;
+                                                font-size: 12px;
+                                                font-weight: bold;
+                                                z-index:500;
+                                                width: 600px;
+                                                height: 420px;
+                                                left:50%;/*FF IE7*/
+                                                top:50%;/*FF IE7*/
+    margin-left:-300px!important;/*FF IE7 该值为本身宽的一半 */
+margin-top:-210px!important;/*FF IE7 该值为本身高的一半*/
+
+position:fixed!important;/*FF IE7*/">
+<div style='position:absolut; width:600px;height:420px;margin-left:0px; margin-top:100px'>
+            
+    <lable>昵 称：</lable><input type="text" size="20"/><br /><br/>
+<lable>密 码：</lable><input type="password" size="20"><br /><br />
+<input type="checkbox" /><lable>记住我</lable> &nbsp;&nbsp;&nbsp;<button type="button">登录</button><br/><br/><br/>
+<a href="javascript:closeLogin();">关闭登录框</a>&nbsp;&nbsp;<a href="zhuce.html">注册</a></div></div>
+<script>
+function openLogin(){
+   document.getElementById("win").style.display="";
+}
+function closeLogin(){
+   document.getElementById("win").style.display="none";
+}
+</script>
+</li>
+
+							<li><a href="javascript:;" /*class="spice-btn spice-btn-gray spice-submenu-btn-register*/">注册</a></li>
 						</ul>
 					</div>
 				</div>
@@ -72,31 +103,18 @@
 						<!-- End Collapse Button -->
 						<!-- Start Website Logo -->
 						<a href="index.html" class="navbar-brand">
-							<img src="assets/images/logo.png" class="logo" alt="Logo"> 医学<span>Line</span>
+							<img src="assets/images/logo.png" class="logo" alt="Logo"> 养<span>益生</span>
 						</a>
 						<!-- End Website Logo -->
 					</div>
 					<!-- Start Menu Area -->
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="index.html">首页</a></li>
-							
+							<li><a href="index.html">主页</a></li>
 							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">职业病</a>
 								<ul class="dropdown-menu" role="menu">
 									<li><a href="services.html">职业病</a></li>
 									<li><a href="department-single.html">具体类别</a></li>
-								</ul>
-							</li>
-							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">医生</a>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="doctors.html">医生</a></li>
-									<li><a href="doctor-profile.html">医生文件</a></li>
-								</ul>
-							</li>
-							<li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown">病症</a>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="departments.html">病症</a></li>
-									<li class="active"><a href="department-single.html">单独病症</a></li>
 								</ul>
 							</li>
 							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">新闻</a>
@@ -105,14 +123,13 @@
 									<li><a href="news-single.html">单独新闻</a></li>
 								</ul>
 							</li>
-							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">网页</a>
+							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">页面</a>
 								<ul class="dropdown-menu" role="menu">
-									
 									<li><a href="faqs.html">常见问题</a></li>
-									<li><a href="404.html">404 页面</a></li>
+									<li><a href="404.html">404 页</a></li>
 								</ul>
 							</li>
-							<li><a href="contact.html">接触</a></li>
+							<li><a href="contact.html">个人资料</a></li>
 						</ul>
 					</div>
 					<!-- Start Menu Area -->
@@ -133,8 +150,8 @@
 		<div class="container">
 			<ul class="list-unstyled list-inline">
 				<li><a href="index.html">首页</a></li>
-				<li><a href="departments.html">部门</a></li>
-				<li class="active">单独部门</li>
+				<li><a href="departments.html">服务</a></li>
+				<li class="active">单独病症</li>
 			</ul>
 		</div>
 	</div>
@@ -153,20 +170,32 @@
 							<h4>石绵病</h4>
 							<div class="news-post-content">
 								<p>
-									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+									石棉肺病又称石棉沉着病，是人体长期吸入石棉尘后，致使肺组织弥漫性纤维化及胸膜增生为病理特征的损害。石棉是一种具用纤维状结构的硅酸盐矿物，含有镁和少量铁、钙、钠等。在开采及加工处理石棉的生产过程中，可形成大量粉尘,如防尘措施不力，可进入大气和水源污染环境，危害居民健康而成为公害。病程一般缓慢，临床上最早出现咳嗽、呼吸困难，且随活动而加剧的自觉症状；多为局部及一般性胸部疼痛，如为持续性疼痛则可能是胸膜问质瘤（接触石棉后并发的一种少见的肿瘤）的最早特征。
 								</p>
 								<p>
-									It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+									石棉沉着病是由于在开采，加工，制造，使用（如作绝热用）或运输石棉制品中长期吸入石棉粉尘（含各种化学成分的纤维矿物硅酸盐）所引起。肺癌和间皮瘤的危险性与接触石棉纤维的累积时间有关。石棉有促进致癌的作用，但不是致癌始动剂。吸烟的石棉沉着病患者中肺癌的发生率增加，并有剂量-反应的关系。
 								</p>
 								<blockquote>
 									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros amet sollicitudin interdum. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit. Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										石棉沉着病患者早期可无症状及X线改变，或者仅有活动后气短。
+隐匿症状出现多在接触粉尘7～10年以上，但少数也有仅在接触粉尘后1年左右即出现症状。石棉沉着病典型症状为缓慢出现、逐渐加重的呼吸困难，早期以劳力性为主，严重程度与接触粉尘的时间和浓度有关。一般为干咳，严重吸烟者咳嗽往往较重，且伴有黏液痰。胸痛往往较轻，常为背部或胸骨后钝痛，咯血较少见，如合并肿瘤可发生咯血，合并感染时有发热、咳脓痰。
 									</p>
 								</blockquote>
 								<p>
-									It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+									如何诊断是否为石棉沉着病呢？有石棉接触史的患者，根据其胸部X线或者CT检查所见的特征性改变，可以作出石棉沉着病的诊断。通常患者亦存在肺功能异常，听诊时可闻及啰喑。石棉沉着病的诊断必须进行活组织检查（取小块胸膜进行显微镜检查）。
 								</p>
-								<div class="row">
+								<p>
+									石棉沉着病的治疗主要是缓解症状，如采用氧疗或抽吸胸腔积液缓解呼吸困难等。有时，肺移植可成功地治疗石棉沉着病。如合并有胸膜间皮瘤，均为恶性，根据疾病分期，除适合手术切除的部分肿瘤患者外，其他患者可选择进行化疗和放疗。
+								</p>
+								<p>对于预防和缓解石棉病可采取：<br>
+									1.工艺改革、革新生产设备：是消除粉尘危害的主要途径。<br>
+									2.密闭、抽风、除尘：对不能采取湿式作业的场所，应采用密闭抽风除尘办法，防止粉尘飞扬。<br>
+									3.个人防护：佩戴防尘护具，如防尘安全帽、送风头盔、送风口罩等。<br>
+									食疗：多吃蔬菜和水果，例如猪血、雪梨、百合、西兰花、蜂蜜等清肺的食物，避免肥甘油腻等食物的摄入，避免辛辣刺激食物、烟酒、咖啡、浓茶等的刺激。有助于改善身体不适状况。
+									医用药物：克矽平、汉防己甲素，中药，也可在临床医生具体指导下用些汉防已甲素，羟基哌哇，磷酸哌哇等。
+									平时要多加锻炼。
+							    </p>
+								<!--<div class="row">
 									<div class="col-sm-6 col-xs-12">
 										<ul class="list-unstyled list-style-3">
 											<li>合格的医生队伍</li>
@@ -185,7 +214,7 @@
 											<li>价格便宜</li>
 										</ul>
 									</div>
-								</div>
+								</div>-->
 							</div>
 						</div>
 					</article>
@@ -212,10 +241,10 @@
 								<p class="designation">患病十年</p>
 								<p class="divider"><i class="fa fa-plus-square"></i></p>
 								<p>
-									Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the with the release of Letraset sheets Lorem Ipsum passages.
+									
 								</p>
 							</div>
-							<a href="doctor-profile.html" class="btn btn-secondary text-uppercase">预约</a>
+							<!-- <a href="doctor-profile.html" class="btn btn-secondary text-uppercase">预约</a> -->
 						</div>
 					</li>
 					<!-- End Doctor Bio #1 -->
@@ -237,10 +266,10 @@
 								<p class="designation">二十年病龄</p>
 								<p class="divider"><i class="fa fa-plus-square"></i></p>
 								<p>
-									Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the with the release of Letraset sheets Lorem Ipsum passages.
+									
 								</p>
 							</div>
-							<a href="doctor-profile.html" class="btn btn-secondary text-uppercase">预约</a>
+							<!-- <a href="doctor-profile.html" class="btn btn-secondary text-uppercase">预约</a> -->
 						</div>
 					</li>
 					<!-- End Doctor Bio #2 -->
@@ -258,14 +287,14 @@
 								</div>
 							</div>
 							<div class="inner">
-								<h4>Dr. Tom Smith Bert</h4>
-								<p class="designation">Cardiac Clinic, Health Care</p>
+								<h4>某某</h4>
+								<p class="designation"></p>
 								<p class="divider"><i class="fa fa-plus-square"></i></p>
 								<p>
-									Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the with the release of Letraset sheets Lorem Ipsum passages.
+									
 								</p>
 							</div>
-							<a href="doctor-profile.html" class="btn btn-secondary text-uppercase">Book An Appointment</a>
+							<!-- <a href="doctor-profile.html" class="btn btn-secondary text-uppercase">Book An Appointment</a> -->
 						</div>
 					</li>
 					<!-- End Doctor Bio #3 -->
@@ -273,15 +302,15 @@
 				<!-- End Department Doctors Area -->
 				<!-- Start Appointment Area -->
 				<div class="comment-form">
-					<h4 class="main-heading2"><i class="fa fa-pencil-square-o"></i>预约申请</h4>
+					<h4 class="main-heading2"><i class="fa fa-pencil-square-o"></i>相关评论</h4>
 					<form method="post" action="#">
 						<div class="row">
-							<div class="col-md-6 col-xs-12">
+							<!--<div class="col-md-6 col-xs-12">
 								<div class="form-group">
 									<input type="text" class="form-control no-border-radius" placeholder="Full Name *" required>
 								</div>
-							</div>
-							<div class="col-md-6 col-xs-12">
+							</div>-->
+							<!--<div class="col-md-6 col-xs-12">
 								<div class="form-group">
 									<input type="text" class="form-control no-border-radius" placeholder="Your Phone *" required>
 								</div>
@@ -290,12 +319,12 @@
 								<div class="form-group">
 									<input type="text" class="form-control no-border-radius" placeholder="Your Address *" required>
 								</div>
-							</div>
-							<div class="col-md-6 col-xs-12">
+							</div>-->
+							<!--<div class="col-md-6 col-xs-12">
 								<div class="form-group">
 									<input type="text" class="form-control no-border-radius" placeholder="Email Address *" required>
 								</div>
-							</div>
+							</div>-->
 							<div class="col-xs-12">
 								<div class="form-group">
 									<textarea class="form-control no-border-radius" rows="5" placeholder="Message"></textarea>
@@ -338,15 +367,16 @@
 				<h4 class="side-heading1">
 					<span class="hidden-sm">Opening </span>Hours
 				</h4>
-				<ul class="list-unstyled list-style-2">
+				<!-- <ul class="list-unstyled list-style-2">
 					<li>Mon - Fri 09:00 - 18:00</li>
 					<li>Saturday 09:00 - 15:00</li>
 					<li>Sunday 09:00 - 12:00</li>
 					<li>Holidays Closed</li>
-				</ul>
+				</ul> -->
+				<img src="D:\养益生\5aa08568af1a04\5aa08568af1a4\img\run.jpg">
 				<!-- End Opening Hours -->
 				<!-- Start Testimonials -->
-				<h4 class="side-heading1">Testimonials</h4>
+				<h4 class="side-heading1">评论区</h4>
 				<div id="testimonial-carousel" class="testimonial-box carousel" data-ride="carousel">
 					<!-- Start Testimonial Titles -->
 					<ol class="carousel-indicators">
@@ -361,33 +391,33 @@
 						<!-- Start Tab #1 -->
 						<div class="item active">
 							<blockquote>
-								Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dol or id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit ...
+								网站简洁明了...
 							</blockquote>
 							<div class="quote-footer">
-								Jeniffier Barter<br>
-								<span>Female, 45 Years</span>
+								张扬<br>
+								<span>男, 45岁</span>
 							</div>
 						</div>
 						<!-- End Tab #1 -->
 						<!-- Start Tab #2 -->
 						<div class="item">
 							<blockquote>
-								Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dol or id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit ...
+								可以轻而易举的了解到具体病症及如何诊断...
 							</blockquote>
 							<div class="quote-footer">
-								Sam Armstrong<br>
-								<span>Male, 36 Years</span>
+								刘倩<br>
+								<span>女, 36岁</span>
 							</div>
 						</div>
 						<!-- End Tab #2 -->
 						<!-- Start Tab #3 -->
 						<div class="item">
 							<blockquote>
-								Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dol or id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit ...
+								给出的建议十分有效，有效的缓解了病情，也起到了一定预防作用...
 							</blockquote>
 							<div class="quote-footer">
-								Julia Hotter<br>
-								<span>Female, 29 Years</span>
+								叶游<br>
+								<span>男, 29岁</span>
 							</div>
 						</div>
 						<!-- Start Tab #3 -->
@@ -407,8 +437,8 @@
 				<div class="row">
 					<!-- Start Information Area -->
 					<div class="col-md-3 col-sm-4 col-xs-6">
-						<h4>Information</h4>
-						<p>Lorem Ipsum passages, and more recently with desktop publishing ...</p>
+						<h4>信息</h4>
+						<p>养益生，养一生……</p>
 						<ul class="list-unstyled address-list">
 							<li class="clearfix">
 								<i class="fa fa-phone"></i>
@@ -420,66 +450,66 @@
 							</li>
 							<li class="clearfix address">
 								<i class="fa fa-map-marker"></i>
-								221B Baker Street, London, UK
+								河北师范大学, 石家庄, 河北
 							</li>
 							<li class="clearfix">
 								<i class="fa fa-calendar"></i>
-								Mon - Sat 9:00 - 20:00
+								周一 — 周五 9:00 - 20:00
 							</li>
 						</ul>
 					</div>
 					<!-- End Information Area -->
 					<!-- Start Services Area -->
 					<div class="col-md-3 col-sm-4 col-xs-6">
-						<h4>Services</h4>
+						<h4>职业病</h4>
 						<ul class="list-unstyled">
-							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> Pediatric Clinic</a></li>
-							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> Diagnosis Clinic</a></li>
-							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> Cardiac Clinic</a></li>
-							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> Dental Clinic</a></li>
-							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> Gynecological Clinic</a></li>
-							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> Psychological</a></li>
+							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 尘肺</a></li>
+							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 职业性放射病</a></li>
+							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 职业中毒</a></li>
+							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 物理因素职业病</a></li>
+							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 职业性皮肤病</a></li>
+							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 职业性耳鼻喉疾病</a></li>
 						</ul>
 					</div>
 					<!-- End Services Area -->
 					<!-- Start Testimonials Area -->
 					<div class="col-md-3 col-sm-4 col-xs-12 hidden-xs">
-						<h4>Testimonials</h4>
+						<h4>资讯</h4>
 						<ul class="list-unstyled tweets-list">
 							<li>
 								<i class="fa fa-comments"></i>
-								John Doe on
-								<p>Lorem Ipsum passages ...</p>
+								职业病患者九成是尘肺
+								<p>尘肺、慢性中毒...</p>
 							</li>
 							<li>
 								<i class="fa fa-comments"></i>
-								John Doe on
-								<p>Lorem Ipsum passages ...</p>
+								教师面临10大压力
+								<p>76.9%的教师感觉压力大 ...</p>
 							</li>
 							<li>
 								<i class="fa fa-comments"></i>
-								John Doe on
-								<p>Lorem Ipsum passages ...</p>
+								职业病要怎么预防呢？
+								<p>1.设立职业危害管理机构 ...</p>
 							</li>
 							<li>
 								<i class="fa fa-comments"></i>
-								John Doe on
-								<p>Lorem Ipsum passages ...</p>
+								职业病有哪些症状呢？
+								<p>职业病一般是由于接触职业性 ...</p>
 							</li>
 						</ul>
 					</div>
 					<!-- End Testimonials Area -->
 					<!-- Start Newsletter Area -->
 					<div class="col-md-3 col-sm-12 col-xs-12 newsletter-block">
-						<h4>Newsletter</h4>
+						<h4>通讯</h4>
 						<form action="#" class="newsletter">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Enter Your Name">
+								<input type="text" class="form-control" placeholder="输入你的名字">
 							</div>
 							<div class="form-group">
-								<input type="email" class="form-control" placeholder="Enter Your E-Mail">
+								<input type="email" class="form-control" placeholder="输入你的邮箱">
 							</div>
-							<button type="submit" class="btn btn-lg btn-block btn-secondary">Submit</button>
+							<button type="submit" class="btn btn-lg btn-block btn-secondary">提交</button>
 						</form>
 					</div>
 					<!-- End Newsletter Area -->
@@ -490,12 +520,12 @@
 		<div class="copyright">
 			<div class="container clearfix">
 				<p class="pull-left">
-					&copy; 2018 <span>MedLine</span>. AlL Rights Reserved
+					&copy; 2018 <span>养益生</span>. 版权所有
 				</p>
 				<ul class="list-unstyled list-inline pull-right">
-					<li><a href="#">Terms Of Services</a></li>
-					<li><a href="#">Privacy Policy</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
+					<li><a href="#">服务条款</a></li>
+					<li><a href="#">隐私政策</a></li>
+					<li><a href="contact.html">联系我们</a></li>
 				</ul>
 			</div>
 		</div>

@@ -61,7 +61,7 @@
 body {
     font: 14px/24px 'Roboto', Arial, Helvetica, sans-serif;
     color: #232323;
-    background: #fff;
+    background: #FAFAFA;
 }
 a {
     color: #009bdb;
@@ -654,6 +654,7 @@ header {
     margin-top: 60px;
     margin-bottom: 60px;
 }
+
 
 /*--------------------------------------------
 7. Notification Boxes Styles
