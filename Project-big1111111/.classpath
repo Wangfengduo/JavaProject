@@ -13,5 +13,42 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/classmate-1.3.0.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/commons-fileupload-1.3.2.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/commons-io-2.5.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/hibernate-commons-annotations-5.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/hibernate-core-5.2.10.Final.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/jandex-2.0.3.Final.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/javassist-3.20.0-GA.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/jboss-logging-3.3.0.Final.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/jboss-transaction-api_1.2_spec-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/jstl.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/mysql-connector-java-5.1.7-bin.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/spring-aop-4.3.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/spring-aspects-4.3.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/spring-beans-4.3.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/spring-context-4.3.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/spring-context-support-4.3.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/spring-core-4.3.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/spring-expression-4.3.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/spring-instrument-4.3.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/spring-instrument-tomcat-4.3.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/spring-jdbc-4.3.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/spring-jms-4.3.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/spring-messaging-4.3.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/spring-orm-4.3.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/spring-oxm-4.3.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/spring-test-4.3.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/spring-tx-4.3.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/spring-web-4.3.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/spring-webmvc-4.3.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/spring-webmvc-portlet-4.3.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/spring-websocket-4.3.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/standard.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/validation-api-1.1.0.Final-sources.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
