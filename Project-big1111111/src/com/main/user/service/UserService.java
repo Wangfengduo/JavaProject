@@ -53,6 +53,15 @@ public class UserService {
 			return "no1";
 		}
 	}
+	
+	////根据用户名查找用户信息
+	public boolean getSome(HttpSession session) {
+		String name = (String) session.getAttribute("name");
+		User user = userDao.getSome(name);
+		session.setAttribute("user", user);
+		return true;
+	}
+	
 	//修改密码
 	public String changePwd(HttpSession session,String password,String newpassword,String newpwd) {
 		String name=(String) session.getAttribute("name");
