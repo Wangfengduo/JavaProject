@@ -1,5 +1,8 @@
 package com.main.user.action;
 
-public class UserAction {
+import org.springframework.stereotype.Controller;
 
+@Controller
+public class UserAction {
+	
 }

@@ -50,5 +50,7 @@
 	<classpathentry kind="lib" path="D:/Java/jarbao/spring-websocket-4.3.7.RELEASE.jar"/>
 	<classpathentry kind="lib" path="D:/Java/jarbao/standard.jar"/>
 	<classpathentry kind="lib" path="D:/Java/jarbao/validation-api-1.1.0.Final-sources.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/java mail/activation.jar"/>
+	<classpathentry kind="lib" path="D:/Java/jarbao/java mail/mail.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
