@@ -13,6 +13,46 @@
 		<link rel="stylesheet" href="css1/font-awesome.min.css" />
 </head>
 <body>
+<script type="text/javascript">
+function check(){
+    //判断密码
+    var password_ = /^[a-zA-Z_0-9]{3,10}$/;
+    //判断电话号码
+    var telephone_ = /\d{11}/;
+    //判断邮箱
+    var email_ = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;    
+    
+    //获得input对象
+    var username = document.getElementById("name");
+    var password = document.getElementById("password");
+    var email = document.getElementById("mail");
+    var telephone = document.getElementById("phone");
+    
+     if(username == null || username.value == ""){
+        alert("用户名不能为空");
+         return false;
+     } else if(password == null || password.value == ""){
+        alert("密码不能为空");
+         return false;
+     }else if(password.value.match(password_) == null){
+        alert("密码长度为3-10位");
+        return false;
+     }else if(email == null || email.value == ""){
+        alert("email不能为空");
+         return false; 
+     }else if(email.value.match(email_) == null){
+        alert("您输入的邮箱格式不正确");
+        return false;
+     }else if(telephone == null || telephone.vlaue == ""){
+        alert("电话号码不能为空");
+        return false;
+     }else if(telephone.value.match(telephone_) == null){
+        alert("您输入的电话号码无效");
+        return false;
+    }
+     return true;
+}
+</script>
 
 
 		<div class="wrap login_wrap">
@@ -26,7 +66,7 @@
 						<div class="login_title">
 							注册
 						</div>
-						<form:form action="${ctx}/user/register" method="post">
+						<form:form action="${ctx}/user/register" method="post" onsubmit="return check();">
 							<div class="form_text_ipt">
 								<input id ="name" name="name" type="text" placeholder="用户名">
 							</div>
