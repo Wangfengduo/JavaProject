@@ -1,0 +1,662 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<title>养益生</title>
+	<!-- Bootstrap CSS -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Font Awesome CSS -->
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+	<!-- FlatIcons CSS -->
+	<link href="assets/css/flaticon.css" rel="stylesheet">
+	<!-- Camera Slider CSS -->
+	<link href="assets/js/plugins/camera/css/camera.css" rel="stylesheet">
+	<!-- Magnific Popup CSS -->
+	<link href="assets/js/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+	<!-- Main CSS -->
+	<link href="assets/css/style.css" rel="stylesheet">
+	<!-- Responsive CSS -->
+	<link href="assets/css/responsive.css" rel="stylesheet">
+	<!-- Favicon File -->
+	
+	<!-- Google Web Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,100italic,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]><script src="assets/js/html5shiv.min.js"></script><script src="assets/js/respond.min.js"></script><![endif]-->
+</head>
+<body>
+
+     
+
+	<!-- Start Page Preloader -->
+	<div id="loading">
+		<div id="loading-center">
+			<div id="loading-center-absolute">
+				<div class="object" id="object_four"></div>
+				<div class="object" id="object_three"></div>
+				<div class="object" id="object_two"></div>
+				<div class="object" id="object_one"></div>
+			</div>
+		</div>
+	</div>
+	<!-- End Page Preloader -->
+	<!-- Start Header Area -->
+	<header class="main-header">
+		<div class="container container-relative">
+			<!-- Start TopBar Area -->
+			<div class="top-bar hidden-sm hidden-xs">
+				<div class="row">
+					<div class="col-sm-9 col-xs-12">
+						<span class="top-info"><i class="fa fa-phone"></i></span>+1 888 888 8888
+						<span class="top-info"><i class="fa fa-envelope-o"></i></span>info@yoursite.com
+						<span class="top-info"><i class="fa fa-map-marker"></i></span>河北师范大学, 石家庄, 河北
+						<span class="top-info"><i class="fa fa-calendar"></i></span>周一 — 周五 9:00 - 20:00
+					</div>
+					<div class="col-sm-3 col-xs-12">
+						<ul class="list-unstyled list-inline">
+							<!-- <li><a href="#"><i class="fa fa-qq"></i></a></li>
+							<li><a href="#"><i class="fa fa-wechat"></i></a></li> -->
+							<li><a href="login.html">登录</a></li>
+							<li><a href="register.html">注册</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- End TopBar Area -->
+			<!-- Start NavBar Area -->
+			<nav id="nav" class="navbar navbar-default navbar-static-top affix-top">
+				<div class="container">
+					<div class="navbar-header">
+						<!-- Start Collapse Button -->
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- End Collapse Button -->
+						<!-- Start Website Logo -->
+						<a href="index.html" class="navbar-brand">
+							<img src="assets/images/logo.png" class="logo" alt="Logo"> 养<span>益生</span>
+						</a>
+						<!-- End Website Logo -->
+					</div>
+					<!-- Start Menu Area -->
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav navbar-right">
+							<li class="active"><a href="index.html">主页</a></li>
+							
+							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">职业病</a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="services.html">职业病</a></li>
+										<li><a href="department-single.html">具体类别</a></li>
+								</ul>
+							</li>
+							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">新闻</a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="news.html">新闻</a></li>
+									<li><a href="news-single.html">单个新闻</a></li>
+								</ul>
+							</li>
+							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">网页</a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="faqs.html">常见问题</a></li>
+									<li><a href="404.html">404页</a></li>
+								</ul>
+							</li>
+							<li><a href="contact.html">联系我们</a></li>
+							<li class="dropdown" style="
+  			  						height: 50px;
+    								border-top-width: 10px;
+								    margin-top: 10px;
+								    margin-bottom: 0px;
+								    ">
+								<input type="text" name="search" ></input>
+							</li>
+							<li class="dropdown" style="margin-top: 10px;margin-left: 1px;"><input type="button" value="搜索"></li>
+						</ul>
+					</div>
+					<!-- Start Menu Area -->
+				</div>
+			</nav>
+			<!-- End NavBar Area -->
+		</div>
+	</header>
+	<!-- End Header Area -->
+	<!-- Start Slider Area -->
+	<section class="slider clearfix">
+		<div id="camera_wrap_1" class="camera_wrap camera_white_skin">
+			<!-- Start Slide #1 -->
+			<div data-src="assets/images/slider/slider-image-1.jpg">
+				<div class="camera_caption fadeIn hidden-sm hidden-xs">
+					<h2>养益生</h2>
+					<h2>从<span>这里</span>开始</h2>
+					<p>让我们一起珍视你的健康。</p>
+					<a href="services.html" class="btn btn-secondary">阅读更多</a>
+				</div>
+			</div>
+			<!-- End Slide #1 -->
+			<!-- Start Slide #2 -->
+			<div data-src="assets/images/slider/slider-image-2.jpg">
+				<div class="camera_caption fadeIn hidden-sm hidden-xs">
+					<h2>养益生</h2>
+					<h2>从 <span>这里</span> 开始</h2>
+					<p>Lorem Ipsum is simply dummy text printer took a galley of type and scrambled it to make a type specimen book ...</p>
+					<a href="services.html" class="btn btn-secondary">Read More</a>
+				</div>
+			</div>
+			<!-- End Slide #2 -->
+			<!-- Start Slide #3 -->
+			<div data-src="assets/images/slider/slider-image-3.jpg">
+				<div class="camera_caption fadeIn hidden-sm hidden-xs">
+					<h2>Main Heading</h2>
+					<h2>Some Caption <span>Here</span></h2>
+					<p>Lorem Ipsum is simply dummy text printer took a galley of type and scrambled it to make a type specimen book ...</p>
+					<a href="services.html" class="btn btn-secondary">Read More</a>
+				</div>
+			</div>
+			<!-- End Slide #3 -->
+		</div>
+	</section>
+	<!-- End Slider Area -->
+	<!-- Start Main Container Area -->
+	<div class="container main-container">
+		<!-- Start Notification Area -->
+		<div class="notification-boxes row">
+			<!-- Start Box #1 -->
+			<div class="col-md-3 col-sm-6 col-xs-6">
+				<div class="box wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">
+					<i class="fa fa-male"></i>
+					<h4>个人资料</h4>
+					<p>完善您的个人资料，更好的体验我们的服务...</p>
+					<a href="contact.html" class="btn btn-transparent">阅读更多</a>
+				</div>
+			</div>
+			<!-- End Box #1 -->
+			<!-- Start Box #2 -->
+			<div class="col-md-3 col-sm-6 col-xs-6">
+				<div class="box wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+					<i class="fa fa-plus-square"></i>
+					<h4>职业病</h4>
+					<p>我们可以为您提供各种职业病的类型，帮您了解发病的情况...</p>
+					<a href="services.html" class="btn btn-transparent">阅读更多</a>
+				</div>
+			</div>
+			<!-- End Box #2 -->
+			<!-- Start Box #3 -->
+			<div class="col-md-3 col-sm-6 col-xs-6">
+				<div class="box wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1.5s">
+					<i class="fa fa-comments-o"></i>
+					<h4>最新的资讯</h4>
+					<p>我们可以为您提供最新的资讯，让您了解人们的身体状况...</p>
+					<a href="departments.html" class="btn btn-transparent">阅读更多</a>
+				</div>
+			</div>
+			<!-- End Box #3 -->
+			<!-- Start Box #4 -->
+			<div class="col-md-3 col-sm-6 col-xs-6">
+				<div class="box wow fadeInLeft" data-wow-duration="1s" data-wow-delay="2s">
+					<i class="fa fa-question-circle"></i>
+					<h4>常见的问题</h4>
+					<p>您有什么意见或建议，可以通过邮件的方式发送给我们...</p>
+					<a href="news.html" class="btn btn-transparent">阅读更多</a>
+				</div>
+			</div>
+			<!-- End Box #4 -->
+		</div>
+		<!-- End Notification Area -->
+		
+	</div>
+	<!-- End Main Container Area -->
+	<!-- Start Main Container Area -->
+	<div class="container main-container">
+		<!-- Start Services Area -->
+		<section class="medical-services">
+			<h2 class="main-heading1 lite">目前频发的</h2>
+			<h2 class="main-heading2">职业病类</h2>
+			<!-- Start Services List Area -->
+			<ul class="list-unstyled row text-center">
+				<li class="col-md-2 col-sm-4 col-xs-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+					<div class="icon">
+						<img src="assets/images/icons/dental-care.png" alt="Dental Care">
+					</div>
+					<h5>尘肺</h5>
+					<p>有硅肺、煤工业肺等...</p>
+					<a href="department-single.html" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i> 阅读更多</a>
+				</li>
+				<li class="col-md-2 col-sm-4 col-xs-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+					<div class="icon">
+						<img src="assets/images/icons/band-aid.png" alt="First Aid">
+					</div>
+					<h5>职业性放射病</h5>
+					<p>有外照射急性放射病等...</p>
+					<a href="department-single.html" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i> 阅读更多</a>
+				</li>
+				<li class="col-md-2 col-sm-4 col-xs-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+					<div class="icon">
+						<img src="assets/images/icons/pharmacy.png" alt="Pharmacy">
+					</div>
+					<h5>职业中毒</h5>
+					<p>有铅及其化合物中毒等...</p>
+					<a href="department-single.html" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i> 阅读更多</a>
+				</li>
+				<li class="col-md-2 col-sm-4 col-xs-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="1s">
+					<div class="icon">
+						<img src="assets/images/icons/doctors.png" alt="Doctors">
+					</div>
+					<h5>物理因素职业病</h5>
+					<p>有中暑、减压病等...</p>
+					<a href="department-single.html" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i> 阅读更多</a>
+				</li>
+				<li class="col-md-2 col-sm-4 col-xs-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
+					<div class="icon">
+						<img src="assets/images/icons/pulmonary.png" alt="Pulmonary">
+					</div>
+					<h5>职业性皮肤病</h5>
+					<p>有接触性皮炎等...</p>
+					<a href="department-single.html" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i> 阅读更多</a>
+				</li>
+				<li class="col-md-2 col-sm-4 col-xs-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="1.5s">
+					<div class="icon">
+						<img src="assets/images/icons/ambulance.png" alt="Ambulance">
+					</div>
+					<h5>职业性耳鼻喉疾病</h5>
+					<p>有噪声聋、铬鼻病等...</p>
+					<a href="department-single.html" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i> 阅读更多</a>
+				</li>
+			</ul>
+			<!-- End Services List Area -->
+		</section>
+		<!-- End Services Area -->
+		<div class="row">
+			<!-- Start Latest News Area -->
+			<section class="col-md-8 col-sm-12 col-xs-12">
+				<div class="main-block1">
+					<h2 class="main-heading1 lite">最新</h2>
+					<h2 class="main-heading2">资讯 </h2>
+					<!-- Start News Carousel -->
+					<div id="news-carousel" class="news-carousel carousel slide" data-ride="carousel">
+						<div class="carousel-inner">
+							<!-- Start News Slide #1 -->
+							<div class="item active">
+								<div class="row">
+									<!-- Start News #1 -->
+									<div class="col-md-6 col-sm-6 col-xs-6">
+										<div class="news-post-box">
+											<img src="assets/images/news-thumb-image-1.jpg" alt="Latest News" class="img-responsive img-center-sm img-center-xs">
+											<div class="inner">
+												<h5><a href="#">职业病患者九成是尘肺</a></h5>
+												<ul class="list-unstyled list-inline post-meta">
+													<li><i class="fa fa-calendar"></i> 2010,7,21</li>
+													<li><a href="#"><i class="fa fa-comments-o"></i> 10</a></li>
+												</ul>
+												<p>本报讯记者从市卫生局获悉，尘肺、慢性中毒、急性中毒是本市职业病主要病种，其中尘肺病最为突出，占近三年职业病发病人数的91．0％。....</p>
+												<a href="news-single.html" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i>阅读更多</a>
+											</div>
+										</div>
+									</div>
+									<!-- End News #1 -->
+									<!-- Start News #2 -->
+									<div class="col-md-6 col-sm-6 col-xs-6">
+										<div class="news-post-box">
+											<img src="assets/images/news-thumb-image-2.jpg" alt="Latest News" class="img-responsive img-center-sm img-center-xs">
+											<div class="inner">
+												<h5><a href="#">教师面临10大压力 51%教师患职业病 </a></h5>
+												<ul class="list-unstyled list-inline post-meta">
+													<li><i class="fa fa-calendar"></i> 2010,8,12</li>
+													<li><a href="#"><i class="fa fa-comments-o"></i> 10</a></li>
+												</ul>
+												<p>近一年来，调查人员对重庆市500余名一线教师进行了详细调查，结果发现76.9%的教师感觉压力大，37%的教师产生职业倦怠....</p>
+												<a href="news-single.html" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i>阅读更多</a>
+											</div>
+										</div>
+									</div>
+									<!-- Start News #2 -->
+								</div>
+							</div>
+							<!-- End News Slide #1 -->
+							<!-- Start News Slide #2 -->
+							<div class="item">
+								<div class="row">
+									<!-- Start News #3 -->
+									<div class="col-md-6 col-sm-6 col-xs-6">
+										<div class="news-post-box">
+											<img src="assets/images/news-thumb-image-3.jpg" alt="Latest News" class="img-responsive img-center-sm img-center-xs">
+											<div class="inner">
+												<h5><a href="#">Latest News Post Heading</a></h5>
+												<ul class="list-unstyled list-inline post-meta">
+													<li><i class="fa fa-calendar"></i> Sept 25, 2015</li>
+													<li><a href="#"><i class="fa fa-comments-o"></i> 10</a></li>
+												</ul>
+												<p>Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker....</p>
+												<a href="news-single.html" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i>阅读更多</a>
+											</div>
+										</div>
+									</div>
+									<!-- End News #3 -->
+									<!-- Start News #4 -->
+									<div class="col-md-6 col-sm-6 col-xs-6">
+										<div class="news-post-box">
+											<img src="assets/images/news-thumb-image-4.jpg" alt="Latest News" class="img-responsive img-center-sm img-center-xs">
+											<div class="inner">
+												<h5><a href="#">Latest Tip Post Heading</a></h5>
+												<ul class="list-unstyled list-inline post-meta">
+													<li><i class="fa fa-calendar"></i> Sept 15, 2015</li>
+													<li><a href="#"><i class="fa fa-comments-o"></i> 10</a></li>
+												</ul>
+												<p>Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker....</p>
+												<a href="news-single.html" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i>阅读更多</a>
+											</div>
+										</div>
+									</div>
+									<!-- Start News #4 -->
+								</div>
+							</div>
+							<!-- End News Slide #2 -->
+						</div>
+						<!-- Start News Carousel Controls Area -->
+						<a class="left carousel-control" href="#news-carousel" role="button" data-slide="prev">
+							<span class="fa fa-angle-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#news-carousel" role="button" data-slide="next">
+							<span class="fa fa-angle-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+						<!-- Start News Carousel Controls Area -->
+					</div>
+					<!-- End News Carousel -->
+				</div>
+			</section>
+			<!-- End Latest News Area -->
+			<!-- Start Department Area -->
+			<aside class="col-md-4 col-sm-12 col-xs-12">
+				<div class="main-block1">
+					<h2 class="main-heading1 lite">贴心</h2>
+					<h2 class="main-heading2">小提示</h2>
+					<!-- Start Accordion Area -->
+					<div class="panel-group" id="accordion">
+						<!-- Start Accordion #1 -->
+						<div class="panel">
+							<!-- Start Accordion #1 Heading -->
+							<div class="panel-heading">
+								<h5 class="panel-title">
+									<i class="icon fa fa-tag"></i>
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">尘肺</a>
+								</h5>
+							</div>
+							<!-- End Accordion #1 Heading -->
+							<!-- Start Accordion #1 Body -->
+							<div id="collapse1" class="panel-collapse collapse in">
+								<div class="panel-body">
+									<p>尘肺是一种严重危害人们身心健康的职业病，怎么预防尘肺病直接关系到患者能够健康的生活，一起来了解一下 ...</p>
+									<a href="department-single.html" class="btn btn-sm btn-transparent inverse">更多</a>
+								</div>
+							</div>
+							<!-- End Accordion #1 Body -->
+						</div>
+						<!-- End Accordion #1 -->
+						<!-- Start Accordion #2 -->
+						<div class="panel">
+							<!-- Start Accordion #2 Heading -->
+							<div class="panel-heading">
+								<h5 class="panel-title">
+									<i class="icon fa fa-tag"></i>
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">职业性放射病</a>
+								</h5>
+							</div>
+							<!-- End Accordion #2 Heading -->
+							<!-- Start Accordion #2 Body -->
+							<div id="collapse2" class="panel-collapse collapse">
+								<div class="panel-body">
+									<p>放射性疾病是由电离辐射照射机体引起的一系列疾病。职业性放射性疾病的危害有 ...</p>
+									<a href="department-single.html" class="btn btn-sm btn-transparent inverse">更多</a>
+								</div>
+							</div>
+							<!-- End Accordion #2 Body -->
+						</div>
+						<!-- End Accordion #2 -->
+						<!-- Start Accordion #3 -->
+						<div class="panel">
+							<!-- Start Accordion #3 Heading -->
+							<div class="panel-heading">
+								<h5 class="panel-title">
+									<i class="icon fa fa-tag"></i>
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">职业中毒</a>
+								</h5>
+							</div>
+							<!-- End Accordion #3 Heading -->
+							<!-- Start Accordion #3 Body -->
+							<div id="collapse3" class="panel-collapse collapse">
+								<div class="panel-body">
+									<p>职业中毒是指劳动者在生产劳动过程中由于接触生产性毒物引起的中毒。生产性毒物是指生产过程中产生的，存在于 ...</p>
+									<a href="department-single.html" class="btn btn-sm btn-transparent inverse">更多</a>
+								</div>
+							</div>
+							<!-- End Accordion #3 Body -->
+						</div>
+						<!-- End Accordion #3 -->
+						<!-- Start Accordion #4 -->
+						<div class="panel">
+							<!-- Start Accordion #4 Heading -->
+							<div class="panel-heading">
+								<h5 class="panel-title">
+									<i class="icon fa fa-tag"></i>
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse4">物理因素职业病</a>
+								</h5>
+							</div>
+							<!-- Start Accordion #4 Body -->
+							<div id="collapse4" class="panel-collapse collapse">
+								<div class="panel-body">
+									<p>物理因素职业病是由物理条件产生的疾病，物理因素包括: 气象条件(气温、气湿、气流、气压) ;噪声;振动;电磁辐射等问题 ...</p>
+									<a href="department-single.html" class="btn btn-sm btn-transparent inverse">更多</a>
+								</div>
+							</div>
+							<!-- End Accordion #4 Body -->
+						</div>
+						<!-- End Accordion #4 -->
+						<!-- Start Accordion #5 -->
+						<div class="panel">
+							<!-- Start Accordion #5 Heading -->
+							<div class="panel-heading">
+								<h5 class="panel-title">
+									<i class="icon fa fa-tag"></i>
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse5">职业性皮肤病</a>
+								</h5>
+							</div>
+							<!-- End Accordion #5 Heading -->
+							<!-- Start Accordion #5 Body -->
+							<div id="collapse5" class="panel-collapse collapse">
+								<div class="panel-body">
+									<p>由于职业性因素（化学、物理、生物的）引起的皮肤及其附属器的疾病，应通过调查搞清职业性有害因素，改革生产设备，实现机械化 、密闭化 ，避免接触有害因素  ...</p>
+									<a href="department-single.html" class="btn btn-sm btn-transparent inverse">更多</a>
+								</div>
+							</div>
+							<!-- End Accordion #5 Body -->
+						</div>
+						<!-- End Accordion #5 -->
+						<!-- Start Accordion #6 -->
+						<div class="panel">
+							<!-- Start Accordion #6 Heading -->
+							<div class="panel-heading">
+								<h5 class="panel-title">
+									<i class="icon fa fa-tag"></i>
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse6">职业性耳鼻喉疾病</a>
+								</h5>
+							</div>
+							<!-- End Accordion #6 Heading -->
+							<!-- Start Accordion #6 Body -->
+							<div id="collapse6" class="panel-collapse collapse">
+								<div class="panel-body">
+									<p>职业性耳鼻喉病的有多种病因，发病率在多个职业均有发生，那么如何更好的预防它呢 ...</p>
+									<a href="department-single.html" class="btn btn-sm btn-transparent inverse">更多</a>
+								</div>
+							</div>
+							<!-- End Accordion #6 Body -->
+						</div>
+						<!-- End Accordion #6 -->
+						<!-- Start Accordion #7 -->
+						<div class="panel">
+							<!-- Start Accordion #7 Heading -->
+							<div class="panel-heading">
+								<h5 class="panel-title">
+									<i class="icon fa fa-tag"></i>
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse7">其他</a>
+								</h5>
+							</div>
+							<!-- End Accordion #7 Heading -->
+							<!-- Start Accordion #7 Body -->
+							<div id="collapse7" class="panel-collapse collapse">
+								<div class="panel-body">
+									<p>了解更多其他职业病病种，做出及时的预防措施，保护你们的身体健康 ...</p>
+									<a href="department-single.html" class="btn btn-sm btn-transparent inverse">更多</a>
+								</div>
+							</div>
+							<!-- End Accordion #7 Body -->
+						</div>
+						<!-- End Accordion #7 -->
+					</div>
+					<!-- End Accordion Area -->
+				</div>
+			</aside>
+			<!-- End Department Area -->
+		</div>
+	</div>
+	<!-- End Main Container Area -->
+	<!-- Start Footer Area -->
+	<footer class="main-footer">
+		<div class="footer-area">
+			<div class="container">
+				<div class="row">
+					<!-- Start Information Area -->
+					<div class="col-md-3 col-sm-4 col-xs-6">
+						<h4>信息</h4>
+						<p>养益生，养一生 ...</p>
+						<ul class="list-unstyled address-list">
+							<li class="clearfix">
+								<i class="fa fa-phone"></i>
+								+1 888 888 8888
+							</li>
+							<li class="clearfix">
+								<i class="fa fa-envelope-o"></i>
+								info@yoursite.com
+							</li>
+							<li class="clearfix address">
+								<i class="fa fa-map-marker"></i>
+								河北师范大学, 石家庄, 河北
+							</li>
+							<li class="clearfix">
+								<i class="fa fa-calendar"></i>
+								周一 — 周五 9:00 - 20:00
+							</li>
+						</ul>
+					</div>
+					<!-- End Information Area -->
+					<!-- Start Services Area -->
+					<div class="col-md-3 col-sm-4 col-xs-6">
+						<h4>职业病</h4>
+						<ul class="list-unstyled">
+							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 尘肺</a></li>
+							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 职业性放射病</a></li>
+							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 职业中毒</a></li>
+							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 物理因素职业病</a></li>
+							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 职业性皮肤病</a></li>
+							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 职业性耳鼻喉疾病</a></li>
+						</ul>
+					</div>
+					<!-- End Services Area -->
+					<!-- Start Testimonials Area -->
+					<div class="col-md-3 col-sm-4 col-xs-12 hidden-xs">
+						<h4>资讯</h4>
+						<ul class="list-unstyled tweets-list">
+							<li>
+								<i class="fa fa-comments"></i>
+								职业病患者九成是尘肺
+								<p>尘肺、慢性中毒、...</p>
+							</li>
+							<li>
+								<i class="fa fa-comments"></i>
+								教师面临10大压力
+								<p>76.9%的教师感觉压力大 ...</p>
+							</li>
+							<li>
+								<i class="fa fa-comments"></i>
+								John Doe on
+								<p>Lorem Ipsum passages ...</p>
+							</li>
+							<li>
+								<i class="fa fa-comments"></i>
+								John Doe on
+								<p>Lorem Ipsum passages ...</p>
+							</li>
+						</ul>
+					</div>
+					<!-- End Testimonials Area -->
+					<!-- Start Newsletter Area -->
+					<div class="col-md-3 col-sm-12 col-xs-12 newsletter-block">
+						<h4>通讯</h4>
+						<form action="#" class="newsletter">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="输入你的名字">
+							</div>
+							<div class="form-group">
+								<input type="email" class="form-control" placeholder="输入你的邮箱">
+							</div>
+							<button type="submit" class="btn btn-lg btn-block btn-secondary">提交</button>
+						</form>
+					</div>
+					<!-- End Newsletter Area -->
+				</div>
+			</div>
+		</div>
+		<!-- Start Copyright Area -->
+		<div class="copyright">
+			<div class="container clearfix">
+				<p class="pull-left">
+					&copy; 2018 <span>养益生</span>. 版权所有
+				</p>
+				<ul class="list-unstyled list-inline pull-right">
+					<li><a href="#">服务条款</a></li>
+					<li><a href="#">隐私政策</a></li>
+					<li><a href="contact.html">联系我们</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- End Copyright Area -->
+	</footer>
+	<!-- End Footer Area -->
+	<!-- Start Back To Top Button -->
+	<div id="back-to-top">
+		<a href="#"><i class="fa fa-arrow-up"></i></a>
+	</div>
+	<!-- End Back To Top Button -->
+	<!-- JQuery JS -->
+    <script src="assets/js/jquery.min.js"></script>
+	<!-- JQuery Migrate JS -->
+	<script src="assets/js/jquery-migrate.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="assets/js/bootstrap.min.js"></script>
+	<!-- Slider JS Files -->
+	<script src="assets/js/plugins/camera/js/jquery.mobile.customized.min.js"></script>
+	<script src="assets/js/plugins/camera/js/jquery.easing.js"></script>
+	<script src="assets/js/plugins/camera/js/camera.min.js"></script>
+	<!-- Modernizr JS -->
+	<script src="assets/js/plugins/shuffle/jquery.shuffle.modernizr.min.js"></script>
+	<!-- Popup JS -->
+	<script src="assets/js/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Wow JS -->
+    <script src="assets/js/wow.min.js"></script>
+	<!-- Main JS -->
+	<script src="assets/js/main.js"></script>
+</body>
+</html>

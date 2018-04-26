@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<script type="text/javascript">
+	alert("注册错误!");
+	window.document.location.href="register.jsp";
+</script>
 </body>
 </html>

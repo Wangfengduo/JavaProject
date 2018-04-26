@@ -30,90 +30,27 @@ public class UserService {
 	@Autowired
 	private UserDao userDao;
 	
-	public List<User> findAll(){
-		List<User> list=userDao.select();
-		return list;
+	//登录
+	public User login(String name,String pwd) {
+		User u=this.userDao.findByName(name);
+		if(u!=null) {
+			if(u.getPassword().equals(pwd)) {
+				return u;
+			}else {
+				return null;
+			}
+		}else {
+			return null;
+		}
 	}
+	
 	//注册
-	public boolean register(User user) {
+	public boolean register (User user) {
 		return userDao.insert(user);
 	}
-	//用户名验证
-	public boolean existName(String name) {
-		return userDao.existName(name);
-	}
-	
-	//登录
-	public String login(HttpServletRequest request,String name,String password) {
-		HttpSession session =request.getSession();
-		boolean result =userDao.login(name, password);
-		if(result == true) {
-			return "yes";	
-		}else {
-			return "no1";
-		}
-	}
-	
-	////根据用户名查找用户信息
-	public boolean getSome(HttpSession session) {
-		String name = (String) session.getAttribute("name");
-		User user = userDao.getSome(name);
-		session.setAttribute("user", user);
-		return true;
-	}
-	
-	//修改密码
-	public String changePwd(HttpSession session,String password,String newpassword,String newpwd) {
-		String name=(String) session.getAttribute("name");
-		User user=userDao.getSome(name);
-		if(! user.getPassword().equals(password)) {
-			return "false1";
-		}else if(!newpassword.equals(newpwd)){
-			return "false2";
-		}else {
-			boolean result=userDao.changePwd(user, newpassword);
-			return "true";
-		}
-	}
-	//找回密码
-	public boolean findPassword(String email) {
-		User user=userDao.findPassword(email);
-		if(user != null) {
-			String password1 = user.getPassword();
-			Properties props = new Properties();
-			props.put("mail.smtp.host", "smtp.163.com");
-			//发送邮件协议名称  
-			props.put("mail.transport.protocol", "smtp");
-			// 是否认证 
-			props.put("mail.smtp.auth", true);
-			//创建java程序端与邮件服务器的会话实例
-			Session mailSession =Session.getInstance(props, new Authenticator(){
-				protected PasswordAuthentication getPasswordAuthentication() {
-					return new PasswordAuthentication("javamail5678@163.com","javamail5678sqm");
-				}
-			});
-			try {
-				Message msg= new MimeMessage(mailSession);
-				//设置邮件的发送人
-				msg.setFrom(new InternetAddress("javamail5678@163.com"));
-				//设置邮件的收件人
-				msg.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
-				msg.setSubject("找回密码");
-				msg.setSentDate(new Date());
-				msg.setText("您的密码是："+password1);
-				Transport.send(msg);
-			} catch (AddressException e) {
-				e.printStackTrace();
-			}catch (MessagingException e) {
-				e.printStackTrace();
-			}
-			return true;
-		}else {
-			return false;
-		}
-	}
 	
 	
 	
 	
+
 }

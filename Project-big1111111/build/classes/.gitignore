@@ -1,1 +1,5 @@
 /com/
+/src/
+/dbinfo.properties
+/messages.properties
+/spring-bean.xml
