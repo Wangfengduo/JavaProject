@@ -49,7 +49,20 @@ public class UserService {
 		return userDao.insert(user);
 	}
 	
-	
+	//修改密码
+	public String changePwd(HttpSession session,String password,String newpassword,String newpwd) {
+		String name = (String) session.getAttribute("name");
+		User user = userDao.findByName(name);
+		if(!user.getPassword().equals(password)) {
+			return "false1";
+		}else if(!newpassword.equals(newpwd)){
+			return "false2";
+		}else {
+			@SuppressWarnings("unused")
+			boolean result = userDao.changePwd(user, newpassword);
+			return "true";
+		}	
+	}
 	
 	
 

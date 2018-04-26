@@ -51,4 +51,18 @@ public class UserAction {
 		return "/user/success5";
 	}
 	
+	
+	//修改密码
+	public String changePwd(HttpSession session,String password,String newpassword,String newpwd) {
+		String result = userservice.changePwd(session, password, newpassword, newpwd);
+		if(result.equals("false1")) {
+			return "user/error6";
+		}else if(result.equals("false2")) {
+			return "user/error7";
+		}else {
+			return "user/success2";
+		}
+	}
+	
+	
 }

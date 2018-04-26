@@ -55,6 +55,13 @@ public class UserDao {
 		return true;
 	}
 	
+	//修改密码
+	public boolean changePwd(User user,String password) {
+		Session session = sessionFactory.getCurrentSession();
+		user.setPassword(password);
+		session.update(user);
+		return true;
+	}
 	
 	
 	
