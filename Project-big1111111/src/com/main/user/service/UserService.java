@@ -65,5 +65,48 @@ public class UserService {
 	}
 	
 	
+	public boolean findPassword(String mail) {
+		User user = userDao.findPassword(mail);
+		if(user != null) {
+			String password1 = user.getPassword();
+			Properties props = new Properties();
+			props.put("mail.smtp.host", "smtp.163.com");
+			// �����ʼ�Э������  
+			props.put("mail.transport.protocol", "smtp");
+			// �Ƿ���֤  
+			props.put("mail.smtp.auth", true);
+			//����java��������ʼ��������ĻỰʵ��
+			Session mailSession = Session.getInstance(props,new Authenticator() {
+				protected PasswordAuthentication getPasswordAuthentication() {
+					return new PasswordAuthentication("javamail5678@163.com","javamail5678sqm");
+				}
+			});	
+			try {
+				Message msg = new MimeMessage(mailSession);
+				//设置邮件的发件人
+				msg.setFrom(new InternetAddress("javamail5678@163.com"));
+				//设置邮件的收件人
+				msg.addRecipient(Message.RecipientType.TO, new InternetAddress(mail));
+				msg.setSubject("找回密码");
+				msg.setSentDate(new Date());
+				msg.setText("您的密码是："+password1);
+				Transport.send(msg);
+			} catch (AddressException e) {
+				// TODO �Զ����ɵ� catch ��
+				e.printStackTrace();
+			} catch (MessagingException e) {
+				// TODO �Զ����ɵ� catch ��
+				e.printStackTrace();
+			}
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	
+	
+	
+	
 
 }

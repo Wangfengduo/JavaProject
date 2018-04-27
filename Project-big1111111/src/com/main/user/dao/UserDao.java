@@ -63,6 +63,16 @@ public class UserDao {
 		return true;
 	}
 	
+	//找回密码
+	@SuppressWarnings("unchecked")
+	public User findPassword(String mail) {
+		Session session =sessionFactory.getCurrentSession();
+		String sql="from User u where u.mail =?";
+		Query<User>query =session.createQuery(sql);
+		query.setParameter(0, mail);
+		User user=query.uniqueResult();
+		return user;
+	}
 	
 	
 	

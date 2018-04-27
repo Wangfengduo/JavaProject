@@ -38,7 +38,7 @@
 									<label><input name="" type="checkbox"> 下次自动登录</label>
 								</div>
 								<div class="right check_right">
-									<a href="#">忘记密码</a>
+									<a href="findPassword.jsp">忘记密码</a>
 								</div>
 							</div>
 							<div class="form_btn">

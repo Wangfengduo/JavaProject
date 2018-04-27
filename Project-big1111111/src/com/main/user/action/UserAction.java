@@ -53,6 +53,7 @@ public class UserAction {
 	
 	
 	//修改密码
+	@RequestMapping("/changePwd")
 	public String changePwd(HttpSession session,String password,String newpassword,String newpwd) {
 		String result = userservice.changePwd(session, password, newpassword, newpwd);
 		if(result.equals("false1")) {
@@ -64,5 +65,15 @@ public class UserAction {
 		}
 	}
 	
+	//找回密码
+	@RequestMapping("/findPassword")
+	public String findPassword(String mail) {
+		boolean result = userservice.findPassword(mail);
+		if(result) {
+			return "user/success4";
+		}else {
+			return "user/error8";
+		}
+	}
 	
 }
