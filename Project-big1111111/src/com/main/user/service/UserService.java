@@ -104,7 +104,10 @@ public class UserService {
 		}
 	}
 	
-	
+	//用户名是否存在
+	public boolean existName(String name) {
+		return userDao.existName(name);
+	}
 	
 	
 	

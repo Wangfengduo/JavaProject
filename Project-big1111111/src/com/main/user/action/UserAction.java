@@ -12,7 +12,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.main.user.bean.User;
 import com.main.user.service.UserService;
@@ -73,6 +73,15 @@ public class UserAction {
 			return "user/success4";
 		}else {
 			return "user/error8";
+		}
+	}
+	//用户名是否存在
+	@RequestMapping("/verifyName")
+	public @ResponseBody String verifyName(@RequestParam String name) { 
+		if (userservice.existName(name)) {
+			return "true";
+		}else {
+			return "false";
 		}
 	}
 	

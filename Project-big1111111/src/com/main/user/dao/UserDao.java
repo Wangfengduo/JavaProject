@@ -34,18 +34,18 @@ public class UserDao {
 	}
 	
 	
-	@SuppressWarnings("unchecked")
-	public User exist(String username) {
-		Session session=sessionFactory.getCurrentSession();
-		String sql="from User u where u.name=?";
-		Query query = session.createQuery(sql);
-		query.setParameter(0, username);
+	public boolean existName(String name) {
+		Session session = sessionFactory.getCurrentSession();
+		String sql = "from User u where u.name = ?";
+		@SuppressWarnings("unchecked")
+		Query<User> query = session.createQuery(sql);
+		query.setParameter(0,name);
 		List<User> list = query.list();
-		User user = new User();
-		for(User user1 : list) {
-			user = user1;
+		if(list.size() != 0) {
+			return true;
+		}else {
+			return false;
 		}
-		return user;
 	}
 	
 	//增加用户

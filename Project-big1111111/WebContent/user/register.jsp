@@ -111,7 +111,30 @@ function check(){
 		</div>
 		<script type="text/javascript" src="js1/jquery.min.js" ></script>
 		<script type="text/javascript" src="js1/common.js" ></script>
-		
+		<script>
+			console.log($("#name"));
+			$("#name").blur(function(){
+			    $.ajax({
+			        type:"get",
+			        url:"../user/verifyName",
+			        async:true,
+			        dataType: 'text',
+			        data:{
+			          name:$('#name')[0].value,
+			        },success : function(data){
+			        	console.log(data);
+			          if(data=="true"){
+			        	  alert('用户名已存在');
+			          }
+			          if(data=="false"){
+			        	  alert('用户名可用');
+			          }
+			        },error:function(XMLHttpRequest, textStatus, errorThrown){  
+							alert('未知异常');
+			   	  	}
+			    });
+			})
+		</script>
 		
 		<div style="text-align:center;">
 </div>
