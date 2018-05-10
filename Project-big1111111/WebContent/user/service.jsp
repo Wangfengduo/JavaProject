@@ -34,10 +34,12 @@
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]><script src="assets/js/html5shiv.min.js"></script><script src="assets/js/respond.min.js"></script><![endif]-->
 	
-	<link rel="stylesheet" type="text/css" href="css1/zcity.css">
-	<link rel="stylesheet" type="text/css" href="css1/bootstrap.min.css">	
-	<link rel="stylesheet" type="text/css" href="css/index.css">   
+
 	
+	
+	
+	<script src="assets/js/city.js"></script>
+	<script src="assets/js/caree.js"></script>
 </head>
 <body>
 
@@ -57,8 +59,8 @@
 					</div>
 					<div class="col-sm-3 col-xs-12">
 						<ul class="list-unstyled list-inline">
-							<li><a href="login.html">登录</a></li>			
-							<li><a href="register.html">注册</a></li>
+							<li><a href="login.jsp">登录</a></li>			
+							<li><a href="register.jsp">注册</a></li>
 						</ul>
 					</div>
 				</div>
@@ -135,7 +137,7 @@
 	<div class="breadcrumb">
 		<div class="container">
 			<ul class="list-unstyled list-inline">
-				<li><a href="index.html">主页</a></li>
+				<li><a href="index.jsp">主页</a></li>
 				<li class="active">服务</li>
 			</ul>
 		</div>
@@ -154,63 +156,68 @@
 				padding-left:40px;
 				padding-top:50px;
 			">
-				<table class="demoTable">
-				    <thead>
-				        <tr>
-				            <th class="td-04"><h6 class="title">请选择当前所在城市：</h6></th>
-				        </tr>
-				    </thead>
-				    <tbody>
-				        <tr>
-				            <td class="td-040">
-				                <!--zcityGroup start-->
-				                <div class="zcityGroup" city-range="{'level_start':1,'level_end':3}"></div>
-				                <!--zcityGroup end-->
-				            </td>
-				        </tr>
-				    </tbody>
-				    <tr>
-				    	<td>
-				    		<h6 class="title">请输入您的年龄：<input type="text" style="width: 188px;height: 30px;"></h6>
-				    	</td>
-				    </tr>
-				    <tr>
-				        <td><h6 class="title">请选择您的行业：<select style="width: 188px;height: 30px;">
-				    										<option>请选择</option>
-				    										<option>农、牧、林、渔业</option>
-				    										<option>采矿和采石</option>
-				    										<option>制造业</option>
-				    										<option>电、煤气、蒸汽</option>
-				    										<option>建筑业</option>
-				    										<option>批发和零售业</option>
-				    										<option>运输与存储</option>
-				    										<option>信息和通信</option>
-				    										<option>金融和保险</option>
-				    										<option>房地产</option>
-				    										<option>专业、科学和技术</option>
-				    										<option>教育</option>
-				    										<option>计算机</option>
-				    										<option>服装业</option>
-				    										<option>航空航天</option>
-				    										<option>卫生和社会工作</option>
-				    										<option>公共管理、社会保障和社会组织</option>
-				    									</select></h6>
-				    	</td>
-				    </tr>
-				    <tr>
-				    	<td><h6 class="title">请输入您的职业：<input type="text" style="width: 188px;height: 30px;"></h6></td>
-				    </tr>
-				    
-				    
-				    
-				</table>
+				<form id="form1">   
+				   请选择您的位置：<select id="selProvince" onChange = "getCity(this.options[this.selectedIndex].value)">   
+				        <option value="">-请选择-</option>   
+				        <option value="北京市">北京市</option>   
+				        <option value="上海市">上海市</option>   
+				        <option value="天津市">天津市</option>   
+				        <option value="重庆市">重庆市</option>   
+				        <option value="河北省">河北省</option>   
+				        <option value="山西省">山西省</option>   
+				        <option value="内蒙古自治区">内蒙古自治区</option>   
+				        <option value="辽宁省">辽宁省</option>   
+				        <option value="吉林省">吉林省</option>   
+				        <option value="黑龙江省">黑龙江省</option>   
+				        <option value="江苏省">江苏省</option>   
+				        <option value="浙江省">浙江省</option>   
+				        <option value="安徽省">安徽省</option>   
+				        <option value="福建省">福建省</option>   
+				        <option value="江西省">江西省</option>   
+				        <option value="山东省">山东省</option>   
+				        <option value="河南省">河南省</option>   
+				        <option value="湖北省">湖北省</option>   
+				        <option value="湖南省">湖南省</option>   
+				        <option value="广东省">广东省</option>   
+				        <option value="广西壮族自治区">广西壮族自治区</option>   
+				        <option value="海南省">海南省</option>   
+				        <option value="四川省">四川省</option>   
+				        <option value="贵州省">贵州省</option>   
+				        <option value="云南省">云南省</option>   
+				        <option value="西藏自治区">西藏自治区</option>   
+				        <option value="陕西省">陕西省</option>   
+				        <option value="甘肃省">甘肃省</option>   
+				        <option value="宁夏回族自治区">宁夏回族自治区</option>   
+				        <option value="青海省">青海省</option>   
+				        <option value="新疆维吾尔族自治区">新疆维吾尔族自治区</option>   
+				        <option value="香港特别行政区">香港特别行政区</option>   
+				        <option value="澳门特别行政区">澳门特别行政区</option>   
+				        <option value="台湾省">台湾省</option>   
+				        <option value="其它">其它</option>   
+				    </select>   
+    				<select id="selCity">   
+				        <option>-城市-</option>   
+				    </select>   
+    				</br>
+    				请选择你的职位：
+    				<select id="selCareeType" onChange = "getCaree(this.options[this.selectedIndex].value)">
+    					 <option value="">-请选择-</option>
+    					 <option value="国家机关、党群组织、企业、事业单位负责人">国家机关、党群组织、企业、事业单位负责人</option>
+    					 <option value="专业技术人员">专业技术人员</option>
+    					 <option value="办事人员和有关人员">办事人员和有关人员</option>
+    					 <option value="商业、服务业人员">商业、服务业人员</option>
+    					 <option value="农、林、牧、渔、水利业生产人员">农、林、牧、渔、水利业生产人员</option>
+    					 <option value="生产、运输设备操作人员及有关人员">生产、运输设备操作人员及有关人员</option>
+    					 <option value="军人">军人</option>
+    					 <option value="不便分类的其他行业人员">不便分类的其他行业人员</option>
+    					 
+    				</select>
+    				<select id="selCaree">   
+				        <option>-职业-</option>   
+				    </select>   
+				</form>   
 				
-				<script type="text/javascript" src="js1/jquery-1.9.1.min.js"></script>
-				<script type="text/javascript" src="js1/zcity.js"></script>
 				
-				<script type="text/javascript">
-				zcityrun('.zcityGroup');
-				</script>
 				
 			</div>
 		</div>

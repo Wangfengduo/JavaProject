@@ -66,8 +66,8 @@
 						<ul class="list-unstyled list-inline">
 							<!-- <li><a href="#"><i class="fa fa-qq"></i></a></li>
 							<li><a href="#"><i class="fa fa-wechat"></i></a></li> -->
-							<li><a href="login.html">登录</a></li>
-							<li><a href="register.html">注册</a></li>
+							<li><a href="login.jsp">登录</a></li>
+							<li><a href="register.jsp">注册</a></li>
 						</ul>
 					</div>
 				</div>
@@ -94,11 +94,11 @@
 					<!-- Start Menu Area -->
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav navbar-right">
-							<li class="active"><a href="index.html">主页</a></li>
+							<li class="active"><a href="index.jsp">主页</a></li>
 							
 							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">职业病</a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="services.html">职业病</a></li>
+									<li><a href="service.jsp">职业病</a></li>
 										<li><a href="department-single.html">具体类别</a></li>
 								</ul>
 							</li>

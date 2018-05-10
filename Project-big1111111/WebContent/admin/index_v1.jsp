@@ -6,10 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
-<script type="text/javascript">
-	alert("注册错误!");
-	window.document.location.href="register.jsp";
-</script>
+<body style="background-color:#FFF;">
+查看用户
 </body>
 </html>
