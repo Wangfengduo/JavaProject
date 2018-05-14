@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <c:set var="ctx" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -33,19 +35,22 @@
             <h2 class="mg-b20 text-center">养益生后台登录页面</h2>
             <div class="col-sm-8 col-md-5 center-auto pd-sm-50 pd-xs-20 main_content">
                 <p class="text-center font16">用户登录</p>
-                <form action="admin.jsp">
+                <form action="${ctx}/admin/login">
                     <div class="form-group mg-t20">
                         <i class="icon-user icon_font"></i>
-                        <input type="text" class="login_input" id="Email1" placeholder="请输入用户名" />
+                        <input name="username" type="text" class="login_input" id="Email1" placeholder="请输入用户名" />
                     </div>
                     <div class="form-group mg-t20">
                         <i class="icon-lock icon_font"></i>
-                        <input type="password" class="login_input" id="Password1" placeholder="请输入密码" />
+                        <input name="password" type="password" class="login_input" id="Password1" placeholder="请输入密码" />
                     </div>
                     <div class="checkbox mg-b25">
                         <label>
                             <input type="checkbox" />记住我的登录信息
                         </label>
+                        <br>
+                        <label style="padding-left: 0px;"><a href="findPassword.jsp">忘记密码？</a></label>
+                        <label><a href="register.jsp" style="margin-left:200px;">还没注册？</a></label>
                     </div>
                     <button style="submit" class="login_btn">登 录</button>
                </form>
