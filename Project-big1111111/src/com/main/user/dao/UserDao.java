@@ -73,6 +73,13 @@ public class UserDao {
 		User user=query.uniqueResult();
 		return user;
 	}
+
+
+	public boolean deleteSome(User user) {
+		Session session = sessionFactory.getCurrentSession();
+		session.delete(user);
+		return true;
+	}
 	
 	
 	
