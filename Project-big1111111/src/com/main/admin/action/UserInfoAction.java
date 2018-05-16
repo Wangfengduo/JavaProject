@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.main.admin.bean.Page;
@@ -14,6 +15,7 @@ import com.main.admin.service.DeleteUserService;
 import com.main.admin.service.UserPageService;
 import com.main.user.bean.User;
 
+@Controller
 @RequestMapping("/admin")
 public class UserInfoAction {
 	@Autowired
@@ -33,6 +35,7 @@ public class UserInfoAction {
             Page page = userPageService.queryForPage(Integer.valueOf(pageNo), 10);
             request.setAttribute("page", page);
             List<User> list = page.getList();
+            
             request.setAttribute("userlist", list);
         } catch (Exception e) {
             e.printStackTrace();
@@ -62,5 +65,7 @@ public class UserInfoAction {
 		String string = select(request, response);
 		return string;
 	}
+	
+	
 	
 }

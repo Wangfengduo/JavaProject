@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -21,7 +22,7 @@
                                 <dd>
                                     <a href="#" class="dd-item">用户登录信息<span class="scm dd-ar"></span></a>
                                     <ul class="ad-item-list">
-                                        <li class="J_menuItem" href="index_v1.jsp" data-index="1">查看用户</li>
+                                        <li class="J_menuItem" href="userInfo.jsp" data-index="1">查看用户</li>
                                     </ul>
                                 </dd>
                                 <dd>

@@ -38,6 +38,8 @@ public class UserPageDao {
 		return list;
 	}
 	
+	
+	
 	//数据库记录总数
 	public int getAllRowCount() {
 		List<User> list=null;
