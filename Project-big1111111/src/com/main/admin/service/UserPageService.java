@@ -8,9 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.main.admin.bean.Admin;
+
+import com.main.admin.bean.Page;
 import com.main.admin.dao.UserPageDao;
-import com.main.user.bean.Page;
+
 import com.main.user.bean.User;
 import com.main.user.dao.UserDao;
 
@@ -35,12 +36,12 @@ public class UserPageService {
 		//当前页开始记录
 		int offset = page.countOffset(currentPage,pageSize);
 		//分页查询结果集
-		List<User>list=userPageDao.queryForPage(offset, pageSize);
+		List<User> list=userPageDao.queryForPage(offset, pageSize);
 		
 		 page.setPageNo(currentPage);
 	     page.setPageSize(pageSize);
 	     page.setTotalRecords(allRow);
-	     page.setList1(list);
+	     page.setList(list);
 	        
 	     return page;
 	}

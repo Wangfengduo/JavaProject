@@ -23,6 +23,7 @@ public class UserPageDao {
      */
 	
 	//查找所有用户
+	@SuppressWarnings("unchecked")
 	public List<User> queryForPage(int offset,int length){
 		List<User> list=null;
 		try {

@@ -9,10 +9,11 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.main.admin.bean.Page;
 import com.main.admin.service.DeleteUserService;
 import com.main.admin.service.UserPageService;
-import com.main.user.bean.Page;
 import com.main.user.bean.User;
+
 @RequestMapping("/admin")
 public class UserInfoAction {
 	@Autowired
@@ -29,15 +30,16 @@ public class UserInfoAction {
                 pageNo = "1";
             }
             //每页数量
-            Page page = userPageService.queryForPage(Integer.valueOf(pageNo), 3);
+            Page page = userPageService.queryForPage(Integer.valueOf(pageNo), 10);
             request.setAttribute("page", page);
-            List<User> list = page.getList1();
+            List<User> list = page.getList();
             request.setAttribute("userlist", list);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return "admin/userInfo";
     }
+	
 	//根据用户名获取某一个用户信息
 	@RequestMapping("/someOneInfo")
 	public String getSomeOne(HttpSession session,String username) {

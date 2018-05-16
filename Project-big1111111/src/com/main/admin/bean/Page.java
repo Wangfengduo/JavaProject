@@ -1,28 +1,21 @@
-package com.main.user.bean;
+package com.main.admin.bean;
 
 import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.main.admin.bean.Admin;
+import com.main.user.bean.User;
 
-@Component //声明为bean注入到spring MVC容器中
-public class Page {
-    
-    
-
-    private List<User> list1;
-    
-    
-    // 查询记录总数
-    private int totalRecords;
-
-    // 每页多少条记录
+@Component
+public class Page{
+	//结果集
+	private List<User> list;
+	//查询记录总数
+	private int totalRecords;
+	// 每页多少条记录
     private int pageSize;
-
     // 第几页
     private int pageNo;
-    
     /**
      * @return 总页数
      * */
@@ -40,7 +33,7 @@ public class Page {
         int offset = pageSize*(currentPage-1);
         return offset;
     }
-    
+	
     /**
      * @return 首页
      * */
@@ -57,7 +50,6 @@ public class Page {
         }
         return pageNo-1;
     }
-    
     /**
      * @return 下一页
      * */
@@ -67,48 +59,56 @@ public class Page {
         }
         return pageNo+1;
     }
-    
     /**
      * @return 尾页
      * */
     public int getBottomPageNo(){
         return getTotalPages();
     }
-    
-    
-   
 
-    public int getTotalRecords() {
-        return totalRecords;
-    }
-
-    public void setTotalRecords(int totalRecords) {
-        this.totalRecords = totalRecords;
-    }
-
-    public int getPageSize() {
-        return pageSize;
-    }
-
-    public void setPageSize(int pageSize) {
-        this.pageSize = pageSize;
-    }
-
-    public int getPageNo() {
-        return pageNo;
-    }
-
-    public void setPageNo(int pageNo) {
-        this.pageNo = pageNo;
-    }
-
-	public List<User> getList1() {
-		return list1;
+	public List<User> getList() {
+		return list;
 	}
 
-	public void setList1(List<User> list) {
-		this.list1 = list;
+	public void setList(List<User> list) {
+		this.list = list;
 	}
 
+	public int getTotalRecords() {
+		return totalRecords;
+	}
+
+	public void setTotalRecords(int totalRecords) {
+		this.totalRecords = totalRecords;
+	}
+
+	public int getPageSize() {
+		return pageSize;
+	}
+
+	public void setPageSize(int pageSize) {
+		this.pageSize = pageSize;
+	}
+
+	public int getPageNo() {
+		return pageNo;
+	}
+
+	public void setPageNo(int pageNo) {
+		this.pageNo = pageNo;
+	}
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+	
+	
 }
