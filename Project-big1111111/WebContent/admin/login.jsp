@@ -12,7 +12,7 @@
 <style>
 	body{color:#fff; font-family:"微软雅黑"; font-size:14px;}
 	.wrap1{position:absolute; top:0; right:0; bottom:0; left:0; margin:auto }/*把整个屏幕真正撑开--而且能自己实现居中*/
-	.main_content{background:url(image/main_bg.png) repeat; margin-left:auto; margin-right:auto; text-align:left; float:none; border-radius:8px;}
+	.main_content{background:url(img/main_bg.png) repeat; margin-left:auto; margin-right:auto; text-align:left; float:none; border-radius:8px;}
 	.form-group{position:relative;}
 	.login_btn{display:block; background:#3872f6; color:#fff; font-size:15px; width:100%; line-height:50px; border-radius:3px; border:none; }
 	.login_input{width:100%; border:1px solid #3872f6; border-radius:3px; line-height:40px; padding:2px 5px 2px 30px; background:none;}
@@ -29,7 +29,7 @@
 	}
 </style>
 </head>
-<body style="background:url(image/bg.jpg) no-repeat;">
+<body style="background:url(img/bg.jpg) no-repeat;">
     
     <div class="container wrap1" style="height:450px;">
             <h2 class="mg-b20 text-center">养益生后台登录页面</h2>

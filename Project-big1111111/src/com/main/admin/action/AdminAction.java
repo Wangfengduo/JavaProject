@@ -24,7 +24,7 @@ public class AdminAction {
 		Admin a=this.adminservice.login(username, password);
 		if(a!=null) {
 			session.setAttribute("a", a);
-			return "/admin/admin";
+			return "/admin/index";
 		}else {
 			return "/admin/error1";
 		}
