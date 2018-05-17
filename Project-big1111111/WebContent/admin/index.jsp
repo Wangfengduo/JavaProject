@@ -137,7 +137,7 @@
                       </a>
                       <ul class="sub">
                           <li><a class="" href="general.html">修改密码</a></li>
-                          <li><a class="" href="buttons.html">新增管理员</a></li>
+                          <li><a class="" href="admin_list.jsp">管理员列表</a></li>
                           <li><a class="" href="grids.html">用户授权</a></li>
                       </ul>
                   </li>
@@ -198,43 +198,28 @@
 					<h3 class="page-header"><i class="fa fa-laptop"></i> 主页</h3>
 					<ol class="breadcrumb">
 						<li><i class="fa fa-home"></i><a href="index.jsp">主页</a></li>
-						<li><i class="fa fa-laptop"></i>Dashboard</li>						  	
+											  	
 					</ol>
 				</div>
 			</div>
               
             <div class="row">
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-					<div class="info-box blue-bg">
-						<i class="fa fa-cloud-download"></i>
-						<div class="count">6.674</div>
-						<div class="title">登录</div>						
-					</div><!--/.info-box-->			
-				</div><!--/.col-->
-				
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-					<div class="info-box brown-bg">
-						<i class="fa fa-shopping-cart"></i>
-						<div class="count">7.538</div>
-						<div class="title">管理</div>						
-					</div><!--/.info-box-->			
-				</div><!--/.col-->	
-				
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-					<div class="info-box dark-bg">
-						<i class="fa fa-thumbs-o-up"></i>
-						<div class="count">4.362</div>
-						<div class="title">好评</div>						
-					</div><!--/.info-box-->			
-				</div><!--/.col-->
-				
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-					<div class="info-box green-bg">
-						<i class="fa fa-cubes"></i>
-						<div class="count">1.426</div>
-						<div class="title">Stock</div>						
-					</div>		
-				</div>
+				<table width="99%" border="0" cellspacing="0" cellpadding="0" id="main">
+				  <tr>
+				    <td colspan="2" align="left" valign="top">
+				    <span class="time"><strong>上午好！${admin_username}</strong><u>[管理员]</u></span>
+				    <div class="top"><span class="left">您上次的登灵时间：2017-11-25 12:00   登录IP：127.0.0.1 &nbsp;&nbsp;&nbsp;&nbsp;如非您本人操作，请及时</span><a href="index.html" target="mainFrame" onFocus="this.blur()">更改密码</a></div>
+				    <div class="sec">这是您第<span class="num">10</span>次,登录！</div>
+				    </td>
+				  </tr>
+				  <tr>
+				    <td colspan="2" align="left" valign="top">
+				    <div class="main-corpy">系统提示</div>
+				    <div class="main-order">1=>如您在使用过程有发现出错请及时与我们取得联系；为保证您得到我们的后续服务，强烈建议您购买我们的正版系统或向我们定制系统！<br/>
+											2=>强烈建议您将IE7以上版本或其他的浏览器</div>
+				    </td>
+				  </tr>
+				</table>
 				   
 			</div>
 		  

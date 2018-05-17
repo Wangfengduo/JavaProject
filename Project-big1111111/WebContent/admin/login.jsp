@@ -29,7 +29,7 @@
 	}
 </style>
 </head>
-<body style="background:url(img/bg.jpg) no-repeat;">
+<body style="background:url(img/bg-1.jpg) no-repeat;">
     
     <div class="container wrap1" style="height:450px;">
             <h2 class="mg-b20 text-center">养益生后台登录页面</h2>

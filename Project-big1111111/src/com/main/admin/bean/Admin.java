@@ -1,5 +1,7 @@
 package com.main.admin.bean;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,11 +22,18 @@ public class Admin {
 	private String admin_password;
 	@Column(name="admin_mail")
 	private String mail;
+	@Column(name="time")
+	private Date time;
 	
 	
 	
 	
-	
+	public Date getTime() {
+		return time;
+	}
+	public void setTime(Date time) {
+		this.time = time;
+	}
 	public int getAdmin_id() {
 		return admin_id;
 	}

@@ -1,6 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
+    <c:set var="ctx" value="${pageContext.request.contextPath}" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
@@ -18,9 +22,7 @@
     <!-- font icon -->
     <link href="css/elegant-icons-style.css" rel="stylesheet" />
     <link href="css/font-awesome.min.css" rel="stylesheet" />    
-    <!-- full calendar css-->
-    <link href="assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
-	<link href="assets/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" />
+    
     <!-- easy pie chart-->
     <link href="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
     <!-- owl carousel -->
@@ -195,43 +197,65 @@
 					<h3 class="page-header"><i class="fa fa-laptop"></i> 主页</h3>
 					<ol class="breadcrumb">
 						<li><i class="fa fa-home"></i><a href="index.jsp">主页</a></li>
-						<li><i class="fa fa-laptop"></i>Dashboard</li>						  	
+						<li><i class="fa fa-laptop"></i>用户信息</li>	
+						<li><i class="fa fa-laptop"></i>个人信息</li>						  	
 					</ol>
 				</div>
 			</div>
               
             <div class="row">
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-					<div class="info-box blue-bg">
-						<i class="fa fa-cloud-download"></i>
-						<div class="count">6.674</div>
-						<div class="title">登录</div>						
-					</div><!--/.info-box-->			
-				</div><!--/.col-->
-				
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-					<div class="info-box brown-bg">
-						<i class="fa fa-shopping-cart"></i>
-						<div class="count">7.538</div>
-						<div class="title">管理</div>						
-					</div><!--/.info-box-->			
-				</div><!--/.col-->	
-				
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-					<div class="info-box dark-bg">
-						<i class="fa fa-thumbs-o-up"></i>
-						<div class="count">4.362</div>
-						<div class="title">好评</div>						
-					</div><!--/.info-box-->			
-				</div><!--/.col-->
-				
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-					<div class="info-box green-bg">
-						<i class="fa fa-cubes"></i>
-						<div class="count">1.426</div>
-						<div class="title">Stock</div>						
-					</div>		
-				</div>
+				<table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
+				  <tr>
+				    <td width="99%" align="left" valign="top">您的位置：用户名单</td>
+				  </tr>
+				  <tr>
+				    <td align="left" valign="top">
+				    <table width="100%" border="0" cellspacing="0" cellpadding="0" id="search">
+				  		<tr>
+				   		 <td width="90%" align="left" valign="middle">
+					         <form method="post" action="someOneInfo.action">
+					         <span>用户名：</span>
+					         <input type="text" name="username" value="根据用户名" class="text-word" id="textfield" style="color:#999;font-style:italic;" 
+					             onFocus="if (value =='根据用户名查询'){value =''}" onBlur="if (value ==''){value='根据用户名查询'}">
+					         <input type="submit" value="查询" class="text-but">
+					         </form>
+				         </td>
+				  		</tr>
+					</table>
+				    </td>
+				  </tr>
+				  <tr>
+				    <td align="left" valign="top">
+				    
+				    <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
+				      <tr>
+				        <th align="center" valign="middle" class="borderright">编号</th>
+				        <th align="center" valign="middle" class="borderright">用户名</th>
+				        <th align="center" valign="middle" class="borderright">密码</th>
+				        <th align="center" valign="middle" class="borderright">邮箱</th>
+				        <th align="center" valign="middle" class="borderright">电话</th>
+				        <th align="center" valign="middle">操作</th>
+				      </tr>
+				      <tr class="bggray" onMouseOut="this.style.backgroundColor='#f9f9f9'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+				        <td align="center" valign="middle" class="borderright borderbottom">${user.id }</td>
+				        <td align="center" valign="middle" class="borderright borderbottom">${user.name }</td>
+				        <td align="center" valign="middle" class="borderright borderbottom">${user.password }</td>
+				        <td align="center" valign="middle" class="borderright borderbottom">${user.mail }</td>
+				        <td align="center" valign="middle" class="borderright borderbottom">${user.phone }</td>
+				        <td align="center" valign="middle" class="borderbottom"><a href="${ctx }/admin/deleteUser?username=${user.name }">删除</a></td>
+				      </tr>
+				    </table> 
+				    </td>
+				 </tr>
+				    <tr>
+				       <td width="90%" colspan="6" valign="middle">
+				         <form method="post" action="${ctx}/admin/userInfo">
+				         <input style="display:block;margin:0 auto;height:30px;width:80px;" type=submit value="返回" class="text-but">
+				         </form>
+				       </td>
+				    </tr>
+				  
+				</table>
 				   
 			</div>
 		  
@@ -257,7 +281,7 @@
     <script src="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
     <script src="js/owl.carousel.js" ></script>
     <!-- jQuery full calendar -->
-    <<script src="js/fullcalendar.min.js"></script> <!-- Full Google Calendar - Calendar -->
+    <script src="js/fullcalendar.min.js"></script> <!-- Full Google Calendar - Calendar -->
 	<script src="assets/fullcalendar/fullcalendar/fullcalendar.js"></script>
     <!--script for this page only-->
     <script src="js/calendar-custom.js"></script>
@@ -281,55 +305,8 @@
 	<script src="js/sparklines.js"></script>	
 	<script src="js/charts.js"></script>
 	<script src="js/jquery.slimscroll.min.js"></script>
-  <script>
+  
 
-      //knob
-      $(function() {
-        $(".knob").knob({
-          'draw' : function () { 
-            $(this.i).val(this.cv + '%')
-          }
-        })
-      });
-
-      //carousel
-      $(document).ready(function() {
-          $("#owl-slider").owlCarousel({
-              navigation : true,
-              slideSpeed : 300,
-              paginationSpeed : 400,
-              singleItem : true
-
-          });
-      });
-
-      //custom select box
-
-      $(function(){
-          $('select.styled').customSelect();
-      });
-	  
-	  /* ---------- Map ---------- */
-	$(function(){
-	  $('#map').vectorMap({
-	    map: 'world_mill_en',
-	    series: {
-	      regions: [{
-	        values: gdpData,
-	        scale: ['#000', '#000'],
-	        normalizeFunction: 'polynomial'
-	      }]
-	    },
-		backgroundColor: '#eef3f7',
-	    onLabelShow: function(e, el, code){
-	      el.html(el.html()+' (GDP - '+gdpData[code]+')');
-	    }
-	  });
-	});
-
-
-
-  </script>
 
   </body>
 </html>

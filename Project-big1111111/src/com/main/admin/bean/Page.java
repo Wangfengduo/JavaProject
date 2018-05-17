@@ -10,6 +10,7 @@ import com.main.user.bean.User;
 public class Page{
 	//结果集
 	private List<User> list;
+	private List<Admin> list1;
 	//查询记录总数
 	private int totalRecords;
 	// 每页多少条记录
@@ -96,6 +97,14 @@ public class Page{
 
 	public void setPageNo(int pageNo) {
 		this.pageNo = pageNo;
+	}
+
+	public List<Admin> getList1() {
+		return list1;
+	}
+
+	public void setList1(List<Admin> list1) {
+		this.list1 = list1;
 	}
     
     
