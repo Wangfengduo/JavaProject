@@ -47,6 +47,29 @@ public class AdminDao {
 		return admin;
 	}
 	
+	//修改密码
+	public boolean changePwd(Admin admin,String password) {
+		Session session=sessionFactory.getCurrentSession();
+		admin.setAdmin_password(password);
+		session.update(admin);
+		return true;
+	}
+	
+	
+	//用户名查找返回用户
+	@SuppressWarnings("unchecked")
+	public Admin findByName(String name) {
+		Session session =sessionFactory.getCurrentSession();
+		String sql="from Admin a where a.admin_username=?";
+		Query<Admin> query=session.createQuery(sql);
+		query.setParameter(0, name);
+		List<Admin> list=query.list();
+		Admin a=null;
+		for(Admin admin1:list) {
+			a=admin1;
+		}
+		return a;
+	}
 	
 	
 }

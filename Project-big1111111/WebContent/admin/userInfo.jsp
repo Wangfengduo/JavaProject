@@ -5,7 +5,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
     <meta name="author" content="GeeksLabs">
@@ -49,7 +49,7 @@
             </div>
 
             <!--logo start-->
-            <a href="index.html" class="logo">后台 <span class="lite">管理</span></a>
+            <a href="index.jsp" class="logo">后台 <span class="lite">管理</span></a>
             <!--logo end-->
 
             <div class="nav search-row" id="top_menu">
@@ -86,10 +86,11 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="userInfo.jsp">用户信息</a></li>                          
-                          <li><a class="" href="form_validation.html">用户管理</a></li>
+                          <li><a class="" href="${ctx}/admin/userInfo">用户信息</a></li>                          
+                          <li><a class="" href="#">新增用户</a></li>
+                          <li><a class="" href="#">更改用户</a></li>
+                          <li><a class="" href="#">删除用户</a></li>
                       </ul>
-                  </li>       
                   <li class="sub-menu">
                       <a href="javascript:;" class="">
                           <i class="icon_desktop"></i>
@@ -97,34 +98,37 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="general.html">Components</a></li>
-                          <li><a class="" href="buttons.html">Buttons</a></li>
-                          <li><a class="" href="grids.html">Grids</a></li>
+                          <li><a class="" href="changePwd.jsp">修改密码</a></li>
+                          <li><a class="" href="admin_list.jsp">管理员列表</a></li>
+                          <li><a class="" href="grids.html">用户授权</a></li>
                       </ul>
                   </li>
-                  <li>
-                      <a class="" href="widgets.html">
-                          <i class="icon_genius"></i>
-                          <span>Widgets</span>
-                      </a>
-                  </li>
-                  <li>                     
-                      <a class="" href="chart-chartjs.html">
-                          <i class="icon_piechart"></i>
-                          <span>Charts</span>
-                          
-                      </a>
-                                         
-                  </li>
+                  
                              
                   <li class="sub-menu">
                       <a href="javascript:;" class="">
-                          <i class="icon_table"></i>
-                          <span>讨论区</span>
+                          <i class="icon_desktop"></i>
+                          <span>文章管理</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="basic_table.html">Basic Table</a></li>
+                          <li><a class="" href="#">文章列表</a></li>
+                          <li><a class="" href="#">新增文章</a></li>
+                          <li><a class="" href="#">修改文章</a></li>
+                          <li><a class="" href="#">删除文章</a></li>
+                      </ul>
+                  </li>
+                  
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon_desktop"></i>
+                          <span>讨论区管理</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="#"></a></li>
+                          <li><a class="" href="#"></a></li>
+                          <li><a class="" href="#"></a></li>
                       </ul>
                   </li>
                   

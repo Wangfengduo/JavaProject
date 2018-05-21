@@ -17,14 +17,17 @@ public class AdminAction {
 	@Autowired
 	private AdminService adminservice;
 	//登录验证
+	@SuppressWarnings("unused")
 	@RequestMapping("/login")
 	public String loginCheck(@RequestParam("username") String username,
 							@RequestParam("password") String password,
 							Model model,HttpSession session) {
 		Admin a=this.adminservice.login(username, password);
+		System.out.println(a.getAdmin_username());
 		if(a!=null) {
 			session.setAttribute("a", a);
 			return "/admin/index";
+			
 		}else {
 			return "/admin/error1";
 		}
@@ -46,12 +49,23 @@ public class AdminAction {
 	public String findPassword(String mail) {
 		boolean result=adminservice.findPassword(mail);
 		if(result) {
-			return "admin/success4";
+			return "/admin/success4";
 		}else {
-			return "admin/error8";
+			return "/admin/error8";
 		}
 	}
 	
-	
+	//修改密码
+	@RequestMapping("/changePwd")
+	public String changePwd(HttpSession session,String password,String newpassword,String newpwd) {
+		String string = adminservice.changePwd(session, password, newpassword, newpwd);
+		if(string.equals("error4")) {
+			return "/admin/error4";
+		}else if(string.equals("error5")) {
+			return "/admin/error5";
+		}else {
+			return "/admin/success1";
+		}
+	}
 	
 }

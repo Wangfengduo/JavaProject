@@ -12,6 +12,7 @@ import javax.mail.Transport;
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -81,13 +82,24 @@ public class AdminService {
 			return false;
 		}
 			
-			
+	}
+	
+	
+	//修改密码
+	@SuppressWarnings("unused")
+	public String changePwd(HttpSession session,String password,String newpassword,String newpwd) {
+		String admin_username=(String) session.getAttribute("name");
+		Admin admin =admindao.findByName(admin_username);
+		if(!admin.getAdmin_password().equals(password)) {
+			return "error4";
+		}else if(!newpassword.equals(newpwd)) {
+			return "error5";
+		}else {
+			boolean result = admindao.changePwd(admin, newpassword);
+			return "success";
 		}
-	
-	
-	
-	
-	
+	}
+
 	
 	
 }

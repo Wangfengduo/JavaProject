@@ -5,7 +5,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
     <meta name="author" content="GeeksLabs">
@@ -112,7 +112,7 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu">                
                   <li class="active">
-                      <a class="" href="index.html">
+                      <a class="" href="index.jsp">
                           <i class="icon_house_alt"></i>
                           <span>Dashboard</span>
                       </a>
@@ -124,8 +124,10 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="userInfo.jsp">用户信息</a></li>                          
-                          <li><a class="" href="#">用户管理</a></li>
+                          <li><a class="" href="${ctx}/admin/userInfo">用户信息</a></li>                          
+                          <li><a class="" href="#">新增用户</a></li>
+                          <li><a class="" href="#">更改用户</a></li>
+                          <li><a class="" href="#">删除用户</a></li>
                       </ul>
                   </li>       
                   <li class="sub-menu">
@@ -156,20 +158,21 @@
                   <li class="sub-menu">
                       <a href="javascript:;" class="">
                           <i class="icon_desktop"></i>
-                          <span>标题一</span>
+                          <span>文章管理</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="#"></a></li>
-                          <li><a class="" href="#"></a></li>
-                          <li><a class="" href="#"></a></li>
+                          <li><a class="" href="#">文章列表</a></li>
+                          <li><a class="" href="#">新增文章</a></li>
+                          <li><a class="" href="#">修改文章</a></li>
+                          <li><a class="" href="#">删除文章</a></li>
                       </ul>
                   </li>
                   
                   <li class="sub-menu">
                       <a href="javascript:;" class="">
                           <i class="icon_desktop"></i>
-                          <span>标题二</span>
+                          <span>讨论区管理</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
