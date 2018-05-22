@@ -5,14 +5,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
     <meta name="author" content="GeeksLabs">
     <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
     <link rel="shortcut icon" href="img/favicon.png">
-
-    <title>Creative - Bootstrap Admin Template</title>
 
     <!-- Bootstrap CSS -->    
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -22,9 +20,27 @@
     <!-- font icon -->
     <link href="css/elegant-icons-style.css" rel="stylesheet" />
     <link href="css/font-awesome.min.css" rel="stylesheet" />    
-   
-    
-
+    <!-- full calendar css-->
+    <link href="assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
+	<link href="assets/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" />
+    <!-- easy pie chart-->
+    <link href="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+	<link href="css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+    <!-- Custom styles -->
+	<link rel="stylesheet" href="css/fullcalendar.css">
+	<link href="css/widgets.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+	<link href="css/xcharts.min.css" rel=" stylesheet">	
+	<link href="css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+      <script src="js/lte-ie7.js"></script>
+    <![endif]-->
   </head>
 <body>
   <!-- container section start -->
@@ -232,7 +248,55 @@
 	<script src="js/sparklines.js"></script>	
 	<script src="js/charts.js"></script>
 	<script src="js/jquery.slimscroll.min.js"></script>
-
+	
+	<script>
+		 //knob
+	      $(function() {
+	        $(".knob").knob({
+	          'draw' : function () { 
+	            $(this.i).val(this.cv + '%')
+	          }
+	        })
+	      });
+	
+	      //carousel
+	      $(document).ready(function() {
+	          $("#owl-slider").owlCarousel({
+	              navigation : true,
+	              slideSpeed : 300,
+	              paginationSpeed : 400,
+	              singleItem : true
+	
+	          });
+	      });
+	
+	      //custom select box
+	
+	      $(function(){
+	          $('select.styled').customSelect();
+	      });
+		  
+		  /* ---------- Map ---------- */
+		$(function(){
+		  $('#map').vectorMap({
+		    map: 'world_mill_en',
+		    series: {
+		      regions: [{
+		        values: gdpData,
+		        scale: ['#000', '#000'],
+		        normalizeFunction: 'polynomial'
+		      }]
+		    },
+			backgroundColor: '#eef3f7',
+		    onLabelShow: function(e, el, code){
+		      el.html(el.html()+' (GDP - '+gdpData[code]+')');
+		    }
+		  });
+		});
+	
+	
+	
+	  </script>
 
   </body>
 </html>

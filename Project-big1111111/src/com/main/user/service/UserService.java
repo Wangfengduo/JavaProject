@@ -64,18 +64,18 @@ public class UserService {
 		}	
 	}
 	
-	
+	//找回密码
 	public boolean findPassword(String mail) {
 		User user = userDao.findPassword(mail);
 		if(user != null) {
 			String password1 = user.getPassword();
 			Properties props = new Properties();
 			props.put("mail.smtp.host", "smtp.163.com");
-			// �����ʼ�Э������  
+			
 			props.put("mail.transport.protocol", "smtp");
-			// �Ƿ���֤  
+			 
 			props.put("mail.smtp.auth", true);
-			//����java��������ʼ��������ĻỰʵ��
+			
 			Session mailSession = Session.getInstance(props,new Authenticator() {
 				protected PasswordAuthentication getPasswordAuthentication() {
 					return new PasswordAuthentication("javamail5678@163.com","javamail5678sqm");
@@ -92,10 +92,10 @@ public class UserService {
 				msg.setText("您的密码是："+password1);
 				Transport.send(msg);
 			} catch (AddressException e) {
-				// TODO �Զ����ɵ� catch ��
+				
 				e.printStackTrace();
 			} catch (MessagingException e) {
-				// TODO �Զ����ɵ� catch ��
+				
 				e.printStackTrace();
 			}
 			return true;
