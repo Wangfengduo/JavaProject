@@ -11,7 +11,6 @@ public class Page{
 	//结果集
 	private List<User> list;
 	private List<Admin> list1;
-	private List<Artical> list2;
 	//查询记录总数
 	private int totalRecords;
 	// 每页多少条记录
@@ -107,16 +106,7 @@ public class Page{
 	public void setList1(List<Admin> list1) {
 		this.list1 = list1;
 	}
-
-	public List<Artical> getList2() {
-		return list2;
-	}
-
-	public void setList2(List<Artical> list2) {
-		this.list2 = list2;
-	}
-
-	
+    
     
     
     

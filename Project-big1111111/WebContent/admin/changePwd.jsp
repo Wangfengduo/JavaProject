@@ -11,6 +11,7 @@
     <meta name="author" content="GeeksLabs">
     <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
     <link rel="shortcut icon" href="img/favicon.png">
+
     <title>Creative - Bootstrap Admin Template</title>
 
     <!-- Bootstrap CSS -->    
@@ -308,24 +309,36 @@ input[type=submit]:active {
                           <li><a class="" href="grids.html">用户授权</a></li>
                       </ul>
                   </li>
-                  <<li class="sub-menu">
+                  <li class="sub-menu">
                       <a href="javascript:;" class="">
                           <i class="icon_desktop"></i>
-                          <span>文章管理</span>
+                          <span>讨论区</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="${ctx}/admin/articalInfo">文章列表</a></li>
-                          <li><a class="" href="addArtical.jsp">新增文章</a></li>
-                          <li><a class="" href="updateArtical.jsp">修改文章</a></li>
-                          <li><a class="" href="${ctx}/admin/articalInfo">删除文章</a></li>
+                          <li><a class="" href="#"></a></li>
+                          <li><a class="" href="#"></a></li>
+                          <li><a class="" href="#"></a></li>
                       </ul>
                   </li>
                   
                   <li class="sub-menu">
                       <a href="javascript:;" class="">
                           <i class="icon_desktop"></i>
-                          <span>讨论区管理</span>
+                          <span>标题一</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="#"></a></li>
+                          <li><a class="" href="#"></a></li>
+                          <li><a class="" href="#"></a></li>
+                      </ul>
+                  </li>
+                  
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon_desktop"></i>
+                          <span>标题二</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">

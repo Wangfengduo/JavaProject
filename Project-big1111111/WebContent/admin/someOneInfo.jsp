@@ -216,7 +216,7 @@
 				    <table width="100%" border="0" cellspacing="0" cellpadding="0" id="search">
 				  		<tr>
 				   		 <td width="90%" align="left" valign="middle">
-					         <form method="post" action="${ctx}/admin/someOneInfo">
+					         <form method="post" action="someOneInfo.action">
 					         <span>用户名：</span>
 					         <input type="text" name="username" value="根据用户名" class="text-word" id="textfield" style="color:#999;font-style:italic;" 
 					             onFocus="if (value =='根据用户名查询'){value =''}" onBlur="if (value ==''){value='根据用户名查询'}">
