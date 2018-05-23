@@ -11,6 +11,7 @@
     <meta name="author" content="GeeksLabs">
     <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
     <link rel="shortcut icon" href="img/favicon.png">
+
     <title>Creative - Bootstrap Admin Template</title>
 
     <!-- Bootstrap CSS -->    
@@ -45,170 +46,34 @@
     
     
 <style>
-body {
-  font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
-  color: #404040;
-}
-
-.container {
-  margin: 80px auto;
-  width: 640px;
-}
-
-.login {
-  position: relative;
-  margin: 0 auto;
-  padding: 20px 20px 20px;
-  width: 500px;
-  background: white;
-  border-radius: 3px;
-  -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-.login:before {
-  content: '';
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  bottom: -8px;
-  left: -8px;
-  z-index: -1;
-  background: rgba(0, 0, 0, 0.08);
-  border-radius: 4px;
-}
-.login h1 {
-  margin: -20px -20px 21px;
-  line-height: 40px;
-  font-size: 15px;
-  font-weight: bold;
-  color: #555;
-  text-align: center;
-  text-shadow: 0 1px white;
-  background: #f3f3f3;
-  border-bottom: 1px solid #cfcfcf;
-  border-radius: 3px 3px 0 0;
-  background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
-  background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
-  background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
-  background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
-  -webkit-box-shadow: 0 1px whitesmoke;
-  box-shadow: 0 1px whitesmoke;
-}
-.login p {
-  margin: center;
-}
-.login p:first-child {
-  margin-top: 0;
-}
-.login input[type=text], .login input[type=password] {
-  width: 300px;
-  margin-left:80px;
-}
-.login p.remember_me {
-  float: left;
-  line-height: 31px;
-}
-.login p.remember_me label {
-  font-size: 12px;
-  color: #777;
-  cursor: pointer;
-}
-.login p.remember_me input {
-  position: center;
-  bottom: 1px;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-.login p.submit {
-  text-align: right;
-}
-
-.login-help {
-  margin: 20px 0;
-  font-size: 11px;
-  color: white;
-  text-align: center;
-  text-shadow: 0 1px #2a85a1;
-  font-size:12px;
-}
-.login-help a {
-  color: #cce7fa;
-  text-decoration: none;
-}
-.login-help a:hover {
-  text-decoration: underline;
-}
-
-:-moz-placeholder {
-  color: #c9c9c9 !important;
-  font-size: 13px;
-}
-
-::-webkit-input-placeholder {
-  color: #ccc;
-  font-size: 13px;
-}
-
-input {
-  font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
-  font-size: 14px;
-}
-
-input[type=text], input[type=password] {
-  margin: 5px;
-  padding: 0 10px;
-  width: 200px;
-  height: 34px;
-  color: #404040;
-  background: white;
-  border: 1px solid;
-  border-color: #c4c4c4 #d1d1d1 #d4d4d4;
-  border-radius: 2px;
-  outline: 5px solid #eff4f7;
-  -moz-outline-radius: 3px;
-  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
-}
-input[type=text]:focus, input[type=password]:focus {
-  border-color: #7dc9e2;
-  outline-color: #dceefc;
-  outline-offset: 0;
-}
-
-input[type=submit] {
-  padding: 0 18px;
-  height: 29px;
-  font-size: 12px;
-  font-weight: bold;
-  color: #527881;
-  text-shadow: 0 1px #e3f1f1;
-  background: #cde5ef;
-  border: 1px solid;
-  border-color: #b4ccce #b3c0c8 #9eb9c2;
-  border-radius: 16px;
-  outline: 0;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  background-image: -webkit-linear-gradient(top, #edf5f8, #cde5ef);
-  background-image: -moz-linear-gradient(top, #edf5f8, #cde5ef);
-  background-image: -o-linear-gradient(top, #edf5f8, #cde5ef);
-  background-image: linear-gradient(to bottom, #edf5f8, #cde5ef);
-  -webkit-box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
-}
-input[type=submit]:active {
-  background: #cde5ef;
-  border-color: #9eb9c2 #b3c0c8 #b4ccce;
-  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
-}
-
-.lt-ie9 input[type=text], .lt-ie9 input[type=password] {
-  line-height: 34px;
-}
-
+body{overflow-x:hidden; background:#f2f0f5; padding:15px 0px 10px 5px;}
+#searchmain{ font-size:12px;}
+#search{ font-size:12px; background:#548fc9; margin:10px 10px 0 0; display:inline; width:100%; color:#FFF}
+#search form span{height:40px; line-height:40px; padding:0 0px 0 10px; float:left;}
+#search form input.text-word{height:24px; line-height:24px; width:180px; margin:8px 0 6px 0; padding:0 0px 0 10px; float:left; border:1px solid #FFF;}
+#search form input.text-but{height:24px; line-height:24px; width:55px; background:url(images/main/list_input.jpg) no-repeat left top; border:none; cursor:pointer; font-family:"Microsoft YaHei","Tahoma","Arial",'宋体'; color:#666; float:left; margin:8px 0 0 6px; display:inline;}
+#search a.add{ background:url(images/main/add.jpg) no-repeat 0px 6px; padding:0 10px 0 26px; height:40px; line-height:40px; font-size:14px; font-weight:bold; color:#FFF}
+#search a:hover.add{ text-decoration:underline; color:#d2e9ff;}
+#main-tab{ border:1px solid #eaeaea; background:#FFF; font-size:12px;}
+#main-tab th{ font-size:12px; background:url(images/main/list_bg.jpg) repeat-x; height:32px; line-height:32px;}
+#main-tab td{ font-size:12px; line-height:40px;}
+#main-tab td a{ font-size:12px; color:#548fc9;}
+#main-tab td a:hover{color:#565656; text-decoration:underline;}
+.bordertop{ border-top:1px solid #ebebeb}
+.borderright{ border-right:1px solid #ebebeb}
+.borderbottom{ border-bottom:1px solid #ebebeb}
+.borderleft{ border-left:1px solid #ebebeb}
+.gray{ color:#dbdbdb;}
+td.fenye{ padding:10px 0 0 0; text-align:right;}
+.bggray{ background:#f9f9f9; font-size:14px; font-weight:bold; padding:10px 10px 10px 0; width:120px;}
+.main-for{ padding:10px;}
+.main-for input.text-word{ width:310px; height:36px; line-height:36px; border:#ebebeb 1px solid; background:#FFF; font-family:"Microsoft YaHei","Tahoma","Arial",'宋体'; padding:0 10px;}
+.main-for select{ width:310px; height:36px; line-height:36px; border:#ebebeb 1px solid; background:#FFF; font-family:"Microsoft YaHei","Tahoma","Arial",'宋体'; color:#666;}
+.main-for input.text-but{ width:100px; height:40px; line-height:30px; border: 1px solid #cdcdcd; background:#e6e6e6; font-family:"Microsoft YaHei","Tahoma","Arial",'宋体'; color:#969696; float:left; margin:0 10px 0 0; display:inline; cursor:pointer; font-size:14px; font-weight:bold;}
+#addinfo a{ font-size:14px; font-weight:bold; background:url(images/main/addinfoblack.jpg) no-repeat 0 1px; padding:0px 0 0px 20px; line-height:45px;}
+#addinfo a:hover{ background:url(images/main/addinfoblue.jpg) no-repeat 0 1px;}
 </style>
+
   </head>
 
   <body>
@@ -288,14 +153,16 @@ input[type=submit]:active {
 				  <li class="sub-menu">
                       <a href="javascript:;" class="">
                           <i class="icon_document_alt"></i>
-                          <span>用户</span>
+                          <span>用户管理</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
                           <li><a class="" href="${ctx}/admin/userInfo">用户信息</a></li>                          
-                          <li><a class="" href="#">用户管理</a></li>
+                          <li><a class="" href="#">新增用户</a></li>
+                          <li><a class="" href="#">更改用户</a></li>
+                          <li><a class="" href="${ctx}/admin/userInfo">删除用户</a></li>
                       </ul>
-                  </li>       
+                  </li> 
                   <li class="sub-menu">
                       <a href="javascript:;" class="">
                           <i class="icon_desktop"></i>
@@ -308,7 +175,7 @@ input[type=submit]:active {
                           <li><a class="" href="grids.html">用户授权</a></li>
                       </ul>
                   </li>
-                  <<li class="sub-menu">
+                  <li class="sub-menu">
                       <a href="javascript:;" class="">
                           <i class="icon_desktop"></i>
                           <span>文章管理</span>
@@ -353,8 +220,8 @@ input[type=submit]:active {
 					<h3 class="page-header"><i class="fa fa-laptop"></i> 主页</h3>
 					<ol class="breadcrumb">
 						<li><i class="fa fa-home"></i><a href="index.jsp">主页</a></li>
-						<li><i class="fa fa-laptop"></i>管理员</li>	
-						<li><i class="fa fa-laptop"></i>修改密码</li>						  	
+						<li><i class="fa fa-laptop"></i>文章管理</li>	
+						<li><i class="fa fa-laptop"></i>新增文章</li>						  	
 					</ol>
 				</div>
 			</div>
@@ -362,22 +229,51 @@ input[type=submit]:active {
               
               
             <div class="row">
-            	<div class="login">
-					<h1>修改密码</h1>
-				      <form method="post" action="${ctx}/admin/changePwd" method="post" onsubmit="return checkForm();">
-				        <p><input type="password" name="password" value="" placeholder="原密码"></p>
-				        <p><input type="password" name="newpassword" value="" placeholder="新密码"></p>
-				        <p><input type="password" name="newpwd" value="" placeholder="确认密码"></p>
-				        <p class="submit"><input type="submit" name="commit" value="确认"></p>
-				      </form>   
-			      </div>
+            	<table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
+				  <tr>
+				    <td align="left" valign="top" id="addinfo">
+				    <a href="updateArtical.jsp" target="mainFrame" onFocus="this.blur()" class="add">修改文章</a>
+				    </td>
+				  </tr>
+				  <tr>
+				    <td align="left" valign="top">
+				    
+				    <form method="post" action="${ctx}/admin/updateArtical">
+				    <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
+				      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+				        <td align="right" valign="middle" class="borderright borderbottom bggray">要修改书的编号：</td>
+				        <td align="left" valign="middle" class="borderright borderbottom main-for">
+				        <input type="text" name="id" value="" class="text-word">
+				        </td>
+				      </tr>
+				      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+				        <td align="right" valign="middle" class="borderright borderbottom bggray">修改主题为：</td>
+				        <td align="left" valign="middle" class="borderright borderbottom main-for">
+				        <input type="text" name="title" value="" class="text-word">   
+				        </td>
+				      </tr>
+				      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+				        <td align="right" valign="middle" class="borderright borderbottom bggray">修改内容为：</td>
+				        <td align="left" valign="middle" class="borderright borderbottom main-for">
+				        <!--  <textarea rows="5" cols="80"></textarea>-->
+				        <input type="text" name="content" value="" class="text-word">   
+				        </td>
+				      </tr>
+				      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+				        <td align="right" valign="middle" class="borderright borderbottom bggray">&nbsp;</td>
+				        <td align="left" valign="middle" class="borderright borderbottom main-for">
+				        <input name="" type="submit" value="提交" class="text-but">
+				        <input name="" type="reset" value="重置" class="text-but"></td>
+				      </tr>    
+				    </table>
+				    </form>
+				   </td>
+				  </tr>
+				 </table>
 			</div>
 			
 			
 			
-			
-			
-		  
           </section>
       </section>
       <!--main content end-->

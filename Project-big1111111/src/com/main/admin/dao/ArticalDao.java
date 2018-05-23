@@ -32,7 +32,7 @@ public class ArticalDao {
 	@SuppressWarnings("unchecked")
 	public Artical findByName(String title) {
 		Session session=sessionFactory.getCurrentSession();
-		String sql="from Artical where a.title=? ";
+		String sql="from Artical a where a.title=? ";
 		@SuppressWarnings("rawtypes")
 		Query query=session.createQuery(sql);
 		query.setParameter(0, title);
@@ -45,13 +45,19 @@ public class ArticalDao {
 	}
 	
 	//查询所有文章
-
 	@SuppressWarnings("unchecked")
-	public List<Artical> findAll(){
-		@SuppressWarnings("rawtypes")
-		Query query=this.sessionFactory.getCurrentSession().createQuery("from Artical");
-		List<Artical> list=query.list();
-		return list;
+	public List<Artical> findAll(int offset,int length){
+		List<Artical>list=null;
+		try {
+			
+			Query<Artical> query=this.sessionFactory.getCurrentSession().createQuery("from Artical");
+			query.setFirstResult(offset);
+			query.setMaxResults(length);
+			list=query.list();
+		}catch(RuntimeException re) {
+			throw re;
+		}
+		return list;	
 	}
 	
 	//删除文章
@@ -60,15 +66,27 @@ public class ArticalDao {
 	}
 	
 	//修改文章
-	public void updateArtical(Artical a) {
-		Artical a1=this.sessionFactory.getCurrentSession().get(Artical.class, a.getId());
-		a1.setU_id(a.getU_id());
-		a1.setTitle(a.getTitle());
-		a1.setContent(a.getContent());
-		a1.setC_id(a.getC_id());
-		this.sessionFactory.getCurrentSession().update(a);
-	
+	public void updateArtical(Artical a,int id,String title,String content) {
+		Session session = sessionFactory.getCurrentSession();
+		a.setTitle(title);
+		a.setContent(content);
+		session.update(a);
 	}
 	
+	//数据库记录总数
+	@SuppressWarnings("unchecked")
+	public int getAllRowCount() {
+		List<Artical> list=null;
+		int count=0;
+		try {
+			Session session=sessionFactory.getCurrentSession();
+			Query<Artical> query=session.createQuery("from Artical");
+			list=query.list();
+			count=list.size();
+		}catch(RuntimeException re){
+            throw re;
+        }
+		return count;
+	}
 	
 }

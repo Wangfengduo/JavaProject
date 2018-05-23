@@ -11,6 +11,7 @@
     <meta name="author" content="GeeksLabs">
     <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
     <link rel="shortcut icon" href="img/favicon.png">
+
     <title>Creative - Bootstrap Admin Template</title>
 
     <!-- Bootstrap CSS -->    
@@ -288,14 +289,16 @@ input[type=submit]:active {
 				  <li class="sub-menu">
                       <a href="javascript:;" class="">
                           <i class="icon_document_alt"></i>
-                          <span>用户</span>
+                          <span>用户管理</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
                           <li><a class="" href="${ctx}/admin/userInfo">用户信息</a></li>                          
-                          <li><a class="" href="#">用户管理</a></li>
+                          <li><a class="" href="#">新增用户</a></li>
+                          <li><a class="" href="#">更改用户</a></li>
+                          <li><a class="" href="${ctx}/admin/userInfo">删除用户</a></li>
                       </ul>
-                  </li>       
+                  </li> 
                   <li class="sub-menu">
                       <a href="javascript:;" class="">
                           <i class="icon_desktop"></i>
@@ -308,7 +311,7 @@ input[type=submit]:active {
                           <li><a class="" href="grids.html">用户授权</a></li>
                       </ul>
                   </li>
-                  <<li class="sub-menu">
+                  <li class="sub-menu">
                       <a href="javascript:;" class="">
                           <i class="icon_desktop"></i>
                           <span>文章管理</span>
@@ -353,8 +356,8 @@ input[type=submit]:active {
 					<h3 class="page-header"><i class="fa fa-laptop"></i> 主页</h3>
 					<ol class="breadcrumb">
 						<li><i class="fa fa-home"></i><a href="index.jsp">主页</a></li>
-						<li><i class="fa fa-laptop"></i>管理员</li>	
-						<li><i class="fa fa-laptop"></i>修改密码</li>						  	
+						<li><i class="fa fa-laptop"></i>文章管理</li>	
+						<li><i class="fa fa-laptop"></i>新增文章</li>						  	
 					</ol>
 				</div>
 			</div>
@@ -363,11 +366,12 @@ input[type=submit]:active {
               
             <div class="row">
             	<div class="login">
-					<h1>修改密码</h1>
-				      <form method="post" action="${ctx}/admin/changePwd" method="post" onsubmit="return checkForm();">
-				        <p><input type="password" name="password" value="" placeholder="原密码"></p>
-				        <p><input type="password" name="newpassword" value="" placeholder="新密码"></p>
-				        <p><input type="password" name="newpwd" value="" placeholder="确认密码"></p>
+					<h1>添加文章</h1>
+				      <form method="post" action="${ctx}/admin/addArtical" onsubmit="return checkForm();">
+				        <p><input type="text" name="title" value="" placeholder="主题"></p>
+				        <p><input type="text" name="author" value="" placeholder="作者"></p>
+				        <p><input type="text" name="content" value="" placeholder="内容"></p>
+				        <p><input type="text" name="category" value="" placeholder="种类ID"></p>
 				        <p class="submit"><input type="submit" name="commit" value="确认"></p>
 				      </form>   
 			      </div>

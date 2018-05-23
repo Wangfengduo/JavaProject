@@ -5,13 +5,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
     <meta name="author" content="GeeksLabs">
     <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
     <link rel="shortcut icon" href="img/favicon.png">
-
+	
     <!-- Bootstrap CSS -->    
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- bootstrap theme -->
@@ -41,6 +41,9 @@
       <script src="js/respond.min.js"></script>
       <script src="js/lte-ie7.js"></script>
     <![endif]-->
+    
+    
+    
   </head>
 <body>
   <!-- container section start -->
@@ -75,7 +78,7 @@
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             
-                            <span class="username">${a.admin_username}aaa先生</span>
+                            <span class="username">${a.admin_username}</span>
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
@@ -126,7 +129,7 @@
                           <li><a class="" href="${ctx}/admin/userInfo">用户信息</a></li>                          
                           <li><a class="" href="#">新增用户</a></li>
                           <li><a class="" href="#">更改用户</a></li>
-                          <li><a class="" href="#">删除用户</a></li>
+                          <li><a class="" href="${ctx}/admin/userInfo">删除用户</a></li>
                       </ul>
                   </li>       
                   <li class="sub-menu">
@@ -149,10 +152,10 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="#">文章列表</a></li>
-                          <li><a class="" href="#">新增文章</a></li>
-                          <li><a class="" href="#">修改文章</a></li>
-                          <li><a class="" href="#">删除文章</a></li>
+                          <li><a class="" href="${ctx}/admin/articalInfo">文章列表</a></li>
+                          <li><a class="" href="addArtical.jsp">新增文章</a></li>
+                          <li><a class="" href="updateArtical.jsp">修改文章</a></li>
+                          <li><a class="" href="${ctx}/admin/articalInfo">删除文章</a></li>
                       </ul>
                   </li>
                   
