@@ -9,6 +9,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.main.admin.bean.Artical;
 
@@ -61,8 +62,9 @@ public class ArticalDao {
 	}
 	
 	//删除文章
-	public void delArtical(Artical aa) {
-		this.sessionFactory.getCurrentSession().delete(aa);
+	@Transactional 
+	public void delArtical(int id) {
+		this.sessionFactory.getCurrentSession().createQuery("delete from Artical a where a.id="+id).executeUpdate();
 	}
 	
 	//修改文章
@@ -88,5 +90,21 @@ public class ArticalDao {
         }
 		return count;
 	}
+	
+	@SuppressWarnings("unchecked")
+	public Artical selectSome(int id) {
+		Session session=sessionFactory.getCurrentSession();
+		String sql="from Artical a where a.id=?";
+		Query<Artical> query=session.createQuery(sql);
+		query.setParameter(0, id);
+		List<Artical> list=query.list();
+		Artical a=null;
+		for(Artical a1:list) {
+			a=a1;
+		}
+		return a;
+		
+	}
+	
 	
 }

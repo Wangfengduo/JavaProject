@@ -100,7 +100,7 @@
                       </a>
                       <ul class="sub">
                           <li><a class="" href="changePwd.jsp">修改密码</a></li>
-                          <li><a class="" href="admin_list.jsp">管理员列表</a></li>
+                          <li><a class="" href="${ctx}/admin/admin_list">管理员列表</a></li>
                           <li><a class="" href="#">用户授权</a></li>
                       </ul>
                   </li>
@@ -197,7 +197,7 @@
 						        <td align="center" valign="middle" class="borderright borderbottom">管理员</td>
 						        <td align="center" valign="middle" class="borderright borderbottom">未锁定</td>
 						        <td align="center" valign="middle" class="borderright borderbottom">${admin.time }</td>
-						        <td align="center" valign="middle" class="borderbottom"><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">编辑</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
+						        <td align="center" valign="middle" class="borderbottom"><a href="#" target="mainFrame" onFocus="this.blur()" class="add">编辑</a><span class="gray">&nbsp;|&nbsp;</span><a href="#" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
 						      </tr>
 						      </c:forEach>
 						    </table></td>

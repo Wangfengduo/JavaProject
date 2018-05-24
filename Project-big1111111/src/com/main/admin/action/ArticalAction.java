@@ -3,12 +3,12 @@ package com.main.admin.action;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.main.admin.bean.Artical;
 import com.main.admin.bean.Page;
@@ -22,7 +22,7 @@ public class ArticalAction {
 	
 	//获取所有用户信息，分页显示
 	@RequestMapping("/articalInfo")
-	public String select (HttpServletRequest request,HttpServletResponse response) {
+	public String select (HttpServletRequest request) {
 		try {
             String pageNo = request.getParameter("pageNo");
             if (pageNo == null) {
@@ -50,12 +50,14 @@ public class ArticalAction {
 	
 	//删除某一文章
 	@RequestMapping("/deleteArtical")
-	public String deleteArtical(HttpServletRequest request,HttpServletResponse response) {
-		String articaltitle=request.getParameter("title");
-		System.out.println(articaltitle);
-		this.articalService.deleteArtical(articaltitle);
-		return "admin/articalInfo";
-	}
+    public String deleteArtical(@RequestParam(value = "id") int id) {
+        System.out.println("删除单个");
+        articalService.deleteArtical(id);
+        return "admin/articalInfo";
+    }
+
+	
+	
 	//新增文章
 	@RequestMapping("/addArtical")
 	public String addArtical(Artical a) {

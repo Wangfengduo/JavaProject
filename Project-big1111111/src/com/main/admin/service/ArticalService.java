@@ -19,9 +19,9 @@ public class ArticalService {
 	public void addArtical(Artical a) {
 		this.articalDao.saveArtical(a);
 	}
-	public void deleteArtical(String title) {
-		Artical artical=articalDao.findByName(title);
-		this.articalDao.delArtical(artical);
+	public void deleteArtical(int id) {
+		
+		this.articalDao.delArtical(id);
 	}
 	
 	

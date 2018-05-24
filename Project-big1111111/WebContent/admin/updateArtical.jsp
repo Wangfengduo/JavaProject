@@ -1,18 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
-    <c:set var="ctx" value="${pageContext.request.contextPath}" />
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+     <c:set var="ctx" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
     <meta name="author" content="GeeksLabs">
     <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
     <link rel="shortcut icon" href="img/favicon.png">
-
-    <title>Creative - Bootstrap Admin Template</title>
 
     <!-- Bootstrap CSS -->    
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +20,9 @@
     <!-- font icon -->
     <link href="css/elegant-icons-style.css" rel="stylesheet" />
     <link href="css/font-awesome.min.css" rel="stylesheet" />    
-    
+    <!-- full calendar css-->
+    <link href="assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
+	<link href="assets/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" />
     <!-- easy pie chart-->
     <link href="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
     <!-- owl carousel -->
@@ -41,9 +41,37 @@
       <script src="js/respond.min.js"></script>
       <script src="js/lte-ie7.js"></script>
     <![endif]-->
+    
+    <style>
+		body{overflow-x:hidden; background:#f2f0f5; padding:15px 0px 10px 5px;}
+		#searchmain{ font-size:12px;}
+		#search{ font-size:12px; background:#548fc9; margin:10px 10px 0 0; display:inline; width:100%; color:#FFF}
+		#search form span{height:40px; line-height:40px; padding:0 0px 0 10px; float:left;}
+		#search form input.text-word{height:24px; line-height:24px; width:180px; margin:8px 0 6px 0; padding:0 0px 0 10px; float:left; border:1px solid #FFF;}
+		#search form input.text-but{height:24px; line-height:24px; width:55px; background:url(images/main/list_input.jpg) no-repeat left top; border:none; cursor:pointer; font-family:"Microsoft YaHei","Tahoma","Arial",'宋体'; color:#666; float:left; margin:8px 0 0 6px; display:inline;}
+		#search a.add{ background:url(images/main/add.jpg) no-repeat 0px 6px; padding:0 10px 0 26px; height:40px; line-height:40px; font-size:14px; font-weight:bold; color:#FFF}
+		#search a:hover.add{ text-decoration:underline; color:#d2e9ff;}
+		#main-tab{ border:1px solid #eaeaea; background:#FFF; font-size:12px;}
+		#main-tab th{ font-size:12px; background:url(images/main/list_bg.jpg) repeat-x; height:32px; line-height:32px;}
+		#main-tab td{ font-size:12px; line-height:40px;}
+		#main-tab td a{ font-size:12px; color:#548fc9;}
+		#main-tab td a:hover{color:#565656; text-decoration:underline;}
+		.bordertop{ border-top:1px solid #ebebeb}
+		.borderright{ border-right:1px solid #ebebeb}
+		.borderbottom{ border-bottom:1px solid #ebebeb}
+		.borderleft{ border-left:1px solid #ebebeb}
+		.gray{ color:#dbdbdb;}
+		td.fenye{ padding:10px 0 0 0; text-align:right;}
+		.bggray{ background:#f9f9f9; font-size:14px; font-weight:bold; padding:10px 10px 10px 0; width:120px;}
+		.main-for{ padding:10px;}
+		.main-for input.text-word{ width:310px; height:36px; line-height:36px; border:#ebebeb 1px solid; background:#FFF; font-family:"Microsoft YaHei","Tahoma","Arial",'宋体'; padding:0 10px;}
+		.main-for select{ width:310px; height:36px; line-height:36px; border:#ebebeb 1px solid; background:#FFF; font-family:"Microsoft YaHei","Tahoma","Arial",'宋体'; color:#666;}
+		.main-for input.text-but{ width:100px; height:40px; line-height:30px; border: 1px solid #cdcdcd; background:#e6e6e6; font-family:"Microsoft YaHei","Tahoma","Arial",'宋体'; color:#969696; float:left; margin:0 10px 0 0; display:inline; cursor:pointer; font-size:14px; font-weight:bold;}
+		#addinfo a{ font-size:14px; font-weight:bold; background:url(images/main/addinfoblack.jpg) no-repeat 0 1px; padding:0px 0 0px 20px; line-height:45px;}
+		#addinfo a:hover{ background:url(images/main/addinfoblue.jpg) no-repeat 0 1px;}
+		</style>
   </head>
-
-  <body>
+<body>
   <!-- container section start -->
   <section id="container" class="">
      
@@ -76,7 +104,7 @@
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             
-                            <span class="username">Jenifer Smith</span>
+                            <span class="username">${a.admin_username}先生</span>
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
@@ -125,7 +153,7 @@
                       </a>
                       <ul class="sub">
                           <li><a class="" href="${ctx}/admin/userInfo">用户列表</a></li>                          
-                          <li><a class="" href="#">新增用户</a></li>
+                          <li><a class="" href="addAdmin.jsp">新增用户</a></li>
                           <li><a class="" href="#">更改用户</a></li>
                           <li><a class="" href="${ctx}/admin/userInfo">删除用户</a></li>
                       </ul>
@@ -189,66 +217,58 @@
 				<div class="col-lg-12">
 					<h3 class="page-header"><i class="fa fa-laptop"></i> 主页</h3>
 					<ol class="breadcrumb">
+	
 						<li><i class="fa fa-home"></i><a href="index.jsp">主页</a></li>
-						<li><i class="fa fa-laptop"></i>用户信息</li>	
-						<li><i class="fa fa-laptop"></i>个人信息</li>						  	
+						<li><i class="icon_document_alt"></i>文章管理	</li>
+						<li><i class="fa fa-file-text-o"></i>更新文章</li>					  	
 					</ol>
 				</div>
 			</div>
               
             <div class="row">
+				
 				<table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
-				  <tr>
-				    <td width="99%" align="left" valign="top">您的位置：用户名单</td>
-				  </tr>
-				  <tr>
-				    <td align="left" valign="top">
-				    <table width="100%" border="0" cellspacing="0" cellpadding="0" id="search">
-				  		<tr>
-				   		 <td width="90%" align="left" valign="middle">
-					         <form method="post" action="someOneInfo.action">
-					         <span>用户名：</span>
-					         <input type="text" name="username" value="根据用户名" class="text-word" id="textfield" style="color:#999;font-style:italic;" 
-					             onFocus="if (value =='根据用户名查询'){value =''}" onBlur="if (value ==''){value='根据用户名查询'}">
-					         <input type="submit" value="查询" class="text-but">
-					         </form>
-				         </td>
-				  		</tr>
-					</table>
-				    </td>
-				  </tr>
-				  <tr>
-				    <td align="left" valign="top">
-				    
-				    <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
-				      <tr>
-				        <th align="center" valign="middle" class="borderright">编号</th>
-				        <th align="center" valign="middle" class="borderright">用户名</th>
-				        <th align="center" valign="middle" class="borderright">密码</th>
-				        <th align="center" valign="middle" class="borderright">邮箱</th>
-				        <th align="center" valign="middle" class="borderright">电话</th>
-				        <th align="center" valign="middle">操作</th>
-				      </tr>
-				      <tr class="bggray" onMouseOut="this.style.backgroundColor='#f9f9f9'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-				        <td align="center" valign="middle" class="borderright borderbottom">${user.id }</td>
-				        <td align="center" valign="middle" class="borderright borderbottom">${user.name }</td>
-				        <td align="center" valign="middle" class="borderright borderbottom">${user.password }</td>
-				        <td align="center" valign="middle" class="borderright borderbottom">${user.mail }</td>
-				        <td align="center" valign="middle" class="borderright borderbottom">${user.phone }</td>
-				        <td align="center" valign="middle" class="borderbottom"><a href="${ctx }/admin/deleteUser?username=${user.name }">删除</a></td>
-				      </tr>
-				    </table> 
-				    </td>
-				 </tr>
-				    <tr>
-				       <td width="90%" colspan="6" valign="middle">
-				         <form method="post" action="${ctx}/admin/userInfo">
-				         <input style="display:block;margin:0 auto;height:30px;width:80px;" type=submit value="返回" class="text-but">
-				         </form>
-				       </td>
-				    </tr>
 				  
+				  <tr>
+				    <td align="left" valign="top" id="addinfo">
+				    <a href="updateArtical.jsp" target="mainFrame" onFocus="this.blur()" class="add">修改文章</a>
+				    </td>
+				  </tr>
+				  <tr>
+				    <td align="left" valign="top">
+				    <form method="post" action="${ctx}/admin/updateArtical">
+				    <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
+				      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+				        <td align="right" valign="middle" class="borderright borderbottom bggray">要修改书的编号：</td>
+				        <td align="left" valign="middle" class="borderright borderbottom main-for">
+				        <input type="text" name="id" value="" class="text-word">
+				        </td>
+				      </tr>
+				      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+				        <td align="right" valign="middle" class="borderright borderbottom bggray">修改主题为：</td>
+				        <td align="left" valign="middle" class="borderright borderbottom main-for">
+				        <input type="text" name="title" value="" class="text-word">
+				        </td>
+				      </tr>
+				      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+				        <td align="right" valign="middle" class="borderright borderbottom bggray">修改内容为：</td>
+				        <td align="left" valign="middle" class="borderright borderbottom main-for">
+				        <input type="text" name="content" value="" class="text-word">
+				        </td>
+				      </tr>
+				      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+				        <td align="right" valign="middle" class="borderright borderbottom bggray">&nbsp;</td>
+				        <td align="left" valign="middle" class="borderright borderbottom main-for">
+				        <input name="" type="submit" value="提交" class="text-but">
+				        <input name="" type="reset" value="重置" class="text-but"></td>
+				      </tr>
+				        
+				    </table>
+				    </form>
+				    </td>
+				    </tr>
 				</table>
+				
 				   
 			</div>
 		  
@@ -268,20 +288,8 @@
     <!-- nice scroll -->
     <script src="js/jquery.scrollTo.min.js"></script>
     <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
-    <!-- charts scripts -->
-    <script src="assets/jquery-knob/js/jquery.knob.js"></script>
-    <script src="js/jquery.sparkline.js" type="text/javascript"></script>
-    <script src="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
-    <script src="js/owl.carousel.js" ></script>
-    <!-- jQuery full calendar -->
-    <script src="js/fullcalendar.min.js"></script> <!-- Full Google Calendar - Calendar -->
-	<script src="assets/fullcalendar/fullcalendar/fullcalendar.js"></script>
-    <!--script for this page only-->
-    <script src="js/calendar-custom.js"></script>
-	<script src="js/jquery.rateit.min.js"></script>
-    <!-- custom select -->
-    <script src="js/jquery.customSelect.min.js" ></script>
-	<script src="assets/chart-master/Chart.js"></script>
+    
+    
    
     <!--custome script for all page-->
     <script src="js/scripts.js"></script>
@@ -298,8 +306,55 @@
 	<script src="js/sparklines.js"></script>	
 	<script src="js/charts.js"></script>
 	<script src="js/jquery.slimscroll.min.js"></script>
-  
-
+	
+	<script>
+		 //knob
+	      $(function() {
+	        $(".knob").knob({
+	          'draw' : function () { 
+	            $(this.i).val(this.cv + '%')
+	          }
+	        })
+	      });
+	
+	      //carousel
+	      $(document).ready(function() {
+	          $("#owl-slider").owlCarousel({
+	              navigation : true,
+	              slideSpeed : 300,
+	              paginationSpeed : 400,
+	              singleItem : true
+	
+	          });
+	      });
+	
+	      //custom select box
+	
+	      $(function(){
+	          $('select.styled').customSelect();
+	      });
+		  
+		  /* ---------- Map ---------- */
+		$(function(){
+		  $('#map').vectorMap({
+		    map: 'world_mill_en',
+		    series: {
+		      regions: [{
+		        values: gdpData,
+		        scale: ['#000', '#000'],
+		        normalizeFunction: 'polynomial'
+		      }]
+		    },
+			backgroundColor: '#eef3f7',
+		    onLabelShow: function(e, el, code){
+		      el.html(el.html()+' (GDP - '+gdpData[code]+')');
+		    }
+		  });
+		});
+	
+	
+	
+	  </script>
 
   </body>
 </html>

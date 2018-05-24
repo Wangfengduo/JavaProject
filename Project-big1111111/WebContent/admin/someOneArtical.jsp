@@ -100,7 +100,7 @@
                       </a>
                       <ul class="sub">
                           <li><a class="" href="changePwd.jsp">修改密码</a></li>
-                          <li><a class="" href="admin_list.jsp">管理员列表</a></li>
+                          <li><a class="" href="${ctx}/admin/admin_list">管理员列表</a></li>
                           <li><a class="" href="#">用户授权</a></li>
                       </ul>
                   </li>

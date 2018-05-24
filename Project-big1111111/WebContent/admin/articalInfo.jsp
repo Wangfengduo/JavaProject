@@ -101,7 +101,7 @@
                       </a>
                       <ul class="sub">
                           <li><a class="" href="changePwd.jsp">修改密码</a></li>
-                          <li><a class="" href="admin_list.jsp">管理员列表</a></li>
+                          <li><a class="" href="${ctx}/admin/admin_list">管理员列表</a></li>
                           <li><a class="" href="#">用户授权</a></li>
                       </ul>
                   </li>
@@ -170,7 +170,7 @@
 						    <table width="100%" border="0" cellspacing="0" cellpadding="0" id="search">
 						  		<tr>
 						   		 <td width="90%" align="left" valign="middle">
-							         <form method="post" action="">
+							         <form method="post" action="${ctx }/admin/someOneArtical">
 							         <span>用户名：</span>
 							         <input type="text" name="title" value="根据用户名查询" class="text-word" id="textfield" style="color:#999;font-style:italic;" 
 							             onFocus="if (value =='根据用户名查询'){value =''}" onBlur="if (value ==''){value='根据用户名查询'}">
@@ -198,7 +198,7 @@
 						        <td align="center" valign="middle" class="borderright borderbottom">${artical.title }</td>
 						        <td align="center" valign="middle" class="borderright borderbottom">${artical.author }</td>
 						        <td align="center" valign="middle" class="borderright borderbottom">${artical.c_id }</td>
-						        <td align="center" valign="middle" class="borderright borderbottom"><a href="${ctx}/admin/deleteArtical?title=${artical.title }">删除</a></td>
+						        <td align="center" valign="middle" class="borderright borderbottom"><a href="${ctx}/admin/deleteArtical?id=${artical.id }">删除</a></td>
 						      </tr>
 						      </c:forEach>
 						    </table>

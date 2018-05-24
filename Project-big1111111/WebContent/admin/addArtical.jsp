@@ -307,7 +307,7 @@ input[type=submit]:active {
                       </a>
                       <ul class="sub">
                           <li><a class="" href="changePwd.jsp">修改密码</a></li>
-                          <li><a class="" href="admin_list.jsp">管理员列表</a></li>
+                          <li><a class="" href="${ctx}/admin/admin_list">管理员列表</a></li>
                           <li><a class="" href="#">用户授权</a></li>
                       </ul>
                   </li>
@@ -374,7 +374,7 @@ input[type=submit]:active {
 				        <p><input type="text" name="title" value="" placeholder="主题"></p>
 				        <p><input type="text" name="author" value="" placeholder="作者"></p>
 				        <p><input type="text" name="content" value="" placeholder="内容"></p>
-				        <p><input type="text" name="category" value="" placeholder="种类ID"></p>
+				        <p><input type="text" name="c_id" value="" placeholder="种类ID"></p>
 				        <p class="submit"><input type="submit" name="commit" value="确认"></p>
 				      </form>   
 			      </div>

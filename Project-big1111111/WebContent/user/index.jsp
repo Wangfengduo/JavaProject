@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
+     <c:set var="ctx" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -68,6 +70,7 @@
 							<li><a href="#"><i class="fa fa-wechat"></i></a></li> -->
 							<li><a href="login.jsp">登录</a></li>
 							<li><a href="register.jsp">注册</a></li>
+							<li>${u.name}</li>
 						</ul>
 					</div>
 				</div>
