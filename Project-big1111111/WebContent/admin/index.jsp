@@ -200,7 +200,7 @@
 				    <td colspan="2" align="left" valign="top">
 				    <span class="time"><strong>上午好！${a.admin_username}</strong><u>[管理员]</u></span>
 				    <div class="top"><span class="left">您上次的登灵时间：2017-11-25 12:00   登录IP：127.0.0.1 &nbsp;&nbsp;&nbsp;&nbsp;如非您本人操作，请及时</span><a href="index.html" target="mainFrame" onFocus="this.blur()">更改密码</a></div>
-				    <div class="sec">这是您第<span class="num">10</span>次,登录！</div>
+				    <div class="sec">这是您第<span class="num">23</span>次,登录！</div>
 				    </td>
 				  </tr>
 				  <tr>

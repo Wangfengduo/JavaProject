@@ -68,9 +68,8 @@
 						<ul class="list-unstyled list-inline">
 							<!-- <li><a href="#"><i class="fa fa-qq"></i></a></li>
 							<li><a href="#"><i class="fa fa-wechat"></i></a></li> -->
-							<li><a href="login.jsp">登录</a></li>
-							<li><a href="register.jsp">注册</a></li>
-							<li>${u.name}</li>
+							
+							<li>您好，${u.name}</li>
 						</ul>
 					</div>
 				</div>
