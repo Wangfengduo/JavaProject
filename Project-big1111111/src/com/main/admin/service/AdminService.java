@@ -88,7 +88,7 @@ public class AdminService {
 	//修改密码
 	@SuppressWarnings("unused")
 	public String changePwd(HttpSession session,String password,String newpassword,String newpwd) {
-		String admin_username=(String) session.getAttribute("name");
+		String admin_username=(String) session.getAttribute("a.admin_username");
 		Admin admin =admindao.findByName(admin_username);
 		if(!admin.getAdmin_password().equals(password)) {
 			return "error4";

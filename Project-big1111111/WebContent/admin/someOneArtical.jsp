@@ -86,7 +86,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="${ctx}/admin/userInfo">用户信息</a></li>                          
+                          <li><a class="" href="${ctx}/admin/userInfo">用户列表</a></li>                          
                           <li><a class="" href="#">新增用户</a></li>
                           <li><a class="" href="#">更改用户</a></li>
                           <li><a class="" href="${ctx}/admin/userInfo">删除用户</a></li>
@@ -95,17 +95,16 @@
                   <li class="sub-menu">
                       <a href="javascript:;" class="">
                           <i class="icon_desktop"></i>
-                          <span>管理员</span>
+                          <span>管理员管理</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
                           <li><a class="" href="changePwd.jsp">修改密码</a></li>
                           <li><a class="" href="admin_list.jsp">管理员列表</a></li>
-                          <li><a class="" href="grids.html">用户授权</a></li>
+                          <li><a class="" href="#">用户授权</a></li>
                       </ul>
                   </li>
-                  
-                             
+
                   <li class="sub-menu">
                       <a href="javascript:;" class="">
                           <i class="icon_desktop"></i>
@@ -132,6 +131,9 @@
                           <li><a class="" href="#"></a></li>
                       </ul>
                   </li>
+                  
+                  
+                  
                   
                   
                   

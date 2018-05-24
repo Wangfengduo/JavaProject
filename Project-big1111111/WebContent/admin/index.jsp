@@ -75,7 +75,7 @@
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             
-                            <span class="username">${a.admin_username}aaa先生</span>
+                            <span class="username">${a.admin_username}先生</span>
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
@@ -123,10 +123,10 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="${ctx}/admin/userInfo">用户信息</a></li>                          
-                          <li><a class="" href="#">新增用户</a></li>
+                          <li><a class="" href="${ctx}/admin/userInfo">用户列表</a></li>                          
+                          <li><a class="" href="addAdmin.jsp">新增用户</a></li>
                           <li><a class="" href="#">更改用户</a></li>
-                          <li><a class="" href="#">删除用户</a></li>
+                          <li><a class="" href="${ctx}/admin/userInfo">删除用户</a></li>
                       </ul>
                   </li>       
                   <li class="sub-menu">
@@ -137,7 +137,7 @@
                       </a>
                       <ul class="sub">
                           <li><a class="" href="changePwd.jsp">修改密码</a></li>
-                          <li><a class="" href="admin_list.jsp">管理员列表</a></li>
+                          <li><a class="" href="${ctx}/admin/admin_list">管理员列表</a></li>
                           <li><a class="" href="#">用户授权</a></li>
                       </ul>
                   </li>
@@ -149,10 +149,10 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="#">文章列表</a></li>
-                          <li><a class="" href="#">新增文章</a></li>
-                          <li><a class="" href="#">修改文章</a></li>
-                          <li><a class="" href="#">删除文章</a></li>
+                          <li><a class="" href="${ctx}/admin/articalInfo">文章列表</a></li>
+                          <li><a class="" href="addArtical.jsp">新增文章</a></li>
+                          <li><a class="" href="updateArtical.jsp">修改文章</a></li>
+                          <li><a class="" href="${ctx}/admin/articalInfo">删除文章</a></li>
                       </ul>
                   </li>
                   

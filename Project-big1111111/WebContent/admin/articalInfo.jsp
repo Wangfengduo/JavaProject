@@ -83,29 +83,29 @@
 				  <li class="sub-menu">
                       <a href="javascript:;" class="">
                           <i class="icon_document_alt"></i>
-                          <span>用户</span>
+                          <span>用户管理</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="${ctx}/admin/userInfo">用户信息</a></li>                          
+                          <li><a class="" href="${ctx}/admin/userInfo">用户列表</a></li>                          
                           <li><a class="" href="#">新增用户</a></li>
                           <li><a class="" href="#">更改用户</a></li>
-                          <li><a class="" href="#">删除用户</a></li>
+                          <li><a class="" href="${ctx}/admin/userInfo">删除用户</a></li>
                       </ul>
+                  </li>       
                   <li class="sub-menu">
                       <a href="javascript:;" class="">
                           <i class="icon_desktop"></i>
-                          <span>管理员</span>
+                          <span>管理员管理</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
                           <li><a class="" href="changePwd.jsp">修改密码</a></li>
                           <li><a class="" href="admin_list.jsp">管理员列表</a></li>
-                          <li><a class="" href="grids.html">用户授权</a></li>
+                          <li><a class="" href="#">用户授权</a></li>
                       </ul>
                   </li>
-                  
-                             
+
                   <li class="sub-menu">
                       <a href="javascript:;" class="">
                           <i class="icon_desktop"></i>
@@ -113,10 +113,10 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="#">文章列表</a></li>
-                          <li><a class="" href="#">新增文章</a></li>
-                          <li><a class="" href="#">修改文章</a></li>
-                          <li><a class="" href="#">删除文章</a></li>
+                          <li><a class="" href="${ctx}/admin/articalInfo">文章列表</a></li>
+                          <li><a class="" href="addArtical.jsp">新增文章</a></li>
+                          <li><a class="" href="updateArtical.jsp">修改文章</a></li>
+                          <li><a class="" href="${ctx}/admin/articalInfo">删除文章</a></li>
                       </ul>
                   </li>
                   
@@ -135,6 +135,9 @@
                   
                   
                   
+                  
+                  
+                  
               </ul>
               <!-- sidebar menu end-->
           </div>
@@ -146,7 +149,7 @@
           <section class="wrapper">
 		  <div class="row">
 				<div class="col-lg-12">
-					<h3 class="page-header"><i class="fa fa-file-text-o"></i> 用户信息</h3>
+					<h3 class="page-header"><i class="fa fa-file-text-o"></i> 文章信息</h3>
 					<ol class="breadcrumb">
 						<li><i class="fa fa-home"></i><a href="index.jsp">主页</a></li>
 						<li><i class="icon_document_alt"></i>文章管理	</li>

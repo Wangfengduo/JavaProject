@@ -14,8 +14,8 @@ public class Artical {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
 	private int id;
-	@Column(name="u_id")
-	private int u_id;
+	@Column(name="author")
+	private String author;
 	@Column(name="title")
 	private String title;
 	@Column(name="content")
@@ -28,11 +28,12 @@ public class Artical {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getU_id() {
-		return u_id;
+	
+	public String getAuthor() {
+		return author;
 	}
-	public void setU_id(int u_id) {
-		this.u_id = u_id;
+	public void setAuthor(String author) {
+		this.author = author;
 	}
 	public String getTitle() {
 		return title;
