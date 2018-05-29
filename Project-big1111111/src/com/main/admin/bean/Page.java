@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
+import com.main.user.bean.Comment;
 import com.main.user.bean.User;
 
 @Component
@@ -12,6 +13,7 @@ public class Page{
 	private List<User> list;
 	private List<Admin> list1;
 	private List<Artical> list2;
+	private List<Comment> list3;
 	//查询记录总数
 	private int totalRecords;
 	// 每页多少条记录
@@ -114,6 +116,14 @@ public class Page{
 
 	public void setList2(List<Artical> list2) {
 		this.list2 = list2;
+	}
+
+	public List<Comment> getList3() {
+		return list3;
+	}
+
+	public void setList3(List<Comment> list3) {
+		this.list3 = list3;
 	}
 
 	

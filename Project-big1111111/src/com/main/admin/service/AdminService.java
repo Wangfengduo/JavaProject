@@ -3,10 +3,10 @@ package com.main.admin.service;
 import java.util.Date;
 import java.util.Properties;
 
-import javax.mail.Authenticator;
+
 import javax.mail.Message;
 import javax.mail.MessagingException;
-import javax.mail.PasswordAuthentication;
+
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.AddressException;
@@ -52,25 +52,33 @@ public class AdminService {
 		if(admin != null) {
 			String password1=admin.getAdmin_password();
 			Properties props =new Properties();
+			props.put("username", "wangfd0820@163.com");
+			props.put("password", "javamail123");
+			
 			props.put("mail.smtp.host", "smtp.163.com");
 			props.put("mail.transport.protocol", "smtp");
+			props.put("mail.smtp.port", "25");
 			props.put("mail.smtp.auth", true);
-			Session mailSession = Session.getInstance(props,new Authenticator() {
-				protected PasswordAuthentication getPasswordAuthentication() {
-					return new PasswordAuthentication("javamail5678@163.com","javamail5678sqm");
-				}
-			});	
+			Session mailSession = Session.getInstance(props);
+				
 			
 			try {
 				Message msg = new MimeMessage(mailSession);
 				//设置邮件的发件人
-				msg.setFrom(new InternetAddress("javamail5678@163.com"));
+				msg.setFrom(new InternetAddress("wangfd0820@163.com"));
 				//设置邮件的收件人
-				msg.addRecipient(Message.RecipientType.TO, new InternetAddress(mail));
-				msg.setSubject("找回密码");
+				msg.addRecipients(Message.RecipientType.CC,InternetAddress.parse(props.getProperty("username")) );
+				msg.addRecipients(Message.RecipientType.TO, InternetAddress.parse(mail));
+				msg.setSubject("密码找回");
 				msg.setSentDate(new Date());
-				msg.setText("您的密码是："+password1);
-				Transport.send(msg);
+				msg.setText("请勿回复本邮件。<br/>您的密码是："+password1 +"<br/> tips:本邮件超过30分钟,链接将会失效，需要重新申请找回密码.");
+				msg.saveChanges();
+				
+				Transport transport=mailSession.getTransport("smtp");
+				transport.connect(props.getProperty("mail.smtp.host"), props.getProperty("username"),props.getProperty("password"));
+				transport.sendMessage(msg, msg.getAllRecipients());
+				transport.close();
+				
 			} catch (AddressException e) {
 				e.printStackTrace();
 			} catch (MessagingException e) {

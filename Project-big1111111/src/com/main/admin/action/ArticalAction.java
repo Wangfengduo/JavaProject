@@ -53,7 +53,7 @@ public class ArticalAction {
     public String deleteArtical(@RequestParam(value = "id") int id) {
         System.out.println("删除单个");
         articalService.deleteArtical(id);
-        return "admin/articalInfo";
+        return "redirect:/admin/articalInfo";
     }
 
 	
