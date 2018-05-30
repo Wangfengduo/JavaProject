@@ -1,20 +1,19 @@
-package com.main.user.dao;
+package com.main.admin.dao;
 
 import java.util.List;
-
-import javax.annotation.Resource;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.main.user.bean.Comment;
 
 @Repository
-public class CommentDao {
-	@Resource
+public class CommentInfoDao {
+	@Autowired
 	private SessionFactory sessionFactory;
 	
 	//查看所有评论
@@ -23,7 +22,7 @@ public class CommentDao {
 		List<Comment> list=null;
 		try {
 			Session session=sessionFactory.getCurrentSession();
-			Query<Comment> query=session.createQuery("from Comment c where c.artical_id=?");
+			Query<Comment> query=session.createQuery("from Comment");
 			query.setFirstResult(offset);
 			query.setMaxResults(length);
 			list =query.list();
@@ -48,7 +47,7 @@ public class CommentDao {
         }
 		return count;
 	}
-
+	
 	//添加评论
 	public void saveComment(Comment com) {
 		this.sessionFactory.getCurrentSession().save(com);
@@ -58,5 +57,4 @@ public class CommentDao {
 	public void delComment(int id) {
 		this.sessionFactory.getCurrentSession().createQuery("delete from Comment c where c.id="+id).executeUpdate();
 	}
-	
 }
