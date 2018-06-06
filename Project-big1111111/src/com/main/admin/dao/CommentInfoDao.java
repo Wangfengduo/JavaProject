@@ -57,4 +57,10 @@ public class CommentInfoDao {
 	public void delComment(int id) {
 		this.sessionFactory.getCurrentSession().createQuery("delete from Comment c where c.id="+id).executeUpdate();
 	}
+	
+	public Comment QueryById(int id) {
+		Comment com=this.sessionFactory.getCurrentSession().get(Comment.class, id);
+		return com;
+	}
+	
 }

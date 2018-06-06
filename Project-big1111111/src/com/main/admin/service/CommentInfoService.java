@@ -42,4 +42,8 @@ public class CommentInfoService {
 		this.commentInfoDao.delComment(id);
 	}
 	
+	public void selectComment(int id) {
+		this.commentInfoDao.QueryById(id);
+	}
+	
 }

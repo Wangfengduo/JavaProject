@@ -13,16 +13,25 @@ import javax.persistence.Table;
 @Entity
 @Table(name="comment")
 public class Comment {
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
 	private int id;
+	
+	//文章ID
 	@Column(name="artical_id")
 	private int artical_id;
+	
+	//评论内容
 	@Column(name="content")
 	private String content;
+	
+	//评论者ID
 	@Column(name="u_id")
 	private int u_id;
+	
+	//评论时间
 	@Column(name="comment_time")
 	private Date comment_time;
 	

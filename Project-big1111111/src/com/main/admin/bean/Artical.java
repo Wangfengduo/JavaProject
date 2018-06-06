@@ -13,15 +13,22 @@ public class Artical {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
-	private int id;
+	private int id;//ID
+	
 	@Column(name="author")
-	private String author;
+	private String author;//作者
+	
 	@Column(name="title")
-	private String title;
+	private String title;//标题
+	
 	@Column(name="content")
-	private String content;
+	private String content;//内容
+	
 	@Column(name="c_id")
-	private int c_id;
+	private int c_id; //种类ID
+	
+	
+	
 	public int getId() {
 		return id;
 	}

@@ -53,6 +53,7 @@ public class CommentDao {
 	public void saveComment(Comment com) {
 		this.sessionFactory.getCurrentSession().save(com);
 	}
+	
 	//删除评论
 	@Transactional
 	public void delComment(int id) {

@@ -87,28 +87,27 @@
 					<!-- Start Menu Area -->
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="index.html">主页</a></li>
-							
-							<li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown">职业病</a>
+							<li class="active"><a href="index.jsp">主页</a></li>
+							<li class="dropdown"><a href="about.jsp">关于我们</a>
+							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">职业病</a>
 								<ul class="dropdown-menu" role="menu">
-									<li class="active"><a href="services.html">职业病</a></li>
-									<li><a href="department-single.html">具体类别</a></li>
+									<li><a href="service.jsp">职业病</a></li>
+										<li><a href="department-single.jsp">具体类别</a></li>
 								</ul>
 							</li>
 							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">新闻</a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="news.html">新闻</a></li>
-									<li><a href="news-single.html">单个新闻</a></li>
+									<li><a href="news.jsp">新闻</a></li>
+									<li><a href="news-single.jsp">单个新闻</a></li>
 								</ul>
 							</li>
 							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">网页</a>
 								<ul class="dropdown-menu" role="menu">
-									
-									<li><a href="faqs.html">常见问题</a></li>
-									<li><a href="404.html">404 页</a></li>
+									<li><a href="faqs.jsp">常见问题</a></li>
+									<li><a href="404.jsp">404页面</a></li>
 								</ul>
 							</li>
-							<li><a href="contact.html">联系我们</a></li>
+							<li><a href="contact.jsp">联系我们</a></li>
 							<li class="dropdown" style="
   			  						height: 50px;
     								border-top-width: 10px;
