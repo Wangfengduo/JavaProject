@@ -375,6 +375,8 @@ input[type=submit]:active {
 				        <p><input type="text" name="author" value="" placeholder="作者"></p>
 				        <p><input type="text" name="content" value="" placeholder="内容"></p>
 				        <p><input type="text" name="c_id" value="" placeholder="种类ID"></p>
+				        <p><input type="text" name="tag" value="" placeholder="标签"></p>
+				        <p><input type="text" name="tag" value="" placeholder="描述"></p>
 				        <p class="submit"><input type="submit" name="commit" value="确认"></p>
 				      </form>   
 			      </div>

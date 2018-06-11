@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
+     <c:set var="ctx" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -145,42 +147,40 @@
 			<div class="col-md-9 col-sm-12 col-xs-12">
 				<!-- Start News Post List -->
 				<div class="news-post-list">
+				
+				
+					<c:forEach items="${artical}" var="artical" >
 					<!-- Start News Post #1 -->
 					<article class="news-post">
 						<img src="assets/images/news-post-img-1.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
 						<div class="inner">
 							<h4>
-								<a href="news-single.html">那些人易得肺病</a>
+								<a href="news-single.jsp">${artical.title }</a>
 							</h4>
 							<ul class="list-unstyled list-inline post-meta">
 								<li><i class="fa fa-calendar"></i>2018/01/21</li>
-								<li><i class="fa fa-clock-o"></i>17:00</li>
-								<li><i class="fa fa-user"></i><a href="#">王宝强</a></li>
+								
+								<li><i class="fa fa-user"></i><a href="#">${artical.author }</a></li>
 								<li><a href="#"><i class="fa fa-comments-o"></i> 10 评论</a></li>
 								<li><i class="fa fa-tag"></i>
-									<a href="#">一般</a>,
-									<a href="#"> 肺科</a>,
-									<a href="#"> 调查</a>
+									<a href="#">${artical.tag }</a>
+									
 								</li>
 							</ul>
+							
 							<p>
-								<li>纺织业</li>      
-								<li>酒吧从业者 </li>
-								<li> 医护业  </li>
-								<li> 建筑业 </li>
-								<li>制造业</li>
-
+								    ${artical.desc }
 							</p>
-							<p>
-								    从中医的角度考虑，肺病不是小疾病，如果不注意治疗，就有可能转为肺癌。在众多职业中，有一些比较特殊的职业人群，会更容易得上肺病。
-							</p>
-							<a href="news-single.html" class="btn btn-secondary">
+							<a href="news-single.jsp" class="btn btn-secondary">
 								阅读更多
 								<i class="fa fa-arrow-circle-right"></i>
 							</a>
 						</div>
 					</article>
 					<!-- End News Post #1 -->
+					</c:forEach>
+					
+					
 					<!-- Start News Post #2 -->
 					<article class="news-post">
 						<!-- Start News Carousel -->
@@ -275,6 +275,8 @@
 					<!-- End News Post #3 -->
 				</div>
 				<!-- End News Post List -->
+				
+				
 				<!-- Start News Pagination -->
 				<div class="clearfix pagination-wrap text-center">
 					<ul class="pagination">
@@ -291,6 +293,8 @@
 						</li>
 					</ul>
 				</div>
+				
+				
 				<!-- End News Pagination -->
 			</div>
 			<!-- End Content Area -->

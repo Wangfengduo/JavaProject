@@ -189,6 +189,8 @@
 						        <th align="center" valign="middle" class="borderright">主题</th>
 						        <th align="center" valign="middle" class="borderright">作者</th>
 						        <th align="center" valign="middle" class="borderright">种类ID</th>
+						        <th align="center" valign="middle" class="borderright">标签</th>
+						        <th align="center" valign="middle" class="borderright">描述</th>
 						        <th align="center" valign="middle" class="borderright">操作</th>
 						      </tr>
 						      
@@ -197,6 +199,8 @@
 						        <td align="center" valign="middle" class="borderright borderbottom">${artical.title }</td>
 						        <td align="center" valign="middle" class="borderright borderbottom">${artical.author }</td>
 						        <td align="center" valign="middle" class="borderright borderbottom">${artical.c_id }</td>
+						        <td align="center" valign="middle" class="borderright borderbottom">${artical.tag }</td>
+						        <td align="center" valign="middle" class="borderright borderbottom">${artical.desc }</td>
 						        <td align="center" valign="middle" class="borderright borderbottom"><a href="${ctx}/admin/deleteArtical?title=${artical.title }">删除</a></td>
 						      </tr>
 						      

@@ -2,6 +2,8 @@ package com.main.admin.service;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -42,8 +44,9 @@ public class CommentInfoService {
 		this.commentInfoDao.delComment(id);
 	}
 	
-	public void selectComment(int id) {
-		this.commentInfoDao.QueryById(id);
+	public void selectComment(HttpSession session,int artical_id) {
+		List<Comment> list=this.commentInfoDao.selectById(artical_id);
+		session.setAttribute("list", list);
 	}
 	
 }

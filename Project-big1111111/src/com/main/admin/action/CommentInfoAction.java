@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -41,17 +42,25 @@ public class CommentInfoAction {
 		return "admin/commentInfo";	
 	}
 	
-	//后台添加
+	//添加
 	@RequestMapping("/addComment")
 	public String addComment1(Comment com) {
 		this.commentInfoService.addComment(com);
 		return "redirect:/admin/commentInfo";
 	}
-	//后台删除
+	//删除
 	@RequestMapping("/deleteComment")
 	public String deleteComment(@RequestParam(value = "id") int id) {
 		System.out.println("删除单个");
 		commentInfoService.deleteComment(id);
 		return "redirect:/admin/commentInfo";
 	}
+	
+	//根据文章ID查看评论
+	@RequestMapping("/selectComment")
+	public String selectComment(HttpSession session,int artical_id){
+		this.commentInfoService.selectComment(session, artical_id);
+		return "admin/someOneComment";
+	}	
+	
 }

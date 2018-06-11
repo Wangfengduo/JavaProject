@@ -58,9 +58,18 @@ public class CommentInfoDao {
 		this.sessionFactory.getCurrentSession().createQuery("delete from Comment c where c.id="+id).executeUpdate();
 	}
 	
-	public Comment QueryById(int id) {
-		Comment com=this.sessionFactory.getCurrentSession().get(Comment.class, id);
-		return com;
+	//查找评论
+	
+	@SuppressWarnings("unchecked")
+	public List<Comment> selectById(int artical_id) {
+		Session session =sessionFactory.getCurrentSession();
+		String sql="from Comment c where c.artical_id=?";
+		@SuppressWarnings("rawtypes")
+		Query query=session.createQuery(sql);
+		query.setParameter(0, artical_id);
+		List<Comment> list=null;
+		list=query.list();
+		return list;
 	}
 	
 }

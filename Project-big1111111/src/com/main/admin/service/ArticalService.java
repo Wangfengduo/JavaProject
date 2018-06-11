@@ -36,6 +36,12 @@ public class ArticalService {
 		session.setAttribute("artical", a);
 	}
 	
+	//按ID查找
+	public void selectOne(HttpSession session,int id) {
+		Artical a=this.articalDao.findById(id);
+		session.setAttribute("artical", a);
+	}
+	
 	//查看文章信息，分页显示
 	public Page findAll(int currentPage,int pageSize) {
 		Page page=new Page();

@@ -163,8 +163,8 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="#"></a></li>
-                          <li><a class="" href="#"></a></li>
+                          <li><a class="" href="${ctx}/admin/commentInfo">评论列表</a></li>
+                          <li><a class="" href="${ctx}/admin/commentInfo">文章评论</a></li>
                           <li><a class="" href="#"></a></li>
                       </ul>
                   </li>

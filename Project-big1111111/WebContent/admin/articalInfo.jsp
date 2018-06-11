@@ -190,14 +190,18 @@
 						        <th align="center" valign="middle" class="borderright">主题</th>
 						        <th align="center" valign="middle" class="borderright">作者</th>
 						        <th align="center" valign="middle" class="borderright">种类ID</th>
+						        <th align="center" valign="middle" class="borderright">标签</th>
+						        <th align="center" valign="middle" class="borderright">描述</th>
 						        <th align="center" valign="middle" class="borderright">操作</th>
 						      </tr>
 						      <c:forEach items="${articallist}" var="artical" >
 						      <tr class="bggray" onMouseOut="this.style.backgroundColor='#f9f9f9'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-						        <td align="center" valign="middle" class="borderright borderbottom">${artical.id }</td>
+						        <td align="center" valign="middle" class="borderright borderbottom"><a href="${ctx}/admin/selectArtical?id=${artical.id }">${artical.id }</a></td>
 						        <td align="center" valign="middle" class="borderright borderbottom">${artical.title }</td>
 						        <td align="center" valign="middle" class="borderright borderbottom">${artical.author }</td>
 						        <td align="center" valign="middle" class="borderright borderbottom">${artical.c_id }</td>
+						        <td align="center" valign="middle" class="borderright borderbottom">${artical.tag }</td>
+						        <td align="center" valign="middle" class="borderright borderbottom">${artical.desc }</td>
 						        <td align="center" valign="middle" class="borderright borderbottom"><a href="${ctx}/admin/deleteArtical?id=${artical.id }">删除</a></td>
 						      </tr>
 						      </c:forEach>
@@ -212,11 +216,11 @@
 						<tr>
 				            <td colspan="6" align="center" bgcolor="#5BA8DE">共${page.totalRecords}条记录 共${page.totalPages}页 当前第${page.pageNo}页<br>
 				                
-				                <a href="${ctx}/admin/userInfo?pageNo=${page.topPageNo }"><input type="button" name="fristPage" value="首页" /></a>
+				                <a href="${ctx}/admin/articalInfo?pageNo=${page.topPageNo }"><input type="button" name="fristPage" value="首页" /></a>
 				                <c:choose>
 				                  <c:when test="${page.pageNo!=1}">
 				                    
-				                      <a href="${ctx}/admin/userInfo?pageNo=${page.previousPageNo }"><input type="button" name="previousPage" value="上一页" /></a>
+				                      <a href="${ctx}/admin/articalInfo?pageNo=${page.previousPageNo }"><input type="button" name="previousPage" value="上一页" /></a>
 				                    
 				                  </c:when>
 				                  <c:otherwise>
@@ -227,7 +231,7 @@
 				                </c:choose>
 				                <c:choose>
 				                  <c:when test="${page.pageNo != page.totalPages}">
-				                    <a href="${ctx}/admin/userInfo?pageNo=${page.nextPageNo }"><input type="button" name="nextPage" value="下一页" /></a>
+				                    <a href="${ctx}/admin/articalInfo?pageNo=${page.nextPageNo }"><input type="button" name="nextPage" value="下一页" /></a>
 				                  </c:when>
 				                  <c:otherwise>
 				                    
@@ -235,7 +239,7 @@
 				                    
 				                  </c:otherwise>
 				                </c:choose>
-				                <a href="${ctx}/admin/userInfo?pageNo=${page.bottomPageNo }"><input type="button" name="lastPage" value="尾页" /></a>
+				                <a href="${ctx}/admin/articalInfo?pageNo=${page.bottomPageNo }"><input type="button" name="lastPage" value="尾页" /></a>
 				            </td>
 				        </tr>
 					</table>

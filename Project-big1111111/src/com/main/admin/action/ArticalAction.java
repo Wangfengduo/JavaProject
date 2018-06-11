@@ -48,6 +48,13 @@ public class ArticalAction {
 		return "admin/someOneArtical";
 	}
 	
+	//根据ID获取文章信息
+	@RequestMapping("/selectArtical")
+	public String selectArtical(HttpSession session,int id) {
+		this.articalService.selectOne(session, id);
+		return "admin/someOneArtical";
+	}
+	
 	//删除某一文章
 	@RequestMapping("/deleteArtical")
     public String deleteArtical(@RequestParam(value = "id") int id) {

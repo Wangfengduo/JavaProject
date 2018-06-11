@@ -27,6 +27,11 @@ public class Artical {
 	@Column(name="c_id")
 	private int c_id; //种类ID
 	
+	@Column(name="tag")
+	private String tag;//标签
+	
+	@Column(name="desc")
+	private String desc;//描述
 	
 	
 	public int getId() {
@@ -59,6 +64,18 @@ public class Artical {
 	}
 	public void setC_id(int c_id) {
 		this.c_id = c_id;
+	}
+	public String getTag() {
+		return tag;
+	}
+	public void setTag(String tag) {
+		this.tag = tag;
+	}
+	public String getDesc() {
+		return desc;
+	}
+	public void setDesc(String desc) {
+		this.desc = desc;
 	}
 	
 	

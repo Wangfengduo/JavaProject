@@ -194,13 +194,13 @@
 						        <th align="center" valign="middle" class="borderright">评论时间</th>
 						        <th align="center" valign="middle" class="borderright">操作</th>
 						      </tr>
-						      <c:forEach items="${commentlist}" var="comment" >
+						      <c:forEach items="${list}" var="list" >
 						      <tr class="bggray" onMouseOut="this.style.backgroundColor='#f9f9f9'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-						        <td align="center" valign="middle" class="borderright borderbottom">${comment.id }</td>
-						        <td align="center" valign="middle" class="borderright borderbottom"><a href="${ctx}/admin/selectComment?artical_id=${comment.artical_id }">${comment.artical_id }</a></td>
-						        <td align="center" valign="middle" class="borderright borderbottom">${comment.u_id }</td>
-						        <td align="center" valign="middle" class="borderright borderbottom">${comment.content }</td>
-						        <td align="center" valign="middle" class="borderright borderbottom">${comment.comment_time }</td>
+						        <td align="center" valign="middle" class="borderright borderbottom">${list.id }</td>
+						        <td align="center" valign="middle" class="borderright borderbottom">${list.artical_id }</td>
+						        <td align="center" valign="middle" class="borderright borderbottom">${list.u_id }</td>
+						        <td align="center" valign="middle" class="borderright borderbottom">${list.content }</td>
+						        <td align="center" valign="middle" class="borderright borderbottom">${list.comment_time }</td>
 						        <td align="center" valign="middle" class="borderright borderbottom"><a href="${ctx}/admin/deleteComment?id=${comment.id }">删除</a></td>
 						      </tr>
 						      </c:forEach>
@@ -209,38 +209,6 @@
 						   </tr>
 					
 					
-					
-					
-					
-						<tr>
-				            <td colspan="6" align="center" bgcolor="#5BA8DE">共${page.totalRecords}条记录 共${page.totalPages}页 当前第${page.pageNo}页<br>
-				                
-				                <a href="${ctx}/admin/userInfo?pageNo=${page.topPageNo }"><input type="button" name="fristPage" value="首页" /></a>
-				                <c:choose>
-				                  <c:when test="${page.pageNo!=1}">
-				                    
-				                      <a href="${ctx}/admin/userInfo?pageNo=${page.previousPageNo }"><input type="button" name="previousPage" value="上一页" /></a>
-				                    
-				                  </c:when>
-				                  <c:otherwise>
-				                    
-				                      <input type="button" disabled="disabled" name="previousPage" value="上一页" />
-				                    
-				                  </c:otherwise>
-				                </c:choose>
-				                <c:choose>
-				                  <c:when test="${page.pageNo != page.totalPages}">
-				                    <a href="${ctx}/admin/userInfo?pageNo=${page.nextPageNo }"><input type="button" name="nextPage" value="下一页" /></a>
-				                  </c:when>
-				                  <c:otherwise>
-				                    
-				                      <input type="button" disabled="disabled" name="nextPage" value="下一页" />
-				                    
-				                  </c:otherwise>
-				                </c:choose>
-				                <a href="${ctx}/admin/userInfo?pageNo=${page.bottomPageNo }"><input type="button" name="lastPage" value="尾页" /></a>
-				            </td>
-				        </tr>
 					</table>
                   </div>
               </div> 
