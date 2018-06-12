@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
+     <c:set var="ctx" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -52,8 +54,8 @@
 					</div>
 					<div class="col-sm-3 col-xs-12">
 						<ul class="list-unstyled list-inline">
-							<li><a href="login.html">登录</a></li>
-							<li><a href="register.html">注册</a></li>
+							<li><a href="login.jsp">登录</a></li>
+							<li><a href="register.jsp">注册</a></li>
 						</ul>
 					</div>
 				</div>
@@ -72,7 +74,7 @@
 						</button>
 						<!-- End Collapse Button -->
 						<!-- Start Website Logo -->
-						<a href="index.html" class="navbar-brand">
+						<a href="index.jsp" class="navbar-brand">
 							<img src="assets/images/logo.png" class="logo" alt="Logo">养<span>益生</span>
 						</a>
 						
@@ -149,31 +151,26 @@
 						<img src="assets/images/news-post-img-2.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
 						<div class="inner">
 							<h4>
-								<a href="news-single.html">调查称职业病患者九成是尘肺</a>
+								<a href="news-single.jsp">${artical.title }</a>
 							</h4>
 							<ul class="list-unstyled list-inline post-meta">
 								<li><i class="fa fa-calendar"></i>2018/01/21</li>
 								<li><i class="fa fa-clock-o"></i>17:00</li>
-								<li><i class="fa fa-user"></i><a href="#">杨幂</a></li>
-								<li><a href="#"><i class="fa fa-comments-o"></i> 10 Comments</a></li>
+								<li><i class="fa fa-user"></i><a href="#">${artical.author }</a></li>
+								<li><a href="#"><i class="fa fa-comments-o"></i> 10 评论</a></li>
 								<li><i class="fa fa-tag"></i>
-									<a href="#">杨幂</a>,
-									<a href="#"> 保健</a>,
-									<a href="#">肺科</a>
+									<a href="#">${artical.tag }</a>
 								</li>
 							</ul>
 							<div class="news-post-content">
-								<p>       本报讯（记者赵津）记者从市卫生局获悉，尘肺、慢性中毒、急性中毒是本市职业病主要病种，其中尘肺病最为突出，占近三年职业病发病人数的91．0％。
-								<p>       有关专家提醒从业者，按照《职业病防治法》要求，职业病相关企业应为从业者建立健康档案，从业人员首次上岗和离岗都应进行职业健康检查，工作期间还应定期接受职业体检。目前，本市职业健康检查率为73．0％，未建立健康档案的企业职工可以向有关部门投诉。
-								</p>
-								<p>       职业病发病情况主要呈现以下特点：一是尘肺病依然突出。在各类尘肺病例中，矽肺、石棉肺、水泥尘肺、铸工尘肺和滑石尘肺仍为本市主要病种，共占93．9％，主要发生在建材、冶金、机械三大系统。
-								</p>
+								<p>${artical.content }</p>
+								
+								
 								<blockquote>
 									<p>   二是慢性职业中毒形势严峻，有机溶剂中毒突出，约占职业中毒的70％。三是急性职业中毒事故时有发生。
 									</p>
 								</blockquote>
-								<p>       市卫生监督部门每年都对职业病相关行业企业进行专项监督检查，2002年至今已经有115家企业受到警告，156家企业限期整改，28家企业被勒令停业。市职业病防治监督举报电话：市卫生局、市卫生监督所24321188；市安全生产监督管理局28450345；市总工会维权热线12351；市劳动保障服务热线12333。
-								</p>
+								
 								<div class="row">
 									<div class="col-sm-6 col-xs-12">
 										<ul class="list-unstyled list-style-2">

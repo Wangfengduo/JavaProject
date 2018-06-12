@@ -152,38 +152,6 @@
 					<c:forEach items="${artical}" var="artical" >
 					<!-- Start News Post #1 -->
 					<article class="news-post">
-						<img src="assets/images/news-post-img-1.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-						<div class="inner">
-							<h4>
-								<a href="news-single.jsp">${artical.title }</a>
-							</h4>
-							<ul class="list-unstyled list-inline post-meta">
-								<li><i class="fa fa-calendar"></i>2018/01/21</li>
-								
-								<li><i class="fa fa-user"></i><a href="#">${artical.author }</a></li>
-								<li><a href="#"><i class="fa fa-comments-o"></i> 10 评论</a></li>
-								<li><i class="fa fa-tag"></i>
-									<a href="#">${artical.tag }</a>
-									
-								</li>
-							</ul>
-							
-							<p>
-								    ${artical.desc }
-							</p>
-							<a href="news-single.jsp" class="btn btn-secondary">
-								阅读更多
-								<i class="fa fa-arrow-circle-right"></i>
-							</a>
-						</div>
-					</article>
-					<!-- End News Post #1 -->
-					</c:forEach>
-					
-					
-					<!-- Start News Post #2 -->
-					<article class="news-post">
-						<!-- Start News Carousel -->
 						<div id="news-post-carousel" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner">
 								<div class="item active">
@@ -207,92 +175,89 @@
 							</a>
 							<!-- End Controls -->
 						</div>
-						<!-- End News Carousel -->
+						
 						<div class="inner">
 							<h4>
-								<a href="news-single.jsp">新闻以照片集的格式发布</a>
+								<a href="news-single.jsp">${artical.title }</a>
 							</h4>
 							<ul class="list-unstyled list-inline post-meta">
 								<li><i class="fa fa-calendar"></i>2018/01/21</li>
-								<li><i class="fa fa-clock-o"></i>17:00</li>
-								<li><i class="fa fa-user"></i><a href="#">张萌</a></li>
+								
+								<li><i class="fa fa-user"></i><a href="#">${artical.author }</a></li>
 								<li><a href="#"><i class="fa fa-comments-o"></i> 10 评论</a></li>
 								<li><i class="fa fa-tag"></i>
-									<a href="#">一般</a>,
-									<a href="#"> 健康</a>,
-									<a href="#"> 身体</a>
+									<a href="#">${artical.tag }</a>
+									
 								</li>
 							</ul>
+							
 							<p>
-								<li>为客户提供一站式的媒体选择-----最大限度消除客户东奔西走的烦恼；</li> 
-								<li>为客户提供一揽子的媒体计划-----最大限度降低客户谈判时间和成本；</li>
-								<li>为客户提供批发式的优惠价格-----最大限度减少客户的媒体发布成本；</li>
-								<li>为客户提供高实效的投播方案-----最大限度减少客户的广告投放浪费；</li>
+								    ${artical.desc }
 							</p>
-							<p>
-								 相关媒体：环球时报    中国证劵报    中国青年报    中国经营报    中国医药报    医药经济报    中国报    中国老年报    经济日报          经济观察报     新京晚报     河北日报     河北晨报      新京报     京华时报
-							</p> 
-							<a href="news-single.html" class="btn btn-secondary">
+							<a href="${ctx}/user/news-single?id=${artical.id }" class="btn btn-secondary">
 								阅读更多
 								<i class="fa fa-arrow-circle-right"></i>
 							</a>
 						</div>
 					</article>
+					<!-- End News Post #1 -->
+					</c:forEach>
+					
+					
+					<!-- Start News Post #2 -->
+					
 					<!-- End News Post #2 -->
 					<!-- Start News Post #3 -->
-					<article class="news-post">
-						<img src="assets/images/news-post-img-2.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
-						<div class="inner">
-							<h4>
-								<a href="news-single.html">肺部护理方法</a>
-							</h4>
-							<ul class="list-unstyled list-inline post-meta">
-								<li><i class="fa fa-calendar"></i>2018/01/21</li>
-								<li><i class="fa fa-clock-o"></i>17:00</li>
-								<li><i class="fa fa-user"></i><a href="#"></a></li>
-								<li><a href="#"><i class="fa fa-comments-o"></i> 10 评论</a></li>
-								<li><i class="fa fa-tag"></i>
-									<a href="#">一般</a>,
-									<a href="#"> 健康</a>,
-									<a href="#"> 身体</a>
-								</li>
-							</ul>
-							<p>
-								<li>尽可能地控制自身接触乳胶手套的机会有助于肺部健康，但对于医生和护士而言，不使用手套并非是一个好选择。在十分严重的情况下，乳胶过敏可终结医护人员的职业生涯。因此，可改用无乳胶合成的手套。</li>
-								<li>当你在旧建筑周围工作的时候，穿防护服，戴口罩，或者避免吸烟都是有助于肺部健康的。</li>
-							</p>
-							<p>
-								<li>一个最简单的办法就是，当你将双乙酰放入大锅中混合时，需将盖子盖上，并戴上过滤面罩。</li>
-								<li>选择戴口罩，改善工作环境的通风状况，戒烟限酒。</li>
-								<li>如果你是在允许吸烟的酒吧里工作，保持良好的通风系统可以对你的肺部健康有所帮助。</li>
-							</p>
-							<a href="news-single.html" class="btn btn-secondary">
-								阅读更多
-								<i class="fa fa-arrow-circle-right"></i>
-							</a>
-						</div>
-					</article>
+					
 					<!-- End News Post #3 -->
 				</div>
 				<!-- End News Post List -->
+				
+				
 				
 				
 				<!-- Start News Pagination -->
 				<div class="clearfix pagination-wrap text-center">
 					<ul class="pagination">
 						<li>
-							<a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-						</li>
-						<li class="active"><span>1</span></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
-						<li>
-							<a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+						<table style="
+							width:400px;
+						">
+				           <tr>
+				            <td colspan="6" align="center" bgcolor="#5BA8DE">共${page.totalRecords}条记录 共${page.totalPages}页 当前第${page.pageNo}页<br>
+				                
+				                <a href="${ctx}/user/news?pageNo=${page.topPageNo }"><input type="button" name="fristPage" value="首页" /></a>
+				                <c:choose>
+				                  <c:when test="${page.pageNo!=1}">
+				                    
+				                     <a href="${ctx}/user/news?pageNo=${page.previousPageNo }"><input type="button" name="previousPage" value="上一页" /></a>
+				                    
+				                  </c:when>
+				                  <c:otherwise>
+				                    
+				                      <input type="button" disabled="disabled" name="previousPage" value="上一页" />
+				                    
+				                  </c:otherwise>
+				                </c:choose>
+				                <c:choose>
+				                  <c:when test="${page.pageNo != page.totalPages}">
+				                    <a href="${ctx}/user/news?pageNo=${page.nextPageNo }"><input type="button" name="nextPage" value="下一页" /></a>
+				                  </c:when>
+				                  <c:otherwise>
+				                    
+				                      <input type="button" disabled="disabled" name="nextPage" value="下一页" />
+				                    
+				                  </c:otherwise>
+				                </c:choose>
+				                <a href="${ctx}/user/news?pageNo=${page.bottomPageNo }"><input type="button" name="lastPage" value="尾页" /></a></li>
+				            </td>
+				        </tr>
+						</table>
 						</li>
 					</ul>
 				</div>
+				
+				
 				
 				
 				<!-- End News Pagination -->
