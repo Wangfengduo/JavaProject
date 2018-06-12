@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.main.admin.bean.Artical;
 import com.main.admin.bean.Page;
+import com.main.user.bean.Comment;
 import com.main.user.dao.ArticalInfoDao;
 
 @Service
@@ -45,6 +46,13 @@ public class ArticalInfoService {
 		    page.setList2(list);
 		        
 		     return page;
+		}
+		
+		
+		//评论显示
+		public void selectComment(HttpSession session,int artical_id) {
+			List<Comment> list=this.articalInfoDao.selectById(artical_id);
+			session.setAttribute("list", list);
 		}
 	
 }

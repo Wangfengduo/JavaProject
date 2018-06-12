@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
+   <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
      <c:set var="ctx" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -222,57 +222,27 @@
 					<h4 class="main-heading2">
 						<i class="fa fa-comments-o"></i>肺病讨论(2)
 					</h4>
+					
+					
 					<!-- Start Comment #1 -->
+					<c:forEach items="${list}" var="list" >
 					<div class="media">
 						<a class="media-left" href="#">
 							<img class="media-object" src="assets/images/avatar.png" alt="Avatar">
 						</a>
 						<div class="media-body">
-							<h5><a href="#">陈坤</a></h5>
-							<p class="date"><a href="#">2015.09.8</a></p>
+							<h5><a href="#">${list.u_id }</a></h5>
+							<p class="date"><a href="#">${list.comment_time }</a></p>
 							<p>
-								职业肺病职业吸入性肺病的特征是怎样的？
-							</p>
-							<p>
-								职业肺病是怎样引起的？
-							</p>
-							<a href="#" class="btn btn-secondary">李小璐</a>
-							<!-- Start Comment Repplay -->
-							<div class="media">
-								<a class="media-left" href="#">
-									<img class="media-object" src="assets/images/avatar.png" alt="Avatar">
-								</a>
-								<div class="media-body">
-									<h5><a href="#">李小璐</a></h5>
-									<p class="date"><a href="#">2015.09.8</a></p>
-									<p>
-										颗粒沉积于气管和支气管可引起三种反应：（1）由抗原-抗体反应引起支气管收缩，如某些职业性哮喘；在棉屑沉着病时，颗粒的沉积（通过药理机制）可使气道的肥大细胞产生支气管收缩物，如组胺和过敏性慢反应物质（白三烯C4 , D 4 和E4 ）；或因Sulfites刺激而反射性引起.（2）长期颗粒沉积可致粘液腺肥大或支气管炎，有时引起慢性轻度气道阻塞.（3）石棉纤维或吸附有氡子体的粉尘沉积可致肺癌发生。
-									</p>
-									<a href="#" class="btn btn-secondary">回复</a>
-								</div>
-							</div>
-							<!-- End Comment Repplay -->
-						</div>
-					</div>
-					<!-- End Comment #1 -->
-					<!-- Start Comment #2 -->
-					<div class="media">
-						<a class="media-left" href="#">
-							<img class="media-object" src="assets/images/avatar.png" alt="Avatar">
-						</a>
-						<div class="media-body">
-							<h5><a href="#">白冰</a></h5>
-							<p class="date"><a href="#">2015.09.8</a></p>
-							<p>
-								一、忌生冷的食物。生冷的食物对脾阳和肺阳具有遏制的作用，生痰滋湿，加重咳嗽、心悸、气喘等病情。 
-							</p>
-							<p>
-								二、忌烟酒，慎用辛辣刺激性食品，以避免产生过度的咳嗽。 三、尽量多饮水，吃易消化或半流汁食物，以利湿化痰液，及时排痰。 四、肺炎常伴有高热，机体消耗甚大，故应提供高能量，进食高蛋白且易于消化的食物。可适当多吃水果，以增加水分和维生素。维生素C能增强人体抵抗力，维生素A对保护呼吸道粘膜有利。 五、对肺病患者来说，乳制品和甜食应该少吃，以减少肺里的黏液分泌。 另外，老年人肺病患者可选择如下食品以进行食疗： 1）猪肺一具不灌洗，以甜杏仁49粒（去皮尖），川贝15克（去心），生姜汁1茶匙，蜜30克，四味入肺管内扎紧，白水煮熟，连汤同食。适用于老年人肺炎。 2）紫皮大蒜30克（去皮，放沸水中煮1分钟后捞出），大米60克，白及粉5克。将大米、白及粉放水中煮熟，再入大蒜共煮成粥，早晚餐常服。 3）新百合200克，蜜和蒸软，时常食用有润肺止咳之功。适用于老年人肺炎干咳少痰者。 4）鲜香蕉根200克，捣烂绞汁煮熟，加食盐少许调服。具有清热润肠作用。适用于老年肺炎、大便干结病人。 5）燕窝6克，银耳9克，冰糖适量。将燕窝、银耳用热水泡发，择洗干净，放入冰糖，隔水炖熟服。适用于老年人肺炎。 6）雪梨1~2个，黑豆30克。将梨洗净切片，加水适量，放入黑豆，用文火炖烂，熟后服食。适用于老年人肺炎肺肾亏虚者。
+								${list.content }
 							</p>
 							<a href="#" class="btn btn-secondary">回复</a>
 						</div>
 					</div>
-					<!-- End Comment #2 -->
+					</c:forEach>
+					<!-- End Comment #1 -->
+					
+
 				</div>
 				<!-- End Comments -->
 				<!-- Start Live Comments -->
@@ -320,7 +290,7 @@
 				<!-- End Latest News -->
 				<!-- Start Recent Comments -->
 				<h4 class="side-heading1">
-					<span class="hidden-md hidden-sm">全新世</span>评论
+					<span class="hidden-md hidden-sm">全新</span>评论
 				</h4>
 				<div id="comments-carousel" class="comments-carousel carousel vertical slide" data-ride="carousel">
 					<div class="carousel-inner">
@@ -440,7 +410,7 @@
 					<!-- Start Testimonial Tabs -->
 					<div class="carousel-inner quote-box" role="listbox">
 						<i class="fa fa-quote-left fa-2x"></i>
-						<!-- Start Tab #1 -->
+						 
 						<div class="item active">
 							<blockquote>
 						
@@ -450,31 +420,23 @@
 								<span>肺部保健</span>
 							</div>
 						</div>
-						<!-- End Tab #1 -->
+						
 						<!-- Start Tab #2 -->
-						<div class="item">
+						<c:forEach items="${list}" var="list" >
+						<div class="item active">
 							<blockquote>
-　　断绝氧化反应的抗氧化剂和抗癌特性的硫代葡萄糖苷等营养素丰富的食品，对于肺部功能和健康都有一定的效果。据研究显示，这种成分含有丰富的十字花科蔬菜(西兰花、油菜、青菜、小白菜等)，一周吃5次以上的人比吃这种蔬菜少的人，肺癌发生的危险减低50%多。
+　　								${list.content }
 							</blockquote>
 							<div class="quote-footer">
-								陈冠希<br>
+								${list.u_id}<br>
 								<span>肺部保健</span>
 							</div>
 						</div>
+						</c:forEach>
 						<!-- End Tab #2 -->
-						<!-- Start Tab #3 -->
-						<div class="item">
-							<blockquote>
-								增加抗氧化剂的摄取
-
-　　断绝氧化反应的抗氧化剂和抗癌特性的硫代葡萄糖苷等营养素丰富的食品，对于肺部功能和健康都有一定的效果。据研究显示，这种成分含有丰富的十字花科蔬菜(西兰花、油菜、青菜、小白菜等)，一周吃5次以上的人比吃这种蔬菜少的人，肺癌发生的危险减低50%多。
-							</blockquote>
-							<div class="quote-footer">
-								方大同<br>
-								<span>肺部保健</span>
-							</div>
-						</div>
-						<!-- Start Tab #3 -->
+						
+						
+						
 					</div>
 					<!-- End Testimonial Tabs -->
 				</div>

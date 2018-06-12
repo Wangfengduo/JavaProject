@@ -45,6 +45,7 @@ public class ArticalInfoAction {
 	@RequestMapping("/news-single")
 	public String selectOne(HttpSession session,int id){
 		this.articalInfoService.selectOne(session, id);
+		this.articalInfoService.selectComment(session, id);
 		return "user/news-single";
 		
 	}
