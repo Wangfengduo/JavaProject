@@ -106,8 +106,8 @@
 							</li>
 							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">新闻</a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="news.jsp">新闻</a></li>
-									<li><a href="news-single.jsp">单个新闻</a></li>
+									<li><a href="${ctx }/user/news">新闻</a></li>
+									<li><a href="${ctx }/user/news-single">单个新闻</a></li>
 								</ul>
 							</li>
 							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">网页</a>
@@ -144,7 +144,7 @@
 					<h2>养益生</h2>
 					<h2>从<span>这里</span>开始</h2>
 					<p>让我们一起珍视你的健康。</p>
-					<a href="services.html" class="btn btn-secondary">阅读更多</a>
+					<a href="service.jsp" class="btn btn-secondary">阅读更多</a>
 				</div>
 			</div>
 			<!-- End Slide #1 -->
@@ -154,7 +154,7 @@
 					<h2>养益生</h2>
 					<h2>从 <span>这里</span> 开始</h2>
 					<p>Lorem Ipsum is simply dummy text printer took a galley of type and scrambled it to make a type specimen book ...</p>
-					<a href="services.html" class="btn btn-secondary">Read More</a>
+					<a href="service.jsp" class="btn btn-secondary">Read More</a>
 				</div>
 			</div>
 			<!-- End Slide #2 -->
@@ -164,7 +164,7 @@
 					<h2>Main Heading</h2>
 					<h2>Some Caption <span>Here</span></h2>
 					<p>Lorem Ipsum is simply dummy text printer took a galley of type and scrambled it to make a type specimen book ...</p>
-					<a href="services.html" class="btn btn-secondary">Read More</a>
+					<a href="service.jsp" class="btn btn-secondary">Read More</a>
 				</div>
 			</div>
 			<!-- End Slide #3 -->
@@ -181,7 +181,7 @@
 					<i class="fa fa-male"></i>
 					<h4>个人资料</h4>
 					<p>完善您的个人资料，更好的体验我们的服务...</p>
-					<a href="contact.html" class="btn btn-transparent">阅读更多</a>
+					<a href="contact.jsp" class="btn btn-transparent">阅读更多</a>
 				</div>
 			</div>
 			<!-- End Box #1 -->
@@ -191,7 +191,7 @@
 					<i class="fa fa-plus-square"></i>
 					<h4>职业病</h4>
 					<p>我们可以为您提供各种职业病的类型，帮您了解发病的情况...</p>
-					<a href="services.html" class="btn btn-transparent">阅读更多</a>
+					<a href="service.jsp" class="btn btn-transparent">阅读更多</a>
 				</div>
 			</div>
 			<!-- End Box #2 -->
@@ -201,7 +201,7 @@
 					<i class="fa fa-comments-o"></i>
 					<h4>最新的资讯</h4>
 					<p>我们可以为您提供最新的资讯，让您了解人们的身体状况...</p>
-					<a href="departments.html" class="btn btn-transparent">阅读更多</a>
+					<a href="${ctx }/user/news" class="btn btn-transparent">阅读更多</a>
 				</div>
 			</div>
 			<!-- End Box #3 -->
@@ -211,7 +211,7 @@
 					<i class="fa fa-question-circle"></i>
 					<h4>常见的问题</h4>
 					<p>您有什么意见或建议，可以通过邮件的方式发送给我们...</p>
-					<a href="news.html" class="btn btn-transparent">阅读更多</a>
+					<a href="contact.jsp" class="btn btn-transparent">阅读更多</a>
 				</div>
 			</div>
 			<!-- End Box #4 -->
@@ -234,7 +234,7 @@
 					</div>
 					<h5>尘肺</h5>
 					<p>有硅肺、煤工业肺等...</p>
-					<a href="department-single.html" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i> 阅读更多</a>
+					<a href="department-single.jsp" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i> 阅读更多</a>
 				</li>
 				<li class="col-md-2 col-sm-4 col-xs-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
 					<div class="icon">
@@ -242,7 +242,7 @@
 					</div>
 					<h5>职业性放射病</h5>
 					<p>有外照射急性放射病等...</p>
-					<a href="department-single.html" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i> 阅读更多</a>
+					<a href="department-single.jsp" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i> 阅读更多</a>
 				</li>
 				<li class="col-md-2 col-sm-4 col-xs-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
 					<div class="icon">
@@ -250,7 +250,7 @@
 					</div>
 					<h5>职业中毒</h5>
 					<p>有铅及其化合物中毒等...</p>
-					<a href="department-single.html" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i> 阅读更多</a>
+					<a href="department-single.jsp" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i> 阅读更多</a>
 				</li>
 				<li class="col-md-2 col-sm-4 col-xs-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="1s">
 					<div class="icon">
@@ -258,7 +258,7 @@
 					</div>
 					<h5>物理因素职业病</h5>
 					<p>有中暑、减压病等...</p>
-					<a href="department-single.html" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i> 阅读更多</a>
+					<a href="department-single.jsp" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i> 阅读更多</a>
 				</li>
 				<li class="col-md-2 col-sm-4 col-xs-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
 					<div class="icon">
@@ -266,7 +266,7 @@
 					</div>
 					<h5>职业性皮肤病</h5>
 					<p>有接触性皮炎等...</p>
-					<a href="department-single.html" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i> 阅读更多</a>
+					<a href="department-single.jsp" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i> 阅读更多</a>
 				</li>
 				<li class="col-md-2 col-sm-4 col-xs-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="1.5s">
 					<div class="icon">
@@ -274,7 +274,7 @@
 					</div>
 					<h5>职业性耳鼻喉疾病</h5>
 					<p>有噪声聋、铬鼻病等...</p>
-					<a href="department-single.html" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i> 阅读更多</a>
+					<a href="department-single.jsp" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i> 阅读更多</a>
 				</li>
 			</ul>
 			<!-- End Services List Area -->
@@ -303,7 +303,7 @@
 													<li><a href="#"><i class="fa fa-comments-o"></i> 10</a></li>
 												</ul>
 												<p>本报讯记者从市卫生局获悉，尘肺、慢性中毒、急性中毒是本市职业病主要病种，其中尘肺病最为突出，占近三年职业病发病人数的91．0％。....</p>
-												<a href="news-single.html" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i>阅读更多</a>
+												<a href="department-single.jsp" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i>阅读更多</a>
 											</div>
 										</div>
 									</div>
@@ -319,7 +319,7 @@
 													<li><a href="#"><i class="fa fa-comments-o"></i> 10</a></li>
 												</ul>
 												<p>近一年来，调查人员对重庆市500余名一线教师进行了详细调查，结果发现76.9%的教师感觉压力大，37%的教师产生职业倦怠....</p>
-												<a href="news-single.html" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i>阅读更多</a>
+												<a href="department-single.jsp" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i>阅读更多</a>
 											</div>
 										</div>
 									</div>
@@ -341,7 +341,7 @@
 													<li><a href="#"><i class="fa fa-comments-o"></i> 10</a></li>
 												</ul>
 												<p>Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker....</p>
-												<a href="news-single.html" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i>阅读更多</a>
+												<a href="department-single.jsp" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i>阅读更多</a>
 											</div>
 										</div>
 									</div>
@@ -357,7 +357,7 @@
 													<li><a href="#"><i class="fa fa-comments-o"></i> 10</a></li>
 												</ul>
 												<p>Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker....</p>
-												<a href="news-single.html" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i>阅读更多</a>
+												<a href="department-single.jsp" class="btn btn-secondary"><i class="fa fa-arrow-circle-right"></i>阅读更多</a>
 											</div>
 										</div>
 									</div>
@@ -402,7 +402,7 @@
 							<div id="collapse1" class="panel-collapse collapse in">
 								<div class="panel-body">
 									<p>尘肺是一种严重危害人们身心健康的职业病，怎么预防尘肺病直接关系到患者能够健康的生活，一起来了解一下 ...</p>
-									<a href="department-single.html" class="btn btn-sm btn-transparent inverse">更多</a>
+									<a href="department-single.jsp" class="btn btn-sm btn-transparent inverse">更多</a>
 								</div>
 							</div>
 							<!-- End Accordion #1 Body -->
@@ -422,7 +422,7 @@
 							<div id="collapse2" class="panel-collapse collapse">
 								<div class="panel-body">
 									<p>放射性疾病是由电离辐射照射机体引起的一系列疾病。职业性放射性疾病的危害有 ...</p>
-									<a href="department-single.html" class="btn btn-sm btn-transparent inverse">更多</a>
+									<a href="department-single.jsp" class="btn btn-sm btn-transparent inverse">更多</a>
 								</div>
 							</div>
 							<!-- End Accordion #2 Body -->
@@ -442,7 +442,7 @@
 							<div id="collapse3" class="panel-collapse collapse">
 								<div class="panel-body">
 									<p>职业中毒是指劳动者在生产劳动过程中由于接触生产性毒物引起的中毒。生产性毒物是指生产过程中产生的，存在于 ...</p>
-									<a href="department-single.html" class="btn btn-sm btn-transparent inverse">更多</a>
+									<a href="department-single.jsp" class="btn btn-sm btn-transparent inverse">更多</a>
 								</div>
 							</div>
 							<!-- End Accordion #3 Body -->
@@ -461,7 +461,7 @@
 							<div id="collapse4" class="panel-collapse collapse">
 								<div class="panel-body">
 									<p>物理因素职业病是由物理条件产生的疾病，物理因素包括: 气象条件(气温、气湿、气流、气压) ;噪声;振动;电磁辐射等问题 ...</p>
-									<a href="department-single.html" class="btn btn-sm btn-transparent inverse">更多</a>
+									<a href="department-single.jsp" class="btn btn-sm btn-transparent inverse">更多</a>
 								</div>
 							</div>
 							<!-- End Accordion #4 Body -->
@@ -481,7 +481,7 @@
 							<div id="collapse5" class="panel-collapse collapse">
 								<div class="panel-body">
 									<p>由于职业性因素（化学、物理、生物的）引起的皮肤及其附属器的疾病，应通过调查搞清职业性有害因素，改革生产设备，实现机械化 、密闭化 ，避免接触有害因素  ...</p>
-									<a href="department-single.html" class="btn btn-sm btn-transparent inverse">更多</a>
+									<a href="department-single.jsp" class="btn btn-sm btn-transparent inverse">更多</a>
 								</div>
 							</div>
 							<!-- End Accordion #5 Body -->
@@ -501,7 +501,7 @@
 							<div id="collapse6" class="panel-collapse collapse">
 								<div class="panel-body">
 									<p>职业性耳鼻喉病的有多种病因，发病率在多个职业均有发生，那么如何更好的预防它呢 ...</p>
-									<a href="department-single.html" class="btn btn-sm btn-transparent inverse">更多</a>
+									<a href="department-single.jsp" class="btn btn-sm btn-transparent inverse">更多</a>
 								</div>
 							</div>
 							<!-- End Accordion #6 Body -->
@@ -521,7 +521,7 @@
 							<div id="collapse7" class="panel-collapse collapse">
 								<div class="panel-body">
 									<p>了解更多其他职业病病种，做出及时的预防措施，保护你们的身体健康 ...</p>
-									<a href="department-single.html" class="btn btn-sm btn-transparent inverse">更多</a>
+									<a href="department-single.jsp" class="btn btn-sm btn-transparent inverse">更多</a>
 								</div>
 							</div>
 							<!-- End Accordion #7 Body -->
@@ -568,12 +568,12 @@
 					<div class="col-md-3 col-sm-4 col-xs-6">
 						<h4>职业病</h4>
 						<ul class="list-unstyled">
-							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 尘肺</a></li>
-							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 职业性放射病</a></li>
-							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 职业中毒</a></li>
-							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 物理因素职业病</a></li>
-							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 职业性皮肤病</a></li>
-							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 职业性耳鼻喉疾病</a></li>
+							<li><a href="department-single.jsp"><i class="fa fa-angle-right"></i> 尘肺</a></li>
+							<li><a href="department-single.jsp"><i class="fa fa-angle-right"></i> 职业性放射病</a></li>
+							<li><a href="department-single.jsp"><i class="fa fa-angle-right"></i> 职业中毒</a></li>
+							<li><a href="department-single.jsp"><i class="fa fa-angle-right"></i> 物理因素职业病</a></li>
+							<li><a href="department-single.jsp"><i class="fa fa-angle-right"></i> 职业性皮肤病</a></li>
+							<li><a href="department-single.jsp"><i class="fa fa-angle-right"></i> 职业性耳鼻喉疾病</a></li>
 						</ul>
 					</div>
 					<!-- End Services Area -->

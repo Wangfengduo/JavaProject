@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
-     <c:set var="ctx" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -11,7 +9,6 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="author" content="">
-	<link rel="stylesheet" href="css1/sku_style.css" />
 	<title>养益生</title>
 	<!-- Bootstrap CSS -->
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -37,14 +34,12 @@
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]><script src="assets/js/html5shiv.min.js"></script><script src="assets/js/respond.min.js"></script><![endif]-->
 	
-	<script type="text/javascript" src="js1/jquery.min.js"></script>
-	<script type="text/javascript" src="js1/createSkuTable.js"></script>
-	<script type="text/javascript" src="js1/customSku.js"></script>
+
 	
 	
 	
-	
-	
+	<script src="assets/js/city.js"></script>
+	<script src="assets/js/caree.js"></script>
 </head>
 <body>
 
@@ -150,94 +145,83 @@
 	<!-- Start Main Container -->
 	<div class="container main-container">
 		<!-- Start Services Tab -->
+		
 		<div class="tabs-wrap" style="
 			height:1000px;
 			border:2px solid #FAF0E6;
 			margin-bottom:10px;
 		">
-	
-			<div class="demo-title">淘宝商户端发布商品时,动态生成SKU表格的实例</div>
-			<ul class="SKU_TYPE">
-				<li is_required='1' propid='1' sku-type-name="所在省份"><em>*</em>所在省份：</li>
-			</ul>
-			<ul>
-				<li><label><input type="checkbox" class="sku_value" propvalid='11' value="北京" />北京</label></li>
-				<li><label><input type="checkbox" class="sku_value" propvalid='12' value="河北省" />河北省</label></li>
-				<li><label><input type="checkbox" class="sku_value" propvalid='13' value="东北省" />东北省</label></li>
-				<li><label><input type="checkbox" class="sku_value" propvalid='14' value="河南省" />河南省</label></li>
-				<li><label><input type="checkbox" class="sku_value" propvalid='15' value="湖南省" />湖南省</label></li>
-				<li><label><input type="checkbox" class="sku_value" propvalid='16' value="湖北省" />湖北省</label></li>
-				<li><label><input type="checkbox" class="sku_value" propvalid='17' value="山西省" />山西省</label></li>
-				<li><label><input type="checkbox" class="sku_value" propvalid='18' value="福建省" />福建省</label></li>
-				<li><label><input type="checkbox" class="sku_value" propvalid='19' value="甘肃省" />甘肃省</label></li>
-			</ul>
-			<div class="clear"></div>
-			<ul class="SKU_TYPE">
-				<li is_required='1' propid='2' sku-type-name="职业"><em>*</em>职业：</li>
-			</ul>
-			<ul>
-				<li><label><input type="checkbox" class="sku_value" propvalid='21' value="上班族" />上班族</label></li>
-				<li><label><input type="checkbox" class="sku_value" propvalid='22' value="司机" />司机</label></li>
-				<li><label><input type="checkbox" class="sku_value" propvalid='23' value="医生" />医生</label></li>
-				<li><label><input type="checkbox" class="sku_value" propvalid='24' value="教师" />教师</label></li>
-				<li><label><input type="checkbox" class="sku_value" propvalid='25' value="装修工人" />装修工人</label></li>
-				<li><label><input type="checkbox" class="sku_value" propvalid='24' value="厨师" />厨师</label></li>
-				<li><label><input type="checkbox" class="sku_value" propvalid='24' value="运动员" />运动员</label></li>
-				<li><label><input type="checkbox" class="sku_value" propvalid='24' value="工人" />工人</label></li>
-				<li><label><input type="checkbox" class="sku_value" propvalid='24' value="其他" />其他</label></li>
-			</ul>
-			<div class="clear"></div>
-						
-			<ul class="SKU_TYPE">
-				<li is_required='0' propid='3' sku-type-name="年龄">年龄：</li>
-			</ul>
-			<ul>
-				<li><label><input type="checkbox" class="sku_value" propvalid='31' value="18岁以下" />18岁以下</label></li>
-				<li><label><input type="checkbox" class="sku_value" propvalid='32' value="18-25岁" />18-25岁</label></li>
-				<li><label><input type="checkbox" class="sku_value" propvalid='33' value="25-40岁" />25-40岁</label></li>
-				<li><label><input type="checkbox" class="sku_value" propvalid='34' value="40-50岁" />40-50岁</label></li>
-				<li><label><input type="checkbox" class="sku_value" propvalid='33' value="50-60岁" />50-60岁</label></li>
-			</ul>
-			<div class="clear"></div>
-			<ul class="SKU_TYPE">
-				<li is_required='1' propid='4' sku-type-name="性别"><em>*</em>性别：</li>
-			</ul>
-			<ul>
-				<li><label><input type="checkbox" class="sku_value" propvalid='41' value="男" />男</label></li>
-				<li><label><input type="checkbox" class="sku_value" propvalid='42' value="女" />女</label></li>
-			</ul>
-			<div class="clear"></div>
-			
-			<!--sku模板,用于克隆,生成自定义sku-->
-			<div id="skuCloneModel" style="display: none;">
-				<div class="clear"></div>
-				<ul class="SKU_TYPE">
-					<li is_required='0' propid='' sku-type-name="">
-						<a href="javascript:void(0);" class="delCusSkuType">移除</a>
-						<input type="text" class="cusSkuTypeInput" />：
-					</li>
-				</ul>
-				<ul>
-					<li>
-						<input type="checkbox" class="model_sku_val" propvalid='' value="" />
-						<input type="text" class="cusSkuValInput" />
-					</li>
-					<button class="cloneSkuVal">添加自定义属性值</button>
-				</ul>
-				<div class="clear"></div>
+			<div style="
+				padding-left:40px;
+				padding-top:50px;
+			">
+				<form id="form1">   
+				   请选择您的位置：<select id="selProvince" onChange = "getCity(this.options[this.selectedIndex].value)">   
+				        <option value="">-请选择-</option>   
+				        <option value="北京市">北京市</option>   
+				        <option value="上海市">上海市</option>   
+				        <option value="天津市">天津市</option>   
+				        <option value="重庆市">重庆市</option>   
+				        <option value="河北省">河北省</option>   
+				        <option value="山西省">山西省</option>   
+				        <option value="内蒙古自治区">内蒙古自治区</option>   
+				        <option value="辽宁省">辽宁省</option>   
+				        <option value="吉林省">吉林省</option>   
+				        <option value="黑龙江省">黑龙江省</option>   
+				        <option value="江苏省">江苏省</option>   
+				        <option value="浙江省">浙江省</option>   
+				        <option value="安徽省">安徽省</option>   
+				        <option value="福建省">福建省</option>   
+				        <option value="江西省">江西省</option>   
+				        <option value="山东省">山东省</option>   
+				        <option value="河南省">河南省</option>   
+				        <option value="湖北省">湖北省</option>   
+				        <option value="湖南省">湖南省</option>   
+				        <option value="广东省">广东省</option>   
+				        <option value="广西壮族自治区">广西壮族自治区</option>   
+				        <option value="海南省">海南省</option>   
+				        <option value="四川省">四川省</option>   
+				        <option value="贵州省">贵州省</option>   
+				        <option value="云南省">云南省</option>   
+				        <option value="西藏自治区">西藏自治区</option>   
+				        <option value="陕西省">陕西省</option>   
+				        <option value="甘肃省">甘肃省</option>   
+				        <option value="宁夏回族自治区">宁夏回族自治区</option>   
+				        <option value="青海省">青海省</option>   
+				        <option value="新疆维吾尔族自治区">新疆维吾尔族自治区</option>   
+				        <option value="香港特别行政区">香港特别行政区</option>   
+				        <option value="澳门特别行政区">澳门特别行政区</option>   
+				        <option value="台湾省">台湾省</option>   
+				        <option value="其它">其它</option>   
+				    </select>   
+    				<select id="selCity">   
+				        <option>-城市-</option>   
+				    </select>   
+    				</br>
+    				请选择你的职位：
+    				<select id="selCareeType" onChange = "getCaree(this.options[this.selectedIndex].value)">
+    					 <option value="">-请选择-</option>
+    					 <option value="国家机关、党群组织、企业、事业单位负责人">国家机关、党群组织、企业、事业单位负责人</option>
+    					 <option value="专业技术人员">专业技术人员</option>
+    					 <option value="办事人员和有关人员">办事人员和有关人员</option>
+    					 <option value="商业、服务业人员">商业、服务业人员</option>
+    					 <option value="农、林、牧、渔、水利业生产人员">农、林、牧、渔、水利业生产人员</option>
+    					 <option value="生产、运输设备操作人员及有关人员">生产、运输设备操作人员及有关人员</option>
+    					 <option value="军人">军人</option>
+    					 <option value="不便分类的其他行业人员">不便分类的其他行业人员</option>
+    					 
+    				</select>
+    				<select id="selCaree">   
+				        <option>-职业-</option>   
+				    </select>   
+				</form>   
+				
+				
+				
 			</div>
-			<!--单个sku值克隆模板-->
-			<li style="display: none;" id="onlySkuValCloneModel">
-				<input type="checkbox" class="model_sku_val" propvalid='' value="" />
-				<input type="text" class="cusSkuValInput" />
-				<a href="javascript:void(0);" class="delCusSkuVal">删除</a>
-			</li>
-			<div class="clear"></div>
-			<div id="skuTable"></div>
-			
-			
-		
 		</div>
+		
+		
 		
 		
 		
@@ -896,7 +880,5 @@
     <script src="assets/js/wow.min.js"></script>
 	<!-- Main JS -->
 	<script src="assets/js/main.js"></script>
-	
-	
 </body>
 </html>

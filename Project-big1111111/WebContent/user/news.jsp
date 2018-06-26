@@ -95,8 +95,8 @@
 							</li>
 							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">新闻</a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="news.jsp">新闻</a></li>
-									<li><a href="news-single.jsp">单个新闻</a></li>
+									<li><a href="${ctx }/user/news">新闻</a></li>
+									<li><a href="${ctx }/user/news-single">单个新闻</a></li>
 								</ul>
 							</li>
 							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">网页</a>

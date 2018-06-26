@@ -34,6 +34,7 @@ public class Artical {
 	private String desc;//描述
 	
 	
+	
 	public int getId() {
 		return id;
 	}
@@ -77,6 +78,7 @@ public class Artical {
 	public void setDesc(String desc) {
 		this.desc = desc;
 	}
+	
 	
 	
 	

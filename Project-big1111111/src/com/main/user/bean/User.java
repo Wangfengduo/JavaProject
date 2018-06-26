@@ -1,11 +1,14 @@
 package com.main.user.bean;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name="user")
@@ -56,6 +59,6 @@ public class User {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-
+	
 	
 }
