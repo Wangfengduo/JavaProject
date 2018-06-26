@@ -156,7 +156,7 @@
 			margin-bottom:10px;
 		">
 	
-			<div class="demo-title">淘宝商户端发布商品时,动态生成SKU表格的实例</div>
+			<div class="demo-title">个人信息选择</div>
 			<ul class="SKU_TYPE">
 				<li is_required='1' propid='1' sku-type-name="所在省份"><em>*</em>所在省份：</li>
 			</ul>

@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css1/sku_style.css" />
+<title>仿淘宝动态生成SKU表格实例(zxw)</title>
+
+<script type="text/javascript" src="js1/jquery.min.js"></script>
+<script type="text/javascript" src="js1/createSkuTable.js"></script>
+<script type="text/javascript" src="js1/customSku.js"></script>
+<script type="text/javascript" src="plugins/layer/layer.js"></script>
+
+</head>
+<body>
+
+		<div class="demo-title">淘宝商户端发布商品时,动态生成SKU表格的实例</div>
+		<ul class="SKU_TYPE">
+			<li is_required='1' propid='1' sku-type-name="所在省份"><em>*</em>所在省份：</li>
+		</ul>
+		<ul>
+			<li><label><input type="checkbox" class="sku_value" propvalid='11' value="北京" />北京</label></li>
+			<li><label><input type="checkbox" class="sku_value" propvalid='12' value="河北省" />河北省</label></li>
+			<li><label><input type="checkbox" class="sku_value" propvalid='13' value="东北省" />东北省</label></li>
+			<li><label><input type="checkbox" class="sku_value" propvalid='14' value="河南省" />河南省</label></li>
+			<li><label><input type="checkbox" class="sku_value" propvalid='15' value="湖南省" />湖南省</label></li>
+			<li><label><input type="checkbox" class="sku_value" propvalid='16' value="湖北省" />湖北省</label></li>
+			<li><label><input type="checkbox" class="sku_value" propvalid='17' value="山西省" />山西省</label></li>
+			<li><label><input type="checkbox" class="sku_value" propvalid='18' value="福建省" />福建省</label></li>
+			<li><label><input type="checkbox" class="sku_value" propvalid='19' value="甘肃省" />甘肃省</label></li>
+		</ul>
+		<div class="clear"></div>
+		<ul class="SKU_TYPE">
+			<li is_required='1' propid='2' sku-type-name="职业"><em>*</em>职业：</li>
+		</ul>
+		<ul>
+			<li><label><input type="checkbox" class="sku_value" propvalid='21' value="上班族" />上班族</label></li>
+			<li><label><input type="checkbox" class="sku_value" propvalid='22' value="司机" />司机</label></li>
+			<li><label><input type="checkbox" class="sku_value" propvalid='23' value="医生" />医生</label></li>
+			<li><label><input type="checkbox" class="sku_value" propvalid='24' value="教师" />教师</label></li>
+			<li><label><input type="checkbox" class="sku_value" propvalid='25' value="装修工人" />装修工人</label></li>
+			<li><label><input type="checkbox" class="sku_value" propvalid='24' value="厨师" />厨师</label></li>
+			<li><label><input type="checkbox" class="sku_value" propvalid='24' value="运动员" />运动员</label></li>
+			<li><label><input type="checkbox" class="sku_value" propvalid='24' value="工人" />工人</label></li>
+			<li><label><input type="checkbox" class="sku_value" propvalid='24' value="其他" />其他</label></li>
+		</ul>
+		<div class="clear"></div>
+					
+		<ul class="SKU_TYPE">
+			<li is_required='0' propid='3' sku-type-name="年龄">年龄：</li>
+		</ul>
+		<ul>
+			<li><label><input type="checkbox" class="sku_value" propvalid='31' value="18岁以下" />18岁以下</label></li>
+			<li><label><input type="checkbox" class="sku_value" propvalid='32' value="18-25岁" />18-25岁</label></li>
+			<li><label><input type="checkbox" class="sku_value" propvalid='33' value="25-40岁" />25-40岁</label></li>
+			<li><label><input type="checkbox" class="sku_value" propvalid='34' value="40-50岁" />40-50岁</label></li>
+			<li><label><input type="checkbox" class="sku_value" propvalid='33' value="50-60岁" />50-60岁</label></li>
+		</ul>
+		<div class="clear"></div>
+		<ul class="SKU_TYPE">
+			<li is_required='1' propid='4' sku-type-name="性别"><em>*</em>性别：</li>
+		</ul>
+		<ul>
+			<li><label><input type="checkbox" class="sku_value" propvalid='41' value="男" />男</label></li>
+			<li><label><input type="checkbox" class="sku_value" propvalid='42' value="女" />女</label></li>
+		</ul>
+		<div class="clear">1111</div>
+		<button class="cloneSku">添加自定义sku属性</button>
+		<button value="确认">确认</button>
+		<!--sku模板,用于克隆,生成自定义sku-->
+		<div id="skuCloneModel" style="display: none;">
+			<div class="clear"></div>
+			<ul class="SKU_TYPE">
+				<li is_required='0' propid='' sku-type-name="">
+					<a href="javascript:void(0);" class="delCusSkuType">移除</a>
+					<input type="text" class="cusSkuTypeInput" />：
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<input type="checkbox" class="model_sku_val" propvalid='' value="" />
+					<input type="text" class="cusSkuValInput" />
+				</li>
+				<button class="cloneSkuVal">添加自定义属性值</button>
+			</ul>
+			<div class="clear"></div>
+		</div>
+		<!--单个sku值克隆模板-->
+		<li style="display: none;" id="onlySkuValCloneModel">
+			<input type="checkbox" class="model_sku_val" propvalid='' value="" />
+			<input type="text" class="cusSkuValInput" />
+			<a href="javascript:void(0);" class="delCusSkuVal">删除</a>
+		</li>
+		<div class="clear"></div>
+		<div id="skuTable"></div>
+		<script type="text/javascript" src="js/getSetSkuVals.js"></script>
+	</body>
+
+</html>
