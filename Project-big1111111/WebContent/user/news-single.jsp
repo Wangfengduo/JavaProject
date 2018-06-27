@@ -166,10 +166,7 @@
 								<p>${artical.content }</p>
 								
 								
-								<blockquote>
-									<p>   二是慢性职业中毒形势严峻，有机溶剂中毒突出，约占职业中毒的70％。三是急性职业中毒事故时有发生。
-									</p>
-								</blockquote>
+								
 								
 								<div class="row">
 									<div class="col-sm-6 col-xs-12">

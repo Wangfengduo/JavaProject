@@ -206,7 +206,7 @@
 				<li><label><input type="checkbox" class="sku_value" propvalid='41' value="男" />男</label></li>
 				<li><label><input type="checkbox" class="sku_value" propvalid='42' value="女" />女</label></li>
 			</ul>
-			<div class="clear"></div>
+			
 			
 			<!--sku模板,用于克隆,生成自定义sku-->
 			<div id="skuCloneModel" style="display: none;">

@@ -128,7 +128,7 @@
 	<div class="breadcrumb">
 		<div class="container">
 			<ul class="list-unstyled list-inline">
-				<li><a href="index.html">主页</a></li>
+				<li><a href="index.jsp">主页</a></li>
 				<li class="active">关于我们</li>
 			</ul>
 		</div>

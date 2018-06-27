@@ -1,9 +1,4 @@
-/**
- * author:zhangxiaowu
- * date:2016年9月11日
- * version:1.0
- * email:uf_zhangxiaowu@163.com
- */
+
 
 var alreadySetSkuVals = {};//已经设置的SKU值数据
 

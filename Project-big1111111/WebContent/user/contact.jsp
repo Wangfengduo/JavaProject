@@ -53,8 +53,8 @@
 					</div>
 					<div class="col-sm-3 col-xs-12">
 						<ul class="list-unstyled list-inline">
-							<li><a href="login.html"><font size="3">登录</font></a></li>
-							<li><a href="register.html"><font size="3">注册</font></a></li>
+							<li><a href="login.jsp"><font size="3">登录</font></a></li>
+							<li><a href="register.jsp"><font size="3">注册</font></a></li>
 						</ul>
 					</div>
 				</div>
@@ -73,7 +73,7 @@
 						</button>
 						<!-- End Collapse Button -->
 						<!-- Start Website Logo -->
-						<a href="index.html" class="navbar-brand">
+						<a href="index.jsp" class="navbar-brand">
 							<img src="assets/images/logo.png" class="logo" alt="Logo"> Med<span>Line</span>
 						</a>
 
@@ -131,7 +131,7 @@
 	<div class="breadcrumb">
 		<div class="container">
 			<ul class="list-unstyled list-inline">
-				<li><a href="index.html">Home</a></li>
+				<li><a href="index.jsp">Home</a></li>
 				<li class="active">Contact Us</li>
 			</ul>
 		</div>

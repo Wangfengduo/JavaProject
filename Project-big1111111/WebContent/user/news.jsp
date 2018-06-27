@@ -57,8 +57,8 @@
 							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
 							<li><a href="#"><i class="fa fa-vimeo"></i></a></li> -->
-							<li><a href="login.html">登录</a></li>
-							<li><a href="register.html">注册</a></li>
+							<li><a href="login.jsp">登录</a></li>
+							<li><a href="register.jsp">注册</a></li>
 						</ul>
 					</div>
 				</div>
@@ -77,7 +77,7 @@
 						</button>
 						<!-- End Collapse Button -->
 						<!-- Start Website Logo -->
-						<a href="index.html" class="navbar-brand">
+						<a href="index.jsp" class="navbar-brand">
 							<img src="assets/images/logo.png" class="logo" alt="Logo"> 养<span>益生</span>
 						</a>
 						<!-- End Website Logo -->
@@ -475,12 +475,12 @@
 					<div class="col-md-3 col-sm-4 col-xs-6">
 						<h4>服务</h4>
 						<ul class="list-unstyled">
-							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 放射性疾病</a></li>
-							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 职业中毒</a></li>
-							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 物理因素职业病</a></li>
-							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 肺科诊所</a></li>
-							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 职业性皮肤病</a></li>
-							<li><a href="service-single.html"><i class="fa fa-angle-right"></i> 耳鼻喉疾病</a></li>
+							<li><a href="department-single.jsp"><i class="fa fa-angle-right"></i> 放射性疾病</a></li>
+							<li><a href="department-single.jsp"><i class="fa fa-angle-right"></i> 职业中毒</a></li>
+							<li><a href="department-single.jsp"><i class="fa fa-angle-right"></i> 物理因素职业病</a></li>
+							<li><a href="department-single.jsp"><i class="fa fa-angle-right"></i> 肺科诊所</a></li>
+							<li><a href="department-single.jsp"><i class="fa fa-angle-right"></i> 职业性皮肤病</a></li>
+							<li><a href="department-single.jsp"><i class="fa fa-angle-right"></i> 耳鼻喉疾病</a></li>
 						</ul>
 					</div>
 					<!-- End Services Area -->
