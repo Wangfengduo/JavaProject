@@ -9,25 +9,25 @@
 
 
 ### 项目成员
-* 王凤铎 () 
-  * Email: <958963326@qq.com>
-  * Github : [https://github.com/Wangfengduo](https://github.com/Wangfengduo)
-* 曹冰倩()
+* 曹冰倩(项目经理)
   * Email: <464431955@qq.com>
   * Github : [https://github.com/caobingqian](https://github.com/caobingqian)
-* 王莹莹()
+* 王凤铎 (开发工程师) 
+  * Email: <958963326@qq.com>
+  * Github : [https://github.com/Wangfengduo](https://github.com/Wangfengduo)
+* 王莹莹(UI设计、开发工程师)
   * Email: <1204310814@qq.com>
   * Github : [https://github.com/wangyingying-6](https://github.com/wangyingying-6)
-* 祝贝贝()
+* 祝贝贝(UI设计、产品经理)
   * Email: <845431735@qq.com>
   * Github : [https://github.com/zhubeibei6](https://github.com/zhubeibei6)
-* 程雨晨()
+* 程雨晨(UI设计、开发工程师)
   * Email: <1037036384@qq.com>
   * Github : [https://github.com/chengyuchn](https://github.com/chengyuchn)
-* 张帅()
+* 张帅(开发工程师)
   * Email: <421651638@qq.com>
   * Github : [https://github.com/zhngshuai](https://github.com/zhngshuai)
-* 俞佳越()
+* 俞佳越(测试工程师)
   * Email: <913411227@qq.com>
   * Github : [https://github.com/yujiayue](https://github.com/yujiayue)
 
