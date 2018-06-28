@@ -27,7 +27,7 @@
 * 张帅(开发工程师)
   * Email: <421651638@qq.com>
   * Github : [https://github.com/zhngshuai](https://github.com/zhngshuai)
-* 俞佳越(测试工程师)
+* 俞佳越(测试、开发工程师)
   * Email: <913411227@qq.com>
   * Github : [https://github.com/yujiayue](https://github.com/yujiayue)
 
