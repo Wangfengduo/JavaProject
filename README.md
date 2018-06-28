@@ -33,4 +33,4 @@
 
 
 ### 运行效果
-<img src="../images/admin.png"  />
+<img src="images/admin.png"  />
