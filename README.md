@@ -1,6 +1,6 @@
 #养益生
 * [Github](https://github.com/Wangfengduo/JavaProject) 
-
+* [HostedRedmine](http://10.7.1.5/projects/bigdate/wiki/Wiki)
 ### 项目简介
 
 **养益生**是一个包含了职业病病因及保健康复治疗信息，病情详细查询、用户心得评论交流功能的网站
